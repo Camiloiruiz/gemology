@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gem Properties — GemLens</title>
+  <meta name="description" content="Physical and optical properties of gemstones: hardness, toughness, cleavage, specific gravity, refractive index, birefringence, dispersion, color science, and optical phenomena.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb reveal">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Properties</span>
+        </nav>
+        <span class="chip reveal">Chapter 2</span>
+        <h1 class="display-medium reveal">Gem Properties</h1>
+        <p class="body-large reveal">The measurable physical and optical characteristics that define, distinguish, and determine the value of every gemstone. Mastering these properties is the foundation of systematic gem identification.</p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="section">
+      <div class="container">
+        <div class="content-grid content-grid--with-toc">
+
+          <!-- Main Content Column -->
+          <div class="prose">
+
+            <!-- ============================================================
+                 1. PHYSICAL PROPERTIES
+                 ============================================================ -->
+            <h2 id="physical-properties">Physical Properties</h2>
+            <p>Physical properties are intrinsic characteristics determined by a gem's chemical composition and crystal structure. They can be measured without specialized optical equipment and are often the first observations a gemologist records during identification. The four primary physical properties — hardness, toughness, cleavage, and specific gravity — each provide distinct diagnostic information.</p>
+
+            <!-- Hardness -->
+            <h3 id="hardness">Hardness</h3>
+            <p>Hardness in gemology refers to a material's resistance to being scratched. It is measured on the <strong>Mohs scale of relative hardness</strong>, devised by Friedrich Mohs in 1812. The scale ranks ten reference minerals from 1 (softest) to 10 (hardest), where each mineral can scratch those below it and is scratched by those above it.</p>
+            <p>A critical point for students: the Mohs scale is <strong>ordinal, not proportional</strong>. The intervals between numbers are not equal. The jump from corundum (9) to diamond (10) represents a far greater increase in absolute hardness than the jump from talc (1) to corundum (9). This becomes clear when absolute hardness values (measured by Vickers or Knoop indentation tests) are compared.</p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Mohs #</th>
+                    <th>Reference Mineral</th>
+                    <th>Absolute Hardness (Knoop)</th>
+                    <th>Common Gem Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Talc</td>
+                    <td><span class="val">1</span></td>
+                    <td>No gem use</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Gypsum</td>
+                    <td><span class="val">3</span></td>
+                    <td>Amber (2&ndash;2.5), Pearl (2.5&ndash;4.5)</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Calcite</td>
+                    <td><span class="val">9</span></td>
+                    <td>Calcite, Coral, Marble</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Fluorite</td>
+                    <td><span class="val">21</span></td>
+                    <td>Fluorite, Rhodochrosite</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Apatite</td>
+                    <td><span class="val">48</span></td>
+                    <td>Apatite, Sphene (5&ndash;5.5)</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Orthoclase Feldspar</td>
+                    <td><span class="val">72</span></td>
+                    <td>Feldspar, Tanzanite (6&ndash;6.5), Opal (5.5&ndash;6.5), Moonstone, Labradorite</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Quartz</td>
+                    <td><span class="val">100</span></td>
+                    <td>Quartz, Amethyst, Citrine, Tourmaline (7&ndash;7.5), Garnet (6.5&ndash;7.5)</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Topaz</td>
+                    <td><span class="val">200</span></td>
+                    <td>Topaz, Beryl (7.5&ndash;8), Emerald, Aquamarine, Spinel (8)</td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Corundum</td>
+                    <td><span class="val">400</span></td>
+                    <td>Ruby, Sapphire, Chrysoberyl (8.5)</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Diamond</td>
+                    <td><span class="val">1500</span></td>
+                    <td>Diamond</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>Directional Hardness</h4>
+            <p>Hardness is not always uniform across a crystal. Some minerals exhibit <strong>directional hardness</strong> (also called differential hardness), where scratch resistance varies depending on crystallographic direction. The classic example is <strong>kyanite</strong>: along the length of the crystal (parallel to the c-axis) it has a hardness of approximately <span class="val">4.5</span>, while across the width (perpendicular) it measures approximately <span class="val">7</span>. This extreme variation is diagnostic for kyanite identification.</p>
+            <p>Even <strong>diamond</strong> has directional hardness differences. The octahedral faces are harder than the cubic or dodecahedral faces. Diamond cutters exploit the softer directions to saw and polish diamond — it is the only material hard enough to cut itself, but only along the correct crystallographic orientations. The "grain" of a diamond must be understood before any cutting can begin.</p>
+
+            <div class="callout callout--warn">
+              <p class="callout__label">Important Distinction</p>
+              <p>Hardness and toughness are independent properties. Diamond is the hardest natural material but can cleave easily along its four octahedral planes. A well-placed blow can split a diamond in two. Conversely, nephrite jade has a hardness of only 6&ndash;6.5 but is extraordinarily tough due to its interlocking fibrous crystal structure. Never confuse resistance to scratching with resistance to breaking.</p>
+            </div>
+
+            <!-- Toughness -->
+            <h3 id="toughness">Toughness</h3>
+            <p>Toughness measures a gem's resistance to breaking, chipping, or fracturing under mechanical stress. While hardness governs whether a stone will scratch, toughness determines whether it will survive an impact. For jewelry applications, toughness is often more practically important than hardness — a gem in a ring must endure daily knocks and bumps.</p>
+            <p>Toughness depends on crystal structure, bonding, the presence or absence of cleavage planes, and internal characteristics like fractures or inclusions. Materials with interlocking or fibrous microstructures tend to be the toughest.</p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Toughness Rating</th>
+                    <th>Description</th>
+                    <th>Gem Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Exceptional</td>
+                    <td>Extremely resistant to breaking; virtually impossible to fracture with normal force</td>
+                    <td>Nephrite jade, Jadeite</td>
+                  </tr>
+                  <tr>
+                    <td>Excellent</td>
+                    <td>Very strong resistance; safe for all jewelry types</td>
+                    <td>Corundum (ruby/sapphire), Spinel</td>
+                  </tr>
+                  <tr>
+                    <td>Good</td>
+                    <td>Adequate for most jewelry; some care needed</td>
+                    <td>Quartz, Garnet, Chrysoberyl, Diamond</td>
+                  </tr>
+                  <tr>
+                    <td>Fair</td>
+                    <td>Moderate risk; directional weakness from cleavage</td>
+                    <td>Topaz (perfect basal cleavage), Peridot, Tanzanite</td>
+                  </tr>
+                  <tr>
+                    <td>Poor</td>
+                    <td>Highly susceptible to chipping or breaking; protective settings required</td>
+                    <td>Emerald (often heavily included), Opal (brittle, dehydration), Fluorite</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Toughness directly influences jewelry design decisions. A gem with poor toughness, such as tanzanite (<span class="val">6&ndash;6.5</span> hardness, one direction of perfect cleavage), should be set in protective bezels and reserved for earrings or pendants rather than daily-wear rings. Nephrite jade, despite its modest hardness, was historically used for weapons and tools precisely because of its unmatched toughness.</p>
+
+            <!-- Cleavage & Fracture -->
+            <h3 id="cleavage-fracture">Cleavage &amp; Fracture</h3>
+            <p><strong>Cleavage</strong> is the tendency of a crystalline material to break along flat planes that correspond to directions of weaker atomic bonding in the crystal lattice. Cleavage planes are always parallel to possible crystal faces and are described by their quality (perfect, good, distinct, poor, none) and their crystallographic direction.</p>
+
+            <h4>Cleavage Quality in Common Gems</h4>
+            <ul>
+              <li><strong>Perfect cleavage:</strong> Topaz (one direction, basal — {001}), Diamond (four directions, octahedral — {111}), Feldspar (two directions at nearly 90&deg;), Fluorite (four directions, octahedral)</li>
+              <li><strong>Good / Distinct cleavage:</strong> Spodumene (two directions — prismatic {110}), Kunzite, Kyanite, Peridot (two directions)</li>
+              <li><strong>Poor / None:</strong> Quartz, Garnet, Tourmaline, Spinel, Beryl — these gems fracture rather than cleave, making them generally tougher</li>
+            </ul>
+
+            <p><strong>Fracture</strong> describes how a gem breaks in directions other than cleavage. Fracture surfaces are irregular, unlike the smooth flat planes of cleavage.</p>
+            <ul>
+              <li><strong>Conchoidal:</strong> Smooth, curved, shell-like surfaces with concentric ridges. This is the most common fracture type in gems — seen in quartz, glass, obsidian, garnet, and most amorphous or poorly cleaving materials. The term comes from the Greek word for mussel shell.</li>
+              <li><strong>Uneven / Irregular:</strong> Rough, random surfaces (common in many minerals)</li>
+              <li><strong>Splintery:</strong> Fibrous, needle-like fragments (nephrite jade, some amphiboles)</li>
+              <li><strong>Granular:</strong> Breaks into small grains along crystal boundaries (some aggregate materials)</li>
+            </ul>
+
+            <div class="callout callout--tip">
+              <p class="callout__label">Diagnostic Tip</p>
+              <p>Cleavage presence or absence is a powerful identification tool. Garnet (no cleavage, conchoidal fracture) can be readily distinguished from topaz (perfect basal cleavage) even when both present in similar colors. Under the microscope, cleavage traces inside a stone appear as straight, flat internal features and are an important inclusion type for narrowing identification.</p>
+            </div>
+
+            <!-- Specific Gravity -->
+            <h3 id="specific-gravity">Specific Gravity</h3>
+            <p><strong>Specific gravity (SG)</strong> is the ratio of a gemstone's weight to the weight of an equal volume of water at 4&deg;C. It is a dimensionless number that expresses relative density. Because each gem species has a characteristic SG (or narrow SG range), it is one of the most reliable identification properties — especially for unmounted stones.</p>
+
+            <h4>Measurement Methods</h4>
+            <ul>
+              <li><strong>Hydrostatic weighing (Archimedes' principle):</strong> The gem is weighed in air, then immersed in water while suspended from the balance. The difference in weight equals the weight of water displaced. This is the standard laboratory method.</li>
+              <li><strong>Heavy liquids:</strong> A set of calibrated liquids with known SG values. If a gem floats in a liquid, its SG is lower; if it sinks, its SG is higher. Gems that remain suspended have the same SG as the liquid. Common liquids include methylene iodide (SG 3.32) and Clerici solution (up to SG 4.15).</li>
+            </ul>
+
+            <div class="callout callout--note">
+              <p class="callout__label">Formula</p>
+              <p><strong>SG = Weight in air &divide; (Weight in air &minus; Weight in water)</strong></p>
+              <p>Example: A sapphire weighs 3.50 ct in air and 2.62 ct in water. SG = 3.50 &divide; (3.50 &minus; 2.62) = 3.50 &divide; 0.88 = <span class="val">3.98</span> (consistent with corundum at 4.00).</p>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Material</th>
+                    <th>Specific Gravity</th>
+                    <th>Relative Feel</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Amber</td>
+                    <td><span class="val">1.08</span></td>
+                    <td>Very light — floats in saturated salt water</td>
+                  </tr>
+                  <tr>
+                    <td>Opal</td>
+                    <td><span class="val">2.15</span></td>
+                    <td>Light</td>
+                  </tr>
+                  <tr>
+                    <td>Quartz</td>
+                    <td><span class="val">2.66</span></td>
+                    <td>Medium</td>
+                  </tr>
+                  <tr>
+                    <td>Beryl (Emerald, Aquamarine)</td>
+                    <td><span class="val">2.72</span></td>
+                    <td>Medium</td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline</td>
+                    <td><span class="val">3.06</span></td>
+                    <td>Medium-heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Diamond</td>
+                    <td><span class="val">3.52</span></td>
+                    <td>Heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Topaz</td>
+                    <td><span class="val">3.53</span></td>
+                    <td>Heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Spinel</td>
+                    <td><span class="val">3.60</span></td>
+                    <td>Heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Corundum (Ruby, Sapphire)</td>
+                    <td><span class="val">4.00</span></td>
+                    <td>Very heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Garnet (range)</td>
+                    <td><span class="val">3.50 &ndash; 4.30</span></td>
+                    <td>Heavy to very heavy</td>
+                  </tr>
+                  <tr>
+                    <td>Zircon</td>
+                    <td><span class="val">4.69</span></td>
+                    <td>Very heavy</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>In practice, experienced gemologists develop a "heft" sense — the ability to estimate SG by simply bouncing a stone in the palm. A cubic zirconia (SG <span class="val">5.80</span>) feels noticeably heavier than a diamond (SG <span class="val">3.52</span>) of similar size, providing a quick screening test.</p>
+
+
+            <!-- ============================================================
+                 2. OPTICAL PROPERTIES
+                 ============================================================ -->
+            <h2 id="optical-properties">Optical Properties</h2>
+            <p>Optical properties arise from the interaction of light with a gem's internal crystal structure and chemical composition. They are measured using specialized instruments — primarily the refractometer, polariscope, and spectroscope — and form the backbone of professional gem identification. Optical data is typically more precise and diagnostic than physical data alone.</p>
+
+            <!-- Refractive Index -->
+            <h3 id="refractive-index">Refractive Index</h3>
+            <p>When light passes from air into a denser medium such as a gemstone, it slows down and bends at the surface. The <strong>refractive index (RI)</strong> quantifies this effect: it is the ratio of the speed of light in a vacuum to the speed of light in the gem material. RI is governed by <strong>Snell's Law</strong>: n<sub>1</sub> sin &theta;<sub>1</sub> = n<sub>2</sub> sin &theta;<sub>2</sub>.</p>
+            <p>RI is measured using a <strong>gemological refractometer</strong>, which employs a high-RI glass hemicylinder and a monochromatic sodium light source at <span class="val">589 nm</span> wavelength. The gem is placed on the hemicylinder with a contact liquid (typically methylene iodide, RI 1.81), and the boundary between light and dark on the scale gives the RI reading. The standard refractometer has an upper limit of <span class="val">1.81</span>; gems with higher RI (like diamond at 2.417) are "over the limits" and require alternative methods.</p>
+
+            <h4>Isotropic vs. Anisotropic</h4>
+            <ul>
+              <li><strong>Isotropic (singly refractive):</strong> Gems crystallizing in the cubic (isometric) system have the same RI in all directions. Light travels at one speed regardless of direction. Examples: Diamond (<span class="val">2.417</span>), Garnet (<span class="val">1.714&ndash;1.888</span> depending on species), Spinel (<span class="val">1.712&ndash;1.762</span>). Amorphous materials like glass and opal are also isotropic.</li>
+              <li><strong>Anisotropic (doubly refractive):</strong> All other crystal systems (tetragonal, hexagonal, trigonal, orthorhombic, monoclinic, triclinic) split a single ray of light into two polarized rays traveling at different speeds. This produces two RI readings on the refractometer. Examples: Corundum (<span class="val">1.762&ndash;1.770</span>), Quartz (<span class="val">1.544&ndash;1.553</span>), Tourmaline (<span class="val">1.624&ndash;1.644</span>).</li>
+            </ul>
+
+            <div class="callout callout--key">
+              <p class="callout__label">Key Concept</p>
+              <p>The refractive index is the single most important value for gem identification. A clean RI reading immediately narrows possibilities to a short list of candidate species. Combined with birefringence and optic character, RI data alone can identify most standard gemstones.</p>
+            </div>
+
+            <!-- Birefringence -->
+            <h3 id="birefringence">Birefringence</h3>
+            <p><strong>Birefringence (BR)</strong> is the numerical difference between the maximum and minimum refractive index values of a doubly refractive gem. It is a fixed property of each gem species and is obtained by subtracting the lower RI from the higher RI reading on the refractometer.</p>
+            <p>High birefringence produces a visible optical effect: <strong>doubling of back facet junctions</strong> when viewed through the stone with a loupe. This is particularly evident in zircon (BR <span class="val">0.059</span>) and peridot (BR <span class="val">0.036</span>), where the doubling is easily seen at 10x magnification. This single observation can be diagnostic.</p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Material</th>
+                    <th>RI Range</th>
+                    <th>Birefringence</th>
+                    <th>Doubling Visible?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Zircon</td>
+                    <td>1.925 &ndash; 1.984</td>
+                    <td><span class="val">0.059</span></td>
+                    <td>Very strong — easily seen with loupe</td>
+                  </tr>
+                  <tr>
+                    <td>Peridot</td>
+                    <td>1.654 &ndash; 1.690</td>
+                    <td><span class="val">0.036</span></td>
+                    <td>Clearly visible through table facet</td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline</td>
+                    <td>1.624 &ndash; 1.644</td>
+                    <td><span class="val">0.018</span></td>
+                    <td>Sometimes visible in larger stones</td>
+                  </tr>
+                  <tr>
+                    <td>Quartz</td>
+                    <td>1.544 &ndash; 1.553</td>
+                    <td><span class="val">0.009</span></td>
+                    <td>Not normally visible</td>
+                  </tr>
+                  <tr>
+                    <td>Corundum</td>
+                    <td>1.762 &ndash; 1.770</td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Not normally visible</td>
+                  </tr>
+                  <tr>
+                    <td>Topaz</td>
+                    <td>1.629 &ndash; 1.637</td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Not normally visible</td>
+                  </tr>
+                  <tr>
+                    <td>Beryl</td>
+                    <td>1.565 &ndash; 1.602</td>
+                    <td><span class="val">0.006</span></td>
+                    <td>Not normally visible</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4>Optic Character and Sign</h4>
+            <p>Doubly refractive gems are classified as either <strong>uniaxial</strong> (one optic axis — tetragonal, hexagonal, trigonal systems) or <strong>biaxial</strong> (two optic axes — orthorhombic, monoclinic, triclinic systems). Each is further designated as optically positive (+) or negative (&minus;), determined by whether the extraordinary ray or the intermediate RI value is greater or less than the other readings.</p>
+            <ul>
+              <li><strong>Uniaxial positive (+):</strong> Quartz, Zircon</li>
+              <li><strong>Uniaxial negative (&minus;):</strong> Corundum, Tourmaline, Beryl</li>
+              <li><strong>Biaxial positive (+):</strong> Topaz, Peridot, Chrysoberyl</li>
+              <li><strong>Biaxial negative (&minus;):</strong> Tanzanite, Spodumene (Kunzite)</li>
+            </ul>
+            <p>Optic character is determined using a <strong>polariscope</strong> and conoscope (interference figure), and combined with RI and birefringence, it pins down the crystal system and significantly narrows identification.</p>
+
+            <!-- Dispersion -->
+            <h3 id="dispersion">Dispersion</h3>
+            <p><strong>Dispersion</strong> is the splitting of white light into its component spectral colors as it passes through a gem. It is the physical phenomenon behind the "fire" seen in faceted stones. Technically, dispersion is measured as the difference in refractive index between red light (<span class="val">686.7 nm</span>, Fraunhofer B line) and violet light (<span class="val">430.8 nm</span>, Fraunhofer G line).</p>
+            <p>Higher dispersion values mean a wider spread of spectral colors and more potential fire. However, the amount of fire actually <em>visible</em> depends heavily on the cut (proportions, angles, facet arrangement) and body color — dark-colored stones may mask dispersion even if the value is high.</p>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Material</th>
+                    <th>Dispersion (B&ndash;G)</th>
+                    <th>Fire Impression</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Demantoid Garnet</td>
+                    <td><span class="val">0.057</span></td>
+                    <td>Exceptional — exceeds diamond</td>
+                  </tr>
+                  <tr>
+                    <td>Sphene (Titanite)</td>
+                    <td><span class="val">0.051</span></td>
+                    <td>Very strong; often visible even with body color</td>
+                  </tr>
+                  <tr>
+                    <td>Diamond</td>
+                    <td><span class="val">0.044</span></td>
+                    <td>Strong — the standard for fire in gems</td>
+                  </tr>
+                  <tr>
+                    <td>Zircon</td>
+                    <td><span class="val">0.039</span></td>
+                    <td>Good fire; enhanced by high RI</td>
+                  </tr>
+                  <tr>
+                    <td>Spinel</td>
+                    <td><span class="val">0.020</span></td>
+                    <td>Moderate</td>
+                  </tr>
+                  <tr>
+                    <td>Corundum</td>
+                    <td><span class="val">0.018</span></td>
+                    <td>Low — brilliance rather than fire</td>
+                  </tr>
+                  <tr>
+                    <td>Quartz</td>
+                    <td><span class="val">0.013</span></td>
+                    <td>Low — minimal fire visible</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Demantoid garnet and sphene are prized specifically for their extraordinary fire. A well-cut demantoid in good light can display more fire than a diamond. Synthetic materials like cubic zirconia (<span class="val">0.060</span>) and moissanite (<span class="val">0.104</span>) have very high dispersion, which is one visual cue used to distinguish them from diamond.</p>
+
+            <!-- Luster -->
+            <h3 id="luster">Luster</h3>
+            <p><strong>Luster</strong> describes the quality and intensity of light reflected from a gem's surface. It is related to the refractive index — higher RI generally produces more brilliant surface reflections. Luster is assessed visually and categorized by type.</p>
+
+            <ul>
+              <li><strong>Adamantine:</strong> An exceptionally bright, hard brilliance characteristic of gems with RI above approximately 1.9. Examples: Diamond (<span class="val">2.417</span>), Zircon (<span class="val">1.925&ndash;1.984</span>), Demantoid Garnet. The word comes from the Greek "adamas" (unconquerable), originally referring to diamond.</li>
+              <li><strong>Sub-adamantine:</strong> Between vitreous and adamantine. Examples: Sphene, some high-RI garnets.</li>
+              <li><strong>Vitreous:</strong> Glass-like reflections; the most common luster type in gemstones. Examples: Quartz, Corundum, Beryl, Tourmaline, Topaz, Spinel, most garnets.</li>
+              <li><strong>Waxy:</strong> A subdued, slightly greasy surface sheen. Examples: Turquoise, some jadeite, some opals.</li>
+              <li><strong>Pearly:</strong> A soft, iridescent surface resembling pearl nacre, caused by internal structural features near the surface. Examples: Moonstone (on cleavage surfaces), some feldspars.</li>
+              <li><strong>Silky:</strong> A fine, fibrous sheen caused by densely packed parallel needle-like inclusions or fibrous crystal habit. Examples: Tiger's eye, satin spar gypsum, some cat's eye gems.</li>
+              <li><strong>Metallic:</strong> A mirror-like, opaque, metal-like reflection. Examples: Hematite, Pyrite, Marcasite.</li>
+              <li><strong>Resinous:</strong> A warm, resin-like surface. Examples: Amber, some sphalerite.</li>
+            </ul>
+
+
+            <!-- ============================================================
+                 3. COLOR SCIENCE
+                 ============================================================ -->
+            <h2 id="color-science">Color Science</h2>
+            <p>Color is the most immediately apparent property of a gemstone, and for colored stones it is typically the primary determinant of value — accounting for <span class="val">50&ndash;70%</span> of price. Understanding how and why gems acquire their color is essential for both identification and evaluation.</p>
+
+            <!-- How Gems Get Color -->
+            <h3 id="color-origin">How Gems Get Color</h3>
+            <p>Gems are divided into two fundamental categories based on the origin of their color:</p>
+            <ul>
+              <li><strong>Idiochromatic ("self-colored"):</strong> The color-causing element is a fundamental component of the mineral's chemical formula. These gems are <em>always</em> the same color. Examples: Peridot (iron is integral to the olivine formula (Mg,Fe)<sub>2</sub>SiO<sub>4</sub>), Malachite (copper is part of Cu<sub>2</sub>CO<sub>3</sub>(OH)<sub>2</sub>), Almandine garnet (iron in Fe<sub>3</sub>Al<sub>2</sub>(SiO<sub>4</sub>)<sub>3</sub>), Turquoise (copper).</li>
+              <li><strong>Allochromatic ("other-colored"):</strong> The color comes from trace impurities that are not part of the ideal chemical formula. These gems can occur in many colors, or colorless. Examples: Corundum (pure Al<sub>2</sub>O<sub>3</sub> is colorless; Cr<sup>3+</sup> produces ruby, Fe<sup>2+</sup>+Ti<sup>4+</sup> produces blue sapphire, Fe<sup>3+</sup> produces yellow sapphire), Beryl (pure Be<sub>3</sub>Al<sub>2</sub>Si<sub>6</sub>O<sub>18</sub> is colorless; Cr produces emerald, Fe<sup>2+</sup> produces aquamarine, Mn produces morganite).</li>
+            </ul>
+
+            <!-- Color Mechanisms -->
+            <h3 id="color-mechanisms">Color Mechanisms</h3>
+            <p>The physics of gem color can be explained by four primary mechanisms. Each involves the selective absorption of certain wavelengths of visible light, so that the transmitted or reflected wavelengths produce the color we see.</p>
+
+            <div class="accordion">
+              <div class="accordion__item">
+                <button class="accordion__trigger" aria-expanded="false">
+                  Crystal Field Theory
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>When transition metal ions (Cr, Fe, V, Mn, Co, Cu, Ti) occupy sites in a crystal lattice, the surrounding atoms create an electric field that splits the energy levels of the metal ion's d-orbitals. Electrons can then absorb photons of specific energies (wavelengths) to jump between these split levels, and the remaining wavelengths pass through as the visible color.</p>
+                    <p>The same ion can produce different colors depending on the crystal structure (the "field strength"). Chromium (Cr<sup>3+</sup>) is the definitive example: in corundum (high crystal field strength), it absorbs yellow-green light and transmits <strong>red</strong> — producing ruby. In beryl (lower crystal field strength), the same Cr<sup>3+</sup> absorbs red-purple light and transmits <strong>green</strong> — producing emerald. This is why ruby and emerald, both colored by chromium, are completely different colors.</p>
+                    <p>Other examples: Vanadium (V<sup>3+</sup>) in corundum produces color-change sapphire. Iron (Fe<sup>2+</sup>) in beryl produces the blue of aquamarine. Manganese (Mn<sup>2+</sup>) in beryl produces the pink of morganite.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" aria-expanded="false">
+                  Charge Transfer
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Charge transfer involves the movement of an electron from one ion to an adjacent ion of a different element. This process absorbs much higher energy than crystal field transitions and produces far more intense color — often 100 to 1000 times stronger absorption per unit of chromophore.</p>
+                    <p>The classic example is <strong>blue sapphire</strong>: iron (Fe<sup>2+</sup>) and titanium (Ti<sup>4+</sup>) occupy adjacent sites in the corundum lattice. An electron transfers from Fe<sup>2+</sup> to Ti<sup>4+</sup>, temporarily creating Fe<sup>3+</sup> and Ti<sup>3+</sup>. This intervalence charge transfer absorbs red, orange, and yellow light, transmitting the deep blue we see. Only tiny concentrations of Fe and Ti (hundredths of a percent) are needed because charge transfer is so efficient.</p>
+                    <p>Other examples: Fe<sup>2+</sup>&rarr;Fe<sup>3+</sup> charge transfer causes the deep blue-green in some tourmalines and the blue of aquamarine (complementing crystal field absorption).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" aria-expanded="false">
+                  Color Centers
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Color centers are localized defects in the crystal lattice that trap electrons or electron holes. These trapped charges absorb specific wavelengths of light, producing color. Color centers can be created naturally by exposure to radioactive minerals in the earth, or artificially by irradiation in a laboratory.</p>
+                    <p><strong>Smoky quartz:</strong> Natural gamma radiation from surrounding rocks displaces an electron from a silicon-oxygen bond near an aluminum impurity, creating a trapped hole that absorbs light and produces the brown to gray-brown color.</p>
+                    <p><strong>Blue topaz:</strong> Natural blue topaz is extremely rare. Virtually all blue topaz on the market is created by irradiating colorless topaz (using neutrons, electrons, or gamma rays) to create color centers, followed by heat treatment to adjust the shade from sky blue to London blue.</p>
+                    <p><strong>Maxixe-type beryl:</strong> A deep blue beryl colored by irradiation-induced color centers that fade on exposure to light — an important identification concern.</p>
+                    <p>Color centers are important in gemology because they can be unstable. Some fade with prolonged exposure to light or heat, which is a practical concern for certain gem treatments.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" aria-expanded="false">
+                  Band Theory (Diamonds)
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Band theory describes color in terms of the electronic band structure of a crystal — the continuum of energy levels available to electrons. In most gems, individual ions create discrete absorption. In diamond, however, impurities and defects modify the band structure itself.</p>
+                    <p><strong>Yellow diamonds (Type Ia/Ib):</strong> Nitrogen atoms substitute for carbon in the diamond lattice. In Type Ib diamonds, isolated nitrogen atoms absorb blue light, producing intense yellow ("canary"). In Type Ia, nitrogen exists in aggregates (pairs or larger clusters) with weaker absorption, producing cape yellow.</p>
+                    <p><strong>Blue diamonds (Type IIb):</strong> Boron atoms substitute for carbon. Boron is an electron acceptor that creates an energy level in the band gap, absorbing red and infrared light and producing blue color. These diamonds are also electrically semiconducting — a unique property among gems.</p>
+                    <p><strong>Pink/Red diamonds:</strong> These exceptionally rare colors are believed to result from plastic deformation of the crystal lattice during geological history. The deformation creates a broad absorption band centered around 550 nm (green light absorption), producing pink. The exact defect remains a topic of active research.</p>
+                    <p><strong>Green diamonds:</strong> Natural green color results from radiation exposure (alpha particles from uranium/thorium) over geological time, creating color centers near the surface. The color is often confined to a thin "skin."</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- The 4 Cs — Color -->
+            <h3 id="color-grading">The 4 Cs — Color</h3>
+            <p>Gemological color description is standardized using three independent dimensions:</p>
+            <ul>
+              <li><strong>Hue:</strong> The spectral color position — the fundamental color name. The gemological hue wheel includes: red, orangy-red, orange, yellowish-orange, yellow, yellowish-green, green, bluish-green, blue, violetish-blue, violet, purple, reddish-purple, and red-purple. Most gems are described with a primary and secondary (modifier) hue.</li>
+              <li><strong>Tone:</strong> The relative lightness or darkness of the color on a scale from very light to very dark. GIA uses a seven-step tone scale: very light, light, medium-light, medium, medium-dark, dark, very dark. The most valued gems typically fall in the <span class="val">medium</span> to <span class="val">medium-dark</span> range.</li>
+              <li><strong>Saturation:</strong> The intensity, purity, or vividness of the color — from grayish or brownish (low saturation) to vivid or strong (high saturation). Saturation is the dimension that most directly impacts value in colored stones. GIA uses six saturation levels: grayish/brownish, slightly grayish/brownish, very slightly grayish/brownish, moderately strong, strong, vivid.</li>
+            </ul>
+            <p>The GIA colored stone grading system combines all three dimensions. The ideal for many gems is a pure hue, medium to medium-dark tone, and vivid (strong) saturation. For example, the most valued ruby is a slightly purplish-red hue, medium-dark tone, and vivid saturation — often called "pigeon blood" red.</p>
+
+            <div class="callout callout--note">
+              <p class="callout__label">Color vs. Value</p>
+              <p>For colored gemstones, color is typically <span class="val">50&ndash;70%</span> of the value determination. For colorless diamonds, value works in reverse — the GIA D&ndash;Z scale grades the <em>absence</em> of color, where D (colorless) is most valued and Z (light yellow/brown) is least valued. Beyond Z, diamonds enter the "fancy color" range where intense, saturated colors again command premium prices.</p>
+            </div>
+
+
+            <!-- ============================================================
+                 4. OPTICAL PHENOMENA
+                 ============================================================ -->
+            <h2 id="optical-phenomena">Optical Phenomena</h2>
+            <p>Optical phenomena are special visual effects caused by a gem's internal structure interacting with light in distinctive ways. These effects — sometimes called "phenomenal" properties — are distinct from ordinary color and often dramatically increase a gem's rarity and value. Each phenomenon has a specific physical cause, and understanding the mechanism helps both in identification and in cutting stones to best display the effect.</p>
+
+            <!-- Asterism -->
+            <h3 id="asterism">Asterism</h3>
+            <p><strong>Asterism</strong> is the display of a star-shaped pattern of light on the surface of a cabochon-cut gem. It is caused by reflections from multiple sets of densely packed, parallel needle-like inclusions oriented along crystallographic directions.</p>
+            <p>In <strong>star sapphires and star rubies</strong>, the effect is created by extremely fine rutile (TiO<sub>2</sub>) needles — called "silk" — oriented along three crystallographic directions at 60&deg; to one another (reflecting the hexagonal symmetry of corundum). Each set of needles produces one band of reflected light, and the three bands intersect to form a <strong>six-rayed star</strong>. The star moves across the surface as the light source or viewing angle changes.</p>
+            <p>Rare specimens display a <strong>twelve-rayed star</strong>, caused by an additional set of needles (such as hematite platelets intersecting rutile silk). Star gems must be cut en cabochon with the base of the star centered on the dome and the c-axis perpendicular to the base for optimal display. The quality of a star is judged on sharpness, centering, completeness of all rays, and the quality of the body color.</p>
+            <p>Other star gems include star garnet (almandine — sometimes 4-rayed, sometimes 6-rayed), star diopside (4-rayed), star rose quartz (6-rayed, but typically diffuse), and star moonstone (4-rayed, rare).</p>
+
+            <!-- Chatoyancy -->
+            <h3 id="chatoyancy">Chatoyancy</h3>
+            <p><strong>Chatoyancy</strong> (cat's eye effect) is a single bright band of light that sweeps across the surface of a cabochon-cut gem, resembling the slit pupil of a cat's eye. It is caused by reflection from a single set of densely packed parallel fibrous or needle-like inclusions (or structural tubes).</p>
+            <p>The most valued cat's eye gem is <strong>chrysoberyl cat's eye</strong> (often referred to simply as "Cat's Eye" in the trade — no other species may use the unqualified term). Fine chrysoberyl cat's eye displays a sharp, well-defined eye on a honey-yellow to greenish-yellow body color with a distinctive "milk and honey" effect: when a single point light source is used, one side of the stone appears milky while the other side shows a rich golden color.</p>
+            <p>Chatoyancy also occurs in tourmaline, quartz (tiger's eye is a special case of fibrous chatoyancy), sillimanite, apatite, and other fibrous gems. As with asterism, the stone must be cut en cabochon with the needles oriented perpendicular to the length of the stone and the dome calibrated to display the eye properly.</p>
+
+            <!-- Adularescence -->
+            <h3 id="adularescence">Adularescence</h3>
+            <p><strong>Adularescence</strong> is the billowy, floating, blue-white to silvery-blue light seen inside moonstone. It is caused by <strong>thin-film interference</strong>: alternating layers of two feldspar minerals — orthoclase and albite — that exsolved during cooling. These layers are extremely thin (on the order of visible light wavelengths), and light reflecting from the interfaces between layers interferes constructively and destructively, creating the characteristic glow.</p>
+            <p>The thinner the layers, the bluer the adularescence. Thicker layers produce a more white or silvery sheen. The finest moonstones from Sri Lanka display a vivid blue adularescence on a near-transparent, colorless body — these are the most valued. Moonstone must be cut en cabochon to display the effect and oriented so the layers are parallel to the surface.</p>
+
+            <!-- Labradorescence -->
+            <h3 id="labradorescence">Labradorescence</h3>
+            <p><strong>Labradorescence</strong> is the broad, vivid flash of spectral colors seen in labradorite feldspar. Unlike adularescence (which produces a diffuse glow), labradorescence produces bright, sharply defined color patches — typically blue and green, but fine specimens show the full spectrum including gold, orange, red, and violet.</p>
+            <p>The phenomenon is caused by <strong>lamellar twinning</strong> on a submicroscopic scale. Thin, regularly spaced twin lamellae act as diffraction gratings, scattering and interfering with light. The spacing of the lamellae determines which colors are produced. Spectrolite, a trade name for Finnish labradorite, is prized for displaying the full spectral range with strong saturation.</p>
+
+            <!-- Play of Color -->
+            <h3 id="play-of-color">Play of Color</h3>
+            <p><strong>Play of color</strong> is the shifting display of spectral colors seen in precious opal, and it is the defining characteristic that separates precious opal from common opal. The effect is caused by <strong>diffraction</strong> of light from an orderly three-dimensional array of silica spheres (SiO<sub>2</sub>&middot;nH<sub>2</sub>O) within the opal structure.</p>
+            <p>The silica spheres in precious opal are uniform in size (approximately <span class="val">150&ndash;400 nm</span> in diameter) and packed in regular arrangements. White light entering the opal diffracts off the planes of spheres, and the wavelength (color) diffracted depends on the sphere size and the angle of observation:</p>
+            <ul>
+              <li>Smaller spheres (~150 nm) diffract shorter wavelengths: <strong>violet and blue</strong></li>
+              <li>Medium spheres (~200&ndash;250 nm) diffract: <strong>green and yellow</strong></li>
+              <li>Larger spheres (~300&ndash;400 nm) diffract longer wavelengths: <strong>orange and red</strong></li>
+            </ul>
+            <p>Because red requires the largest, most regularly arranged spheres, opals displaying red play of color are the rarest and most valuable. Black opal (dark body tone with vivid play of color) from Lightning Ridge, Australia, is among the most valued of all gemstones per carat.</p>
+
+            <!-- Aventurescence -->
+            <h3 id="aventurescence">Aventurescence</h3>
+            <p><strong>Aventurescence</strong> is a spangled, metallic glitter effect caused by flat, reflective mineral inclusions scattered throughout a gem. Light reflecting from these tiny platy crystals creates a sparkling, shimmering appearance.</p>
+            <p>In <strong>aventurine quartz</strong>, the effect comes from tiny platelets of green fuchsite mica (the green variety) or red-brown iron oxide/goethite (the reddish-brown variety). In <strong>sunstone</strong> (aventurine feldspar), the glitter is caused by flat copper platelets (Oregon sunstone) or hematite/goethite platelets (Indian sunstone) that create flashes of metallic schiller.</p>
+            <p>Oregon sunstone is particularly noteworthy because the copper inclusions can be large enough to create distinct red to green color-zoned regions in addition to the aventurescent schiller, making it a unique collector's gem.</p>
+
+            <!-- Color Change -->
+            <h3 id="color-change">Color Change</h3>
+            <p><strong>Color change</strong> is the phenomenon where a gem appears to be a distinctly different color under different light sources — typically comparing daylight (or fluorescent light) to incandescent (tungsten) light. This is not merely a shift in shade but a genuine change in perceived hue.</p>
+            <p>The mechanism involves a specific absorption spectrum with a narrow <strong>transmission window</strong> balanced between two absorption bands. <strong>Alexandrite</strong> (chromium-bearing chrysoberyl) is the definitive example: it transmits both red and green light approximately equally. Daylight, which is richer in blue-green wavelengths, emphasizes the green transmission — the stone appears green. Incandescent light, richer in red wavelengths, emphasizes the red transmission — the stone appears red. The human eye's color perception completes the effect.</p>
+            <p>Quality of color change is judged on: (1) the strength and completeness of the change, (2) the attractiveness of both colors, and (3) the hue purity of each. Fine alexandrite showing vivid green to vivid red is among the rarest and most expensive gems. Color change also occurs in some sapphires, garnets (pyrope-spessartine hybrids), tourmaline, and diaspore (Zultanite).</p>
+
+
+            <!-- ============================================================
+                 5. LUMINESCENCE
+                 ============================================================ -->
+            <h2 id="luminescence">Luminescence</h2>
+            <p>Luminescence is the emission of visible light by a gem when excited by an energy source other than heat (at normal temperatures). In gemological practice, the most important form is photoluminescence — specifically fluorescence and phosphorescence under ultraviolet (UV) light. Luminescence behavior provides diagnostic clues and can affect a gem's perceived appearance and market value.</p>
+
+            <!-- Fluorescence -->
+            <h3 id="fluorescence">Fluorescence</h3>
+            <p><strong>Fluorescence</strong> is the emission of visible light while a gem is being exposed to ultraviolet radiation. The emission ceases immediately (or nearly so) when the UV source is removed. Gemologists test with both long-wave UV (<span class="val">365 nm</span>) and short-wave UV (<span class="val">254 nm</span>), as different gems respond differently to each wavelength.</p>
+
+            <h4>Diagnostic Fluorescence Reactions</h4>
+            <ul>
+              <li><strong>Diamond:</strong> Approximately <span class="val">25&ndash;35%</span> of natural diamonds fluoresce under long-wave UV, most commonly <strong>blue</strong> (due to nitrogen-related defects). Intensity ranges from faint to very strong. Short-wave fluorescence is usually weaker or absent.</li>
+              <li><strong>Ruby:</strong> Strong <strong>red</strong> fluorescence under both LW and SW UV (from Cr<sup>3+</sup>). Burmese rubies often show the strongest fluorescence, which actually enhances their apparent color in daylight (which contains UV). Thai/Cambodian rubies with high iron content show weaker fluorescence.</li>
+              <li><strong>Emerald:</strong> Natural emeralds are usually <strong>inert</strong> to weak. Some Colombian emeralds (low iron content) show weak red fluorescence from chromium. Synthetic emeralds (hydrothermal and flux) often fluoresce more strongly red, which can be a useful diagnostic separation.</li>
+              <li><strong>Natural pearl:</strong> Usually <strong>inert</strong> to weak yellowish. Some cultured pearls fluoresce greenish-yellow, which can help distinguish them from naturals.</li>
+              <li><strong>Kunzite (Spodumene):</strong> Moderate to strong <strong>orange</strong> fluorescence under LW UV; weaker or different under SW.</li>
+              <li><strong>Willemite:</strong> Brilliant <strong>green</strong> fluorescence — one of the strongest fluorescent responses of any mineral.</li>
+            </ul>
+
+            <!-- Phosphorescence -->
+            <h3 id="phosphorescence">Phosphorescence</h3>
+            <p><strong>Phosphorescence</strong> is the continued emission of light after the UV excitation source has been removed. While fluorescence stops immediately, phosphorescent gems continue to glow for seconds, minutes, or (in rare cases) hours after the UV lamp is turned off.</p>
+            <p>Phosphorescence is relatively uncommon in gemstones. Notable examples include some <strong>diamonds</strong> (particularly Type IIb blue diamonds, which may phosphoresce blue or red), <strong>kunzite</strong> (can glow for many seconds after SW UV exposure), and some synthetic spinels. The presence, color, and duration of phosphorescence can be diagnostically useful — for example, distinguishing certain diamond types or detecting some synthetic materials.</p>
+
+            <!-- Thermoluminescence -->
+            <h3 id="thermoluminescence">Thermoluminescence</h3>
+            <p><strong>Thermoluminescence</strong> is the emission of light when a gem is heated (at temperatures below incandescence). It differs from incandescence in that the energy was stored in the crystal lattice from previous radiation exposure and is released as light upon heating. Once emitted, the thermoluminescence cannot be repeated unless the material is re-irradiated.</p>
+            <p>Thermoluminescence has limited direct application in standard gem identification but is important in: (1) archaeological and geological dating (measuring accumulated radiation dose to determine how long since a material was last heated), (2) detecting irradiation treatment in some gems, and (3) occasionally distinguishing natural from treated color in specific gem varieties.</p>
+
+            <div class="callout callout--warn">
+              <p class="callout__label">Fluorescence &amp; Diamond Value</p>
+              <p>Strong blue fluorescence in diamonds can cause an "oily," hazy, or milky appearance in ambient lighting conditions — particularly in the D&ndash;F color range — which can reduce value by <span class="val">10&ndash;15%</span> in the trade. However, faint to medium blue fluorescence can actually benefit lower-color diamonds (I&ndash;M range) by counteracting yellowish body color, making them appear whiter face-up. GIA diamond grading reports include a fluorescence grade (None, Faint, Medium, Strong, Very Strong) and fluorescence color as standard fields.</p>
+            </div>
+
+            <!-- Page Navigation -->
+            <div class="page-nav">
+              <a href="fundamentals.html" class="page-nav__link">
+                <span class="page-nav__label">&larr; Previous</span>
+                <span class="page-nav__title">Fundamentals</span>
+              </a>
+              <a href="identification.html" class="page-nav__link page-nav__link--next">
+                <span class="page-nav__label">Next &rarr;</span>
+                <span class="page-nav__title">Identification</span>
+              </a>
+            </div>
+
+          </div><!-- /.prose -->
+
+          <!-- Table of Contents Sidebar -->
+          <aside class="toc">
+            <p class="toc__title">On This Page</p>
+            <ul class="toc__list">
+              <li><a href="#physical-properties">Physical Properties</a></li>
+              <li><a href="#hardness">Hardness</a></li>
+              <li><a href="#toughness">Toughness</a></li>
+              <li><a href="#cleavage-fracture">Cleavage &amp; Fracture</a></li>
+              <li><a href="#specific-gravity">Specific Gravity</a></li>
+              <li><a href="#optical-properties">Optical Properties</a></li>
+              <li><a href="#refractive-index">Refractive Index</a></li>
+              <li><a href="#birefringence">Birefringence</a></li>
+              <li><a href="#dispersion">Dispersion</a></li>
+              <li><a href="#luster">Luster</a></li>
+              <li><a href="#color-science">Color Science</a></li>
+              <li><a href="#color-origin">How Gems Get Color</a></li>
+              <li><a href="#color-mechanisms">Color Mechanisms</a></li>
+              <li><a href="#color-grading">The 4 Cs — Color</a></li>
+              <li><a href="#optical-phenomena">Optical Phenomena</a></li>
+              <li><a href="#luminescence">Luminescence</a></li>
+            </ul>
+          </aside>
+
+        </div><!-- /.content-grid -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+</body>
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentals — GemLens</title>
+  <meta name="description" content="Comprehensive introduction to gemology fundamentals: crystallography, crystal systems, chemical composition, geological formation, and the distinction between natural, treated, and synthetic gemstones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Fundamentals</span>
+        </nav>
+        <span class="chip">Chapter 1</span>
+        <h1 class="display-medium">Fundamentals of Gemology</h1>
+        <p class="body-large">The scientific foundations every gemologist must master: crystallography, mineral chemistry, geological formation processes, and the critical distinctions between natural, treated, and synthetic gemstones.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-grid content-grid--with-toc">
+          <div class="prose">
+
+            <!-- ============================================= -->
+            <!-- SECTION 1: WHAT IS GEMOLOGY                   -->
+            <!-- ============================================= -->
+            <h2 id="what-is-gemology" class="reveal">What Is Gemology</h2>
+
+            <div class="reveal">
+              <p>Gemology is the scientific study of gemstones&mdash;natural, treated, and synthetic materials used in jewelry and ornamental arts. It is a branch of mineralogy that applies principles from crystallography, chemistry, optics, and geology to the identification, evaluation, and classification of gem materials. A trained gemologist combines laboratory measurement with informed visual assessment, systematically narrowing possibilities until a conclusive identification is reached.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Scope of the Discipline</h3>
+              <p>Gemology is traditionally divided into three overlapping areas of study:</p>
+              <ul>
+                <li><strong>Descriptive gemology</strong> focuses on cataloging gem species and varieties by their physical and optical properties&mdash;refractive index, specific gravity, hardness, crystal system, absorption spectrum, and characteristic inclusions. This is the taxonomic backbone of the science.</li>
+                <li><strong>Determinative gemology</strong> is the practical discipline of identification. It applies instrument-based techniques (refractometer, spectroscope, polariscope, dichroscope, microscope) along with observational skills to determine what a gemstone is, whether it has been treated, and whether it is natural or synthetic.</li>
+                <li><strong>Applied gemology</strong> encompasses grading, valuation, treatment disclosure, and the commercial aspects of the gem trade. This includes diamond grading (the 4Cs system), colored stone quality assessment, and origin determination.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>A Brief History</h3>
+              <p>While humans have valued gemstones for millennia, gemology as a rigorous scientific discipline is relatively modern. The systematic study of gems accelerated in the 18th and 19th centuries alongside advances in crystallography and optical mineralogy. The founding of the Gemological Institute of America (GIA) in <span class="val">1931</span> by Robert M. Shipley marked a turning point: GIA developed standardized grading systems, introduced the now-universal 4Cs framework for diamond quality assessment, and established the Graduate Gemologist (G.G.) diploma as the industry benchmark. Other institutions&mdash;including Gem-A (the Gemmological Association of Great Britain, founded 1908), the Swiss Gemmological Institute (SSEF), and the Gemological Association of All Japan (GAAJ)&mdash;have contributed research, grading standards, and advanced detection methods for treatments and synthetics that form the modern knowledge base.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>The Three Attributes of a Gemstone</h3>
+              <p>Not every mineral qualifies as a gemstone. The traditional criteria require that a gem material possess three attributes simultaneously: beauty, durability, and rarity. These are not subjective platitudes&mdash;each has specific technical meaning.</p>
+
+              <div class="two-col">
+                <div class="info-block">
+                  <p class="title-small">Beauty</p>
+                  <p>In gemological terms, beauty encompasses the optical properties that make a stone visually compelling. This includes color (hue, saturation, and tone), transparency, luster (the quality of surface-reflected light), brilliance (internally reflected light returning to the eye), dispersion (spectral splitting of white light, i.e., "fire"), and special optical phenomena such as asterism, chatoyancy, adularescence, and play of color. A material may be scientifically interesting but gemologically irrelevant if it lacks visual appeal when fashioned.</p>
+                </div>
+                <div class="info-block">
+                  <p class="title-small">Durability</p>
+                  <p>A gemstone must withstand the physical stresses of being worn in jewelry. Durability is the composite of three factors: <strong>hardness</strong> (resistance to scratching, measured on the Mohs scale), <strong>toughness</strong> (resistance to chipping and breaking, which depends on crystal structure and the presence of cleavage planes), and <strong>stability</strong> (resistance to chemical alteration, heat, and light exposure). Diamond is the hardest natural material (Mohs 10) but has four directions of perfect octahedral cleavage. Jade (nephrite), at only Mohs 6&ndash;6.5, is among the toughest gem materials due to its interlocking fibrous crystal structure.</p>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <p class="title-small">Rarity</p>
+                <p>Rarity drives value but operates on a spectrum. Quartz is one of the most abundant minerals on Earth, yet fine gem-quality amethyst, ametrine, and rutilated quartz command meaningful prices. At the other extreme, painite was once cited by the Guinness Book of World Records as the rarest mineral (fewer than a dozen crystals were known when first classified). Rarity can refer to the species itself, to gem-quality examples of a common mineral, to a specific color variety (e.g., Padparadscha sapphire), or to material from a particular locality (e.g., Kashmir sapphire, Burmese ruby). Market perception of rarity is also influenced by supply control and marketing.</p>
+              </div>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Note</p>
+              <p>Some gem materials that lack traditional "beauty" in the optical sense&mdash;such as fossils, meteorites, or heavily included stones&mdash;are valued for their rarity and scientific significance. The three-attribute framework is a useful guideline, not an absolute rule.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 2: CRYSTALLOGRAPHY                    -->
+            <!-- ============================================= -->
+            <h2 id="crystallography" class="reveal">Crystallography</h2>
+
+            <div class="reveal">
+              <p>Crystallography is the study of the internal atomic arrangement of solid materials. For gemologists, crystal structure determines virtually every measurable property of a stone&mdash;its optical behavior (isotropic vs. anisotropic), cleavage directions, hardness variation with orientation, crystal habit, twinning patterns, and even how it responds to polarized light. Mastery of basic crystallography is essential for understanding why gems behave the way they do under testing instruments.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Crystalline vs. Amorphous Materials</h3>
+              <p>A <strong>crystalline</strong> material has atoms arranged in a regular, repeating three-dimensional lattice. This periodicity extends in all directions and gives rise to flat crystal faces, predictable cleavage, and anisotropic optical properties (in most crystal systems). The vast majority of gemstones&mdash;diamond, corundum, beryl, quartz, garnet, tourmaline, topaz&mdash;are crystalline.</p>
+              <p>An <strong>amorphous</strong> material lacks long-range atomic order. Opal is the best-known amorphous gem; it is a hydrated form of silica (SiO<sub>2</sub>&middot;nH<sub>2</sub>O) with a disordered structure at the molecular scale, though precious opal does contain orderly arrays of silica spheres that diffract light to produce play of color. Natural glass (obsidian), amber (fossilized tree resin), and moldavite (a tektite glass) are also amorphous. Amorphous gem materials are isotropic&mdash;they show no double refraction and remain dark between crossed polars on a polariscope (with the important caveat that strain birefringence can cause anomalous brightening).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>The Seven Crystal Systems</h3>
+              <p>All crystalline substances belong to one of seven crystal systems, defined by the relative lengths of their crystallographic axes and the angles between them. Gemologists must know these systems because they determine whether a gem is singly refractive (isotropic) or doubly refractive (anisotropic), the character of the optic figure, and the number of refractive index readings observable.</p>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>System</th>
+                    <th>Axes</th>
+                    <th>Angles</th>
+                    <th>Example Gems</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Cubic (Isometric)</strong></td>
+                    <td>a = b = c</td>
+                    <td>All 90&deg;</td>
+                    <td>Diamond, garnet, spinel</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Tetragonal</strong></td>
+                    <td>a = b &ne; c</td>
+                    <td>All 90&deg;</td>
+                    <td>Zircon, idocrase (vesuvianite)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hexagonal</strong></td>
+                    <td>a = b &ne; c</td>
+                    <td>90&deg; / 90&deg; / 120&deg;</td>
+                    <td>Beryl (emerald, aquamarine), apatite</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Trigonal</strong></td>
+                    <td>a = b &ne; c</td>
+                    <td>90&deg; / 90&deg; / 120&deg;</td>
+                    <td>Corundum (ruby, sapphire), tourmaline, quartz</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Orthorhombic</strong></td>
+                    <td>a &ne; b &ne; c</td>
+                    <td>All 90&deg;</td>
+                    <td>Topaz, peridot (olivine), tanzanite (zoisite)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monoclinic</strong></td>
+                    <td>a &ne; b &ne; c</td>
+                    <td>Two 90&deg;, one &ne; 90&deg;</td>
+                    <td>Feldspar (moonstone, orthoclase), nephrite jade, spodumene (kunzite)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Triclinic</strong></td>
+                    <td>a &ne; b &ne; c</td>
+                    <td>None 90&deg;</td>
+                    <td>Feldspar (labradorite, sunstone), turquoise, kyanite</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>Only the cubic system produces singly refractive (isotropic) gems. All other systems are doubly refractive (anisotropic). The tetragonal, hexagonal, and trigonal systems are uniaxial (one optic axis, two RI readings: omega and epsilon). The orthorhombic, monoclinic, and triclinic systems are biaxial (two optic axes, three RI readings: alpha, beta, and gamma).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Crystal Habits</h3>
+              <p>Crystal habit describes the characteristic external shape in which a mineral tends to grow. Habit is determined by internal crystal structure and the conditions under which the crystal formed. Recognizing habits helps gemologists identify rough material before it is fashioned.</p>
+              <ul>
+                <li><strong>Prismatic:</strong> Elongated crystals with well-developed prism faces. Tourmaline commonly forms long, striated prismatic crystals with a characteristic rounded triangular cross-section. Beryl forms hexagonal prisms that can reach enormous sizes (crystals over 5 meters have been recorded).</li>
+                <li><strong>Tabular:</strong> Flat, plate-like crystals where two parallel faces dominate. Feldspar frequently forms tabular crystals. Ruby crystals from Mogok, Myanmar often show a tabular hexagonal habit.</li>
+                <li><strong>Acicular:</strong> Needle-like crystals, extremely thin and elongated. Rutile inclusions in quartz ("rutilated quartz") are a classic example. Actinolite needles within quartz or other hosts are another common occurrence.</li>
+                <li><strong>Massive:</strong> Material that lacks distinct crystal faces entirely, growing as solid, shapeless masses. Jadeite and nephrite jade, turquoise, lapis lazuli, and chalcedony (cryptocrystalline quartz) typically occur in massive form. Massive habit does not mean amorphous&mdash;the material is crystalline at the atomic level but individual crystals are too small to develop visible faces.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Twinning</h3>
+              <p>Twinning occurs when two or more crystals of the same mineral share lattice points in a symmetrical, non-parallel orientation. It is extremely common in gem minerals and serves as an important identification feature under magnification.</p>
+              <ul>
+                <li><strong>Contact twins:</strong> Two crystal halves share a composition plane. Spinel frequently forms contact twins called "spinel law" twins&mdash;flattened octahedral crystals that appear triangular in outline (macles). These are so diagnostic that their presence strongly suggests spinel identification.</li>
+                <li><strong>Penetration twins:</strong> Two crystals appear to grow through each other. Fluorite and staurolite are classic examples. Cross-shaped staurolite penetration twins are well known as "fairy crosses."</li>
+                <li><strong>Polysynthetic twinning:</strong> Repeated, parallel twinning planes produce fine lamellar (layered) structures visible under magnification. This type of twinning is critically important in gemology. Corundum (ruby and sapphire) characteristically shows lamellar twinning as fine, straight parallel lines when viewed under immersion or with a microscope&mdash;these are one of the most diagnostic inclusion features for identifying natural corundum. Polysynthetic twinning in plagioclase feldspar (labradorite) contributes to the lamellar interference that produces labradorescence. In calcite, polysynthetic twins can be induced by pressure and serve as a structural weakness.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Polymorphism</h3>
+              <p>Polymorphism occurs when a single chemical composition can crystallize in more than one crystal structure. Each structural variant is called a <strong>polymorph</strong>, and polymorphs of the same compound can have radically different physical properties.</p>
+              <p>The most famous example is carbon: diamond (cubic system, sp<sup>3</sup> bonding, Mohs 10, RI 2.417) and graphite (hexagonal system, sp<sup>2</sup> bonding, Mohs 1&ndash;2, opaque) are both pure carbon. The difference is entirely structural&mdash;diamond's tetrahedral bonding network versus graphite's weakly bonded planar sheets.</p>
+              <p>Calcium carbonate (CaCO<sub>3</sub>) provides another key example: calcite (trigonal, RI 1.486&ndash;1.658, extremely high birefringence) and aragonite (orthorhombic, RI 1.530&ndash;1.685). Aragonite is the principal mineral component of pearl nacre and is metastable under surface conditions, slowly converting to calcite over geological time. This has practical implications for pearl durability and conservation.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 3: CHEMICAL COMPOSITION               -->
+            <!-- ============================================= -->
+            <h2 id="chemical-composition" class="reveal">Chemical Composition</h2>
+
+            <div class="reveal">
+              <p>Every gemstone has a defined chemical composition that, combined with its crystal structure, determines its identity as a mineral species. Gemologists must understand mineral chemistry because it explains color origins, property ranges within solid-solution series, and why certain treatments are possible. The major chemical groups represented in gemology are the silicates, oxides, carbonates, and native elements.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Major Mineral Groups</h3>
+            </div>
+
+            <div class="accordion reveal">
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Silicates &mdash; the largest group
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Silicates account for the majority of gem minerals. They are built on the SiO<sub>4</sub> tetrahedron&mdash;one silicon atom bonded to four oxygen atoms&mdash;and are classified by how these tetrahedra link together:</p>
+                    <ul>
+                      <li><strong>Nesosilicates (isolated tetrahedra):</strong> Each SiO<sub>4</sub> unit is independent, bonded to other cations rather than sharing oxygen atoms with adjacent tetrahedra. This group includes garnet (e.g., pyrope Mg<sub>3</sub>Al<sub>2</sub>(SiO<sub>4</sub>)<sub>3</sub>), olivine/peridot (Mg,Fe)<sub>2</sub>SiO<sub>4</sub>, zircon (ZrSiO<sub>4</sub>), and topaz (Al<sub>2</sub>SiO<sub>4</sub>(F,OH)<sub>2</sub>). Nesosilicates tend to have relatively high hardness and specific gravity due to efficient atomic packing.</li>
+                      <li><strong>Cyclosilicates (ring silicates):</strong> Tetrahedra link in closed rings of 3, 4, or 6 units. The six-membered ring is the most important in gemology: beryl (Be<sub>3</sub>Al<sub>2</sub>Si<sub>6</sub>O<sub>18</sub>) and tourmaline (complex borosilicate) both have structures based on six-membered rings. The hexagonal channels formed by beryl's ring structure can host water molecules and alkali ions, which influence its optical properties.</li>
+                      <li><strong>Inosilicates (chain silicates):</strong> Tetrahedra share oxygen atoms to form single or double chains. The amphibole group (double chains) includes nephrite jade (a variety of tremolite-actinolite), valued for its extraordinary toughness resulting from interlocking fibrous crystals. The pyroxene group (single chains) includes jadeite (NaAlSi<sub>2</sub>O<sub>6</sub>), spodumene (kunzite, hiddenite), and diopside.</li>
+                      <li><strong>Tectosilicates (framework silicates):</strong> Every tetrahedron shares all four oxygen atoms with neighbors, creating a three-dimensional framework. This group includes quartz (SiO<sub>2</sub>)&mdash;the most common gem mineral&mdash;and the feldspar family. Feldspars such as orthoclase (moonstone), labradorite, and sunstone are tectosilicates with aluminum substituting for some silicon in the framework, balanced by alkali or alkaline-earth cations.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Oxides
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Oxide gems consist of metal cations bonded directly to oxygen. This group includes some of the most important and valuable gemstones:</p>
+                    <ul>
+                      <li><strong>Corundum (Al<sub>2</sub>O<sub>3</sub>):</strong> Pure aluminum oxide, crystallizing in the trigonal system. In its pure state it is colorless; trace chromium produces ruby (red), while iron and titanium together produce blue sapphire. Corundum is Mohs 9 and has no true cleavage, making it exceptionally durable.</li>
+                      <li><strong>Spinel (MgAl<sub>2</sub>O<sub>4</sub>):</strong> A cubic oxide historically confused with ruby. The "Black Prince's Ruby" and the "Timur Ruby" in the British Crown Jewels are actually spinels. Natural spinel is singly refractive&mdash;a key distinction from corundum.</li>
+                      <li><strong>Chrysoberyl (BeAl<sub>2</sub>O<sub>4</sub>):</strong> An orthorhombic oxide that produces two famous varieties: alexandrite (dramatic color change from green in daylight to red in incandescent light, caused by chromium) and cat's eye chrysoberyl (sharp chatoyancy from parallel needle-like inclusions). Ordinary chrysoberyl is a hard (Mohs 8.5), durable yellowish-green gem.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Carbonates
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Carbonate minerals contain the CO<sub>3</sub><sup>2&minus;</sup> anion group. While few carbonates are hard enough for conventional jewelry use, two are gemologically significant:</p>
+                    <ul>
+                      <li><strong>Calcite (CaCO<sub>3</sub>):</strong> Trigonal system. Rarely used as a faceted gem due to its low hardness (Mohs 3) and perfect cleavage in three directions, but it is notable for its extreme birefringence (0.172)&mdash;the doubling of images seen through a transparent calcite rhomb ("Iceland spar") is a classic demonstration of double refraction.</li>
+                      <li><strong>Aragonite (CaCO<sub>3</sub>):</strong> The orthorhombic polymorph of calcium carbonate. Aragonite is the primary mineral in pearl nacre, deposited in overlapping platelet layers by mollusks. The iridescent orient of a fine pearl results from thin-film interference and diffraction at the edges of these aragonite platelets.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Native Elements
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>A small number of gem materials are composed of a single element in its native (uncombined) state:</p>
+                    <ul>
+                      <li><strong>Diamond (C):</strong> Pure carbon crystallized in the cubic system under extreme pressure (at least 4.5&ndash;6 GPa) and temperature (900&ndash;1300&deg;C) at depths of approximately 150&ndash;250 km in the Earth's upper mantle, within the stability field of the diamond crystal structure. Each carbon atom is covalently bonded to four neighbors in a tetrahedral arrangement&mdash;this strong, uniform bonding gives diamond its unmatched hardness (Mohs 10), exceptional thermal conductivity, and high refractive index (<span class="val">2.417</span>). The wide transparency range and high dispersion (<span class="val">0.044</span>) produce the "fire" that makes diamond optically distinctive.</li>
+                      <li><strong>Sulfur, gold, and copper</strong> are occasionally encountered as native-element gems or gem components (e.g., copper inclusions producing the aventurescence in sunstone), but diamond is by far the most commercially important native element in gemology.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <h3>Trace Elements and Color</h3>
+              <p>Most gem minerals are colorless in their pure state. Color arises from trace amounts of transition metal ions (typically measured in parts per million or low percentages by weight) that selectively absorb certain wavelengths of visible light. The same trace element can produce entirely different colors in different host crystals&mdash;a fact that underscores the importance of crystal field theory in understanding gem color.</p>
+
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Trace Element</th>
+                      <th>Host Mineral</th>
+                      <th>Resulting Color</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chromium (Cr<sup>3+</sup>)</td>
+                      <td>Corundum (Al<sub>2</sub>O<sub>3</sub>)</td>
+                      <td>Red (ruby)</td>
+                    </tr>
+                    <tr>
+                      <td>Chromium (Cr<sup>3+</sup>)</td>
+                      <td>Beryl (Be<sub>3</sub>Al<sub>2</sub>Si<sub>6</sub>O<sub>18</sub>)</td>
+                      <td>Green (emerald)</td>
+                    </tr>
+                    <tr>
+                      <td>Chromium (Cr<sup>3+</sup>)</td>
+                      <td>Chrysoberyl (BeAl<sub>2</sub>O<sub>4</sub>)</td>
+                      <td>Green / red color change (alexandrite)</td>
+                    </tr>
+                    <tr>
+                      <td>Iron + Titanium (Fe<sup>2+</sup> + Ti<sup>4+</sup>)</td>
+                      <td>Corundum</td>
+                      <td>Blue (sapphire)</td>
+                    </tr>
+                    <tr>
+                      <td>Iron (Fe<sup>2+</sup>)</td>
+                      <td>Olivine</td>
+                      <td>Green (peridot)</td>
+                    </tr>
+                    <tr>
+                      <td>Iron (Fe<sup>3+</sup>)</td>
+                      <td>Corundum</td>
+                      <td>Yellow (yellow sapphire)</td>
+                    </tr>
+                    <tr>
+                      <td>Manganese (Mn<sup>2+</sup>)</td>
+                      <td>Spodumene</td>
+                      <td>Pink (kunzite)</td>
+                    </tr>
+                    <tr>
+                      <td>Manganese (Mn<sup>2+</sup>)</td>
+                      <td>Garnet (spessartine)</td>
+                      <td>Orange</td>
+                    </tr>
+                    <tr>
+                      <td>Copper (Cu<sup>2+</sup>)</td>
+                      <td>Tourmaline (elbaite)</td>
+                      <td>Neon blue-green (Para&iacute;ba tourmaline)</td>
+                    </tr>
+                    <tr>
+                      <td>Vanadium (V<sup>3+</sup>)</td>
+                      <td>Grossular garnet</td>
+                      <td>Green (tsavorite)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>The color produced by a chromophore depends on the crystal field&mdash;the geometry and strength of the electrostatic environment around the ion. Chromium produces red in corundum (where it substitutes for aluminum in an octahedral site) but green in beryl (where it occupies a slightly different octahedral site with different bond distances and symmetry). Same ion, different crystal field, different color.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Isomorphous Replacement and Solid Solution</h3>
+              <p>Many gem minerals are not fixed in composition but exist as part of a <strong>solid-solution series</strong>, where one ion progressively replaces another of similar size and charge throughout the crystal lattice without changing the overall structure. This process is called isomorphous replacement (or substitution).</p>
+              <p>The garnet group is the best example in gemology. Garnets share the general formula X<sub>3</sub>Y<sub>2</sub>(SiO<sub>4</sub>)<sub>3</sub>, where the X and Y sites accept different cations. The six common end-member compositions form two solid-solution series:</p>
+              <ul>
+                <li><strong>Pyralspite series</strong> (X-site varies): Pyrope (Mg<sub>3</sub>Al<sub>2</sub>), Almandine (Fe<sub>3</sub>Al<sub>2</sub>), Spessartine (Mn<sub>3</sub>Al<sub>2</sub>). Most natural garnets in this series are mixtures&mdash;a "pyrope" may contain significant almandine component, shifting its color from the pure pyrope magnesium-red toward almandine's deeper iron-red. Rhodolite garnet is a pyrope-almandine intermediate.</li>
+                <li><strong>Ugrandite series</strong> (Y-site varies): Uvarovite (Ca<sub>3</sub>Cr<sub>2</sub>), Grossular (Ca<sub>3</sub>Al<sub>2</sub>), Andradite (Ca<sub>3</sub>Fe<sub>2</sub>). Tsavorite is a vanadium/chromium-bearing grossular. Demantoid is a chromium-bearing andradite prized for its exceptional dispersion (<span class="val">0.057</span>&mdash;higher than diamond).</li>
+              </ul>
+              <p>Because garnets in a solid-solution series can have continuously varying compositions, their physical and optical properties (RI, SG) also vary continuously. This is why garnet identification requires measuring specific values rather than matching a single fixed constant&mdash;the RI of garnet species ranges from <span class="val">1.714</span> (pyrope) to <span class="val">1.888</span> (andradite).</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 4: GEOLOGICAL FORMATION               -->
+            <!-- ============================================= -->
+            <h2 id="geological-formation" class="reveal">Geological Formation</h2>
+
+            <div class="reveal">
+              <p>Understanding how gemstones form in the Earth is essential for appreciating their rarity, predicting where they may be found, and recognizing the types of inclusions they contain. Gem-quality crystals require specific conditions: the right chemical ingredients, adequate space to grow, sufficient time, and appropriate temperature and pressure. Gemstones form through four principal geological processes.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Igneous Formation</h3>
+              <p>Igneous gems crystallize from molten rock (magma or lava) as it cools. The rate and conditions of cooling profoundly influence crystal size and quality.</p>
+              <ul>
+                <li>
+                  <strong>Pegmatites:</strong> Coarse-grained igneous rocks that form during the final stages of magma crystallization. The residual melt is enriched in water, flux elements (boron, fluorine, lithium, beryllium), and incompatible elements that could not fit into earlier-forming minerals. These volatile-rich conditions produce large, well-formed crystals over extended cooling periods. Pegmatites are the primary source of tourmaline, beryl (including aquamarine, morganite, and some emerald), topaz, spodumene (kunzite and hiddenite), and many rare collector minerals. Famous pegmatite gem localities include Minas Gerais (Brazil), the Hindu Kush (Afghanistan and Pakistan), and the Pala district of San Diego County (California).
+                </li>
+                <li>
+                  <strong>Kimberlite pipes:</strong> Narrow, carrot-shaped volcanic conduits that originate at depths of 150 km or more in the upper mantle. Kimberlite magma rises rapidly&mdash;possibly in hours&mdash;carrying diamond crystals that formed under extreme mantle pressures (4.5&ndash;6 GPa). The rapid ascent is critical: it transports diamonds through the graphite stability field too quickly for them to convert to graphite. Major diamond-producing kimberlite fields include those in South Africa (Kimberley, Cullinan), Botswana (Jwaneng, Orapa), Russia (Yakutia), and Canada (Northwest Territories). Lamproite pipes (e.g., Argyle in Australia) are a related source of diamonds.
+                </li>
+                <li>
+                  <strong>Basaltic lavas:</strong> Some gems occur as xenocrysts&mdash;crystals carried up from deeper sources by ascending basaltic magma. Sapphire and zircon in Australian, Thai, Cambodian, and Nigerian deposits occur within or weathered out of alkali basalt flows. These sapphires tend to be dark blue to greenish-blue due to higher iron content.
+                </li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Metamorphic Formation</h3>
+              <p>Metamorphic gems form when existing rocks are subjected to elevated temperature and pressure, causing recrystallization without complete melting. The type and intensity of metamorphism determine which gem minerals can form.</p>
+              <ul>
+                <li>
+                  <strong>Regional metamorphism:</strong> Large-scale metamorphism driven by tectonic forces (mountain building, subduction). Ruby and sapphire crystallize in marble that formed when impure limestone underwent regional metamorphism&mdash;the finest Burmese rubies from Mogok and Afghan sapphires formed this way. Garnet (almandine, pyrope) is a common metamorphic mineral in mica schist and gneiss. Tanzanite (the blue-violet variety of zoisite) formed through regional metamorphism of calcareous sediments at Merelani, Tanzania&mdash;the only known commercial source.
+                </li>
+                <li>
+                  <strong>Contact metamorphism:</strong> Localized metamorphism around the margins of an igneous intrusion, where heat from the magma body transforms surrounding rocks. The narrow metamorphic zone (contact aureole) can produce lapis lazuli (a rock composed of lazurite, calcite, and pyrite, formed by metamorphism of limestone), spinel (in metamorphosed dolomitic limestone), and ruby (where aluminum-rich sediments meet carbonate rocks near intrusions).
+                </li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Sedimentary and Alluvial Deposits</h3>
+              <p>While few gems form directly in sedimentary environments, sedimentary processes play a crucial role in concentrating gem minerals into economically workable deposits.</p>
+              <ul>
+                <li>
+                  <strong>Placer (alluvial) deposits:</strong> When gem-bearing source rocks weather and erode, durable gem minerals survive transport by rivers and streams while softer materials disintegrate. Dense, hard gems settle out and accumulate in gravel beds, particularly on the inside of river bends, behind boulders, and in potholes along bedrock. Sri Lanka's gem gravels (illam) are legendary&mdash;a single locality can yield sapphire, ruby, spinel, garnet, tourmaline, zircon, and chrysoberyl. Alluvial diamond deposits in Africa (Sierra Leone, DRC, Angola) and sapphire deposits in Madagascar and Montana (USA) are other major placer sources. Because placer mining selects for the hardest and densest minerals, gem gravels are naturally enriched in high-quality material.
+                </li>
+                <li>
+                  <strong>Sedimentary-hosted gems:</strong> Opal forms when silica-laden groundwater percolates through porous sedimentary rock (sandstone, claystone) and precipitates in cavities, cracks, and fossil replacements. Australian precious opal (Lightning Ridge, Coober Pedy, Mintabie) forms in Cretaceous sedimentary sequences. The orderly stacking of uniformly sized silica spheres required for play of color represents a remarkably specific set of geological conditions&mdash;which is why gem-quality opal is rare despite silica being abundant.
+                </li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Hydrothermal Formation</h3>
+              <p>Hydrothermal gems crystallize from hot, mineral-rich aqueous fluids circulating through fractures and voids in the Earth's crust. Temperature, pressure, and fluid chemistry must be precisely right for gem-quality crystals to form.</p>
+              <p>Colombian emeralds are the iconic hydrothermal gem. They formed when warm saline brines (~300&ndash;400&deg;C) leached chromium and vanadium from surrounding black shales and deposited beryl in calcite-lined veins. The relatively low formation temperature (compared to other emerald sources) contributes to the characteristic three-phase inclusions (liquid, gas bubble, and halite crystal) that are diagnostic of Colombian origin.</p>
+              <p>Quartz varieties form extensively in hydrothermal environments: amethyst (in volcanic geodes, e.g., Brazil and Uruguay), citrine, smoky quartz, and rock crystal. Many ore-deposit minerals with gem varieties&mdash;such as rhodochrosite, fluorite, and sphalerite&mdash;also form hydrothermally.</p>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Note</p>
+              <p>The formation environment leaves a fingerprint in the gem: characteristic inclusions. A gemologist who understands geological formation can often determine the origin of a stone by identifying its inclusion suite&mdash;three-phase inclusions in Colombian emerald, silk (rutile needles) in Burmese ruby, horsetail inclusions (byssolite fibers) in demantoid garnet, and so on.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 5: NATURAL, TREATED & SYNTHETIC       -->
+            <!-- ============================================= -->
+            <h2 id="natural-treated-synthetic" class="reveal">Natural, Treated &amp; Synthetic</h2>
+
+            <div class="reveal">
+              <p>One of the most critical competencies in modern gemology is the ability to distinguish between natural gemstones, treated stones, and laboratory-created (synthetic) materials. Disclosure is both an ethical obligation and, in most jurisdictions, a legal requirement. Understanding each category is fundamental to professional practice.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Natural Gemstones</h3>
+              <p>A natural gemstone is one formed entirely by geological processes with no human intervention beyond extraction and fashioning (cutting and polishing). Minor traditional practices considered part of the lapidary process&mdash;such as oiling of emeralds in cedar oil during cutting&mdash;have historically been accepted as part of the finishing process, though modern standards require disclosure even of minor treatments. A truly untreated natural gem of fine quality commands the highest value, particularly when origin can be established.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Common Treatments</h3>
+              <p>Treatments are human-applied processes that alter the appearance, durability, or perceived quality of a natural gem. Some are broadly accepted by the trade (with disclosure); others are controversial or reduce value significantly. The most common treatments include:</p>
+              <ul>
+                <li><strong>Heat treatment:</strong> The most widespread gem treatment. High temperatures (typically 800&ndash;1800&deg;C) can improve color and clarity. Blue sapphire is routinely heated to dissolve silk and intensify blue color; ruby is heated to remove purple tint and improve transparency. Heat treatment is permanent and broadly accepted in the trade, though unheated stones of equivalent quality are valued higher.</li>
+                <li><strong>Irradiation:</strong> Exposure to gamma rays, neutrons, or electron beams can alter color. Blue topaz is created by irradiating colorless topaz (followed by heat treatment). Some diamonds are irradiated to produce green or blue colors. Irradiation is usually followed by heating to achieve the desired final color and may require disclosure.</li>
+                <li><strong>Fracture filling:</strong> Injecting glass, resin, or oil into surface-reaching fractures to improve apparent clarity. Lead-glass filling of ruby is extremely common in low-quality material and dramatically improves transparency&mdash;but the glass is unstable and can deteriorate with heat, chemicals, or even ultrasonic cleaning. Emerald oiling (cedar oil, Canada balsam, or polymer resins) fills the jardins (fracture networks) typical of emerald.</li>
+                <li><strong>Lattice diffusion:</strong> Heating a gem in the presence of a chemical element that diffuses into the crystal lattice, adding color. Beryllium diffusion of sapphire (producing orange, yellow, and padparadscha-like colors) was controversial when first detected in the early 2000s because beryllium's small atomic size allows it to penetrate deeply, making detection difficult. Titanium diffusion of sapphire produces a shallow blue surface layer.</li>
+                <li><strong>Surface coating:</strong> Applying thin films (metallic oxides, polymers, or sputtered layers) to alter color or produce iridescent effects. "Mystic topaz" is a common coated product. Coatings are typically fragile and can be detected by surface irregularities, scratches through the coating layer, and observation of anomalous color zoning.</li>
+                <li><strong>HPHT (High Pressure, High Temperature):</strong> Originally developed for creating synthetic diamond, HPHT processing is now also used to treat natural diamond. Type IIa brown diamonds can be decolorized to near-colorless by HPHT treatment, and certain brown or yellowish diamonds can be converted to vivid fancy colors. Detection typically requires advanced spectroscopic analysis.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Synthetic Gemstones</h3>
+              <p>A synthetic gemstone is a laboratory-manufactured product that has essentially the same chemical composition, crystal structure, and physical properties as its natural counterpart. Synthetic ruby is real corundum (Al<sub>2</sub>O<sub>3</sub>). Synthetic emerald is real beryl. They are not imitations&mdash;they are the real mineral, created in a controlled environment rather than in the Earth.</p>
+              <p>Major synthesis methods include:</p>
+              <ul>
+                <li><strong>Verneuil process (flame fusion):</strong> Developed in 1902 by Auguste Verneuil, this was the first commercially successful synthesis method. Powdered feedstock is melted in an oxy-hydrogen flame and crystallizes on a rotating pedestal, forming a cylindrical boule. Flame-fusion corundum (ruby and sapphire) and spinel are mass-produced and inexpensive. Diagnostic features include curved growth striae (curved color banding) and gas bubbles&mdash;never seen in natural stones.</li>
+                <li><strong>Czochralski (crystal pulling):</strong> A seed crystal is dipped into a crucible of molten material and slowly pulled upward as it rotates, growing a large single crystal. Used for producing high-quality synthetic corundum, alexandrite, and YAG (yttrium aluminum garnet). The resulting crystals tend to have fewer inclusions than flame-fusion products.</li>
+                <li><strong>Flux growth:</strong> Gem material is dissolved in a molten flux (a chemical solvent, often lead oxide, lithium molybdate, or bismuth oxide) at high temperature, then slowly crystallized over weeks or months as the temperature is gradually lowered. Flux-grown synthetics can closely resemble natural stones because they grow slowly and can develop crystal faces. Flux inclusions (wispy, fingerprint-like remnants of the molten solvent) are the primary diagnostic feature. Flux-grown emerald (Chatham, Gilson) and ruby are the most common products.</li>
+                <li><strong>Hydrothermal growth:</strong> Mimics the natural process: nutrient material is dissolved in superheated water under high pressure and recrystallized on seed plates. Hydrothermal synthetic emerald (Biron, Tairus) and quartz (amethyst, citrine) are produced by this method. Hydrothermal synthetics can be challenging to distinguish from natural material, though characteristic seed-plate boundaries, chevron-shaped growth patterns, and the absence of natural inclusions provide identification clues.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--key reveal">
+              <p class="callout__label">Key Distinction</p>
+              <p><strong>Synthetic vs. Simulant:</strong> A <em>synthetic</em> gem has the same chemical composition and crystal structure as its natural counterpart&mdash;it <em>is</em> the same material. Synthetic ruby is real corundum. A <em>simulant</em> only resembles another gem visually but has a different composition and structure. Cubic zirconia (ZrO<sub>2</sub>) simulates diamond's appearance but is an entirely different material with different hardness, RI, dispersion, and thermal conductivity. Synthetic moissanite (SiC) is another diamond simulant. Glass, plastic, and assembled stones (doublets, triplets) are also simulants. A synthetic is identified by its growth method; a simulant is identified by its actual mineral identity.</p>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">Disclosure Requirement</p>
+              <p>All major gemological organizations and trade bodies (GIA, CIBJO, FTC in the United States) require that treatments, synthetic origin, and simulant identity be disclosed at every point of sale. Failure to disclose constitutes fraud. As a gemologist, you have a professional and ethical obligation to correctly identify and disclose these distinctions.</p>
+            </div>
+
+          </div>
+
+          <aside class="toc">
+            <p class="toc__title">On this page</p>
+            <ul class="toc__list">
+              <li><a href="#what-is-gemology">What Is Gemology</a></li>
+              <li><a href="#crystallography">Crystallography</a></li>
+              <li><a href="#chemical-composition">Chemical Composition</a></li>
+              <li><a href="#geological-formation">Geological Formation</a></li>
+              <li><a href="#natural-treated-synthetic">Natural, Treated &amp; Synthetic</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="page-nav">
+        <a href="index.html" class="page-nav__link">
+          <span class="page-nav__label">Previous</span>
+          <span class="page-nav__title">Home</span>
+        </a>
+        <a href="properties.html" class="page-nav__link page-nav__link--next">
+          <span class="page-nav__label">Next</span>
+          <span class="page-nav__title">Gem Properties</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+</body>
+</html>
