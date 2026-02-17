@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GemLens — Learn Gemology &amp; Gem Identification</title>
+  <meta name="description" content="A concise, interactive guide to gemology fundamentals, gem identification techniques, and a curated catalog of precious and semi-precious gemstones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="#hero" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="#fundamentals" class="nav-link">Fundamentals</a>
+        <a href="#properties" class="nav-link">Properties</a>
+        <a href="#identification" class="nav-link">Identification</a>
+        <a href="#catalog" class="nav-link">Catalog</a>
+        <a href="#tools" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="#hero" class="drawer__link">Home</a>
+      <a href="#fundamentals" class="drawer__link">Fundamentals</a>
+      <a href="#properties" class="drawer__link">Properties</a>
+      <a href="#identification" class="drawer__link">Identification</a>
+      <a href="#catalog" class="drawer__link">Catalog</a>
+      <a href="#tools" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content reveal">
+          <span class="chip">Science of Gems</span>
+          <h1 class="display-large">Learn<br>Gemology</h1>
+          <p class="body-large">A precise, concise guide to understanding gemstones — their properties, identification, and what makes each one unique.</p>
+          <div class="hero__actions">
+            <a href="#fundamentals" class="btn btn--filled">Start Learning</a>
+            <a href="#catalog" class="btn btn--tonal">Browse Gems</a>
+          </div>
+        </div>
+        <div class="hero__visual reveal reveal--delay-1">
+          <svg class="hero-gem" viewBox="0 0 200 200" fill="none">
+            <polygon points="100,10 170,60 150,170 50,170 30,60" stroke="var(--md-primary)" stroke-width="1.5" fill="var(--md-primary-container)" opacity="0.3"/>
+            <polyline points="30,60 100,90 170,60" stroke="var(--md-primary)" stroke-width="1" opacity="0.6"/>
+            <line x1="100" y1="10" x2="100" y2="90" stroke="var(--md-primary)" stroke-width="1" opacity="0.6"/>
+            <line x1="100" y1="90" x2="50" y2="170" stroke="var(--md-primary)" stroke-width="1" opacity="0.6"/>
+            <line x1="100" y1="90" x2="150" y2="170" stroke="var(--md-primary)" stroke-width="1" opacity="0.6"/>
+            <polygon points="100,10 170,60 150,170 50,170 30,60" stroke="var(--md-primary)" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fundamentals -->
+    <section class="section" id="fundamentals">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="chip">Chapter 1</span>
+          <h2 class="headline-large">Fundamentals of Gemology</h2>
+          <p class="body-large">Gemology is the scientific study of gemstones — natural, treated, and synthetic. It covers their chemical composition, crystal structure, and optical behavior.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card__icon" style="--icon-bg: var(--md-tertiary-container); --icon-fg: var(--md-on-tertiary-container);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5"/></svg>
+            </div>
+            <h3 class="title-medium">What Is a Gemstone?</h3>
+            <p class="body-medium">A mineral, rock, or organic material cut and polished for use in jewelry or collection. Defined by <strong>beauty</strong>, <strong>durability</strong>, and <strong>rarity</strong>.</p>
+          </article>
+
+          <article class="card reveal reveal--delay-1">
+            <div class="card__icon" style="--icon-bg: var(--md-secondary-container); --icon-fg: var(--md-on-secondary-container);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="title-medium">Formation</h3>
+            <p class="body-medium">Most gems form deep in Earth's crust or mantle under high heat and pressure over millions of years. Some, like amber and pearl, are organic.</p>
+          </article>
+
+          <article class="card reveal reveal--delay-2">
+            <div class="card__icon" style="--icon-bg: var(--md-primary-container); --icon-fg: var(--md-on-primary-container);">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </div>
+            <h3 class="title-medium">Crystal Systems</h3>
+            <p class="body-medium">Gems crystallize in 7 systems: cubic, hexagonal, trigonal, tetragonal, orthorhombic, monoclinic, and triclinic. This governs shape and optical properties.</p>
+          </article>
+        </div>
+
+        <!-- Mineral vs Organic vs Synthetic -->
+        <div class="info-row reveal">
+          <div class="info-block">
+            <h4 class="title-small">Mineral Gems</h4>
+            <p class="body-small">Inorganic, naturally occurring crystalline solids. Examples: diamond, ruby, emerald, sapphire.</p>
+          </div>
+          <div class="info-block">
+            <h4 class="title-small">Organic Gems</h4>
+            <p class="body-small">Produced by living organisms. Examples: pearl (mollusks), amber (tree resin), coral, jet.</p>
+          </div>
+          <div class="info-block">
+            <h4 class="title-small">Synthetic Gems</h4>
+            <p class="body-small">Lab-created with identical chemistry and structure to natural counterparts. Same properties, different origin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Properties -->
+    <section class="section section--tonal" id="properties">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="chip">Chapter 2</span>
+          <h2 class="headline-large">Gem Properties</h2>
+          <p class="body-large">The measurable physical and optical characteristics used to evaluate and identify gemstones.</p>
+        </div>
+
+        <!-- The 4 Cs -->
+        <h3 class="headline-small reveal">The 4 Cs of Gem Grading</h3>
+        <div class="four-cs-grid">
+          <div class="four-c-card reveal">
+            <div class="four-c-card__letter">C</div>
+            <h4 class="title-medium">Color</h4>
+            <p class="body-small">Evaluated by <strong>hue</strong> (spectral color), <strong>tone</strong> (lightness/darkness), and <strong>saturation</strong> (intensity). The most important factor for colored stones.</p>
+          </div>
+          <div class="four-c-card reveal reveal--delay-1">
+            <div class="four-c-card__letter">C</div>
+            <h4 class="title-medium">Clarity</h4>
+            <p class="body-small">Presence or absence of inclusions (internal) and blemishes (surface). Graded from Flawless to Included. Some inclusions actually increase value (e.g., star sapphire).</p>
+          </div>
+          <div class="four-c-card reveal reveal--delay-2">
+            <div class="four-c-card__letter">C</div>
+            <h4 class="title-medium">Cut</h4>
+            <p class="body-small">The quality of faceting — proportions, symmetry, and polish. Determines how light interacts with the stone. Not to be confused with shape.</p>
+          </div>
+          <div class="four-c-card reveal reveal--delay-3">
+            <div class="four-c-card__letter">C</div>
+            <h4 class="title-medium">Carat Weight</h4>
+            <p class="body-small">1 carat = 0.2 grams. Price per carat increases non-linearly — a 2ct stone costs more than 2× a 1ct stone of equal quality.</p>
+          </div>
+        </div>
+
+        <!-- Mohs Scale -->
+        <h3 class="headline-small reveal">Mohs Hardness Scale</h3>
+        <p class="body-medium reveal">Ranks minerals 1–10 by scratch resistance. Each mineral can scratch those below it. The scale is relative, not linear — diamond (10) is ~4× harder than corundum (9).</p>
+        <div class="mohs-scale reveal">
+          <div class="mohs-item" style="--mohs-hue: 30;">
+            <span class="mohs-num">1</span>
+            <span class="mohs-name">Talc</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 45;">
+            <span class="mohs-num">2</span>
+            <span class="mohs-name">Gypsum</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 60;">
+            <span class="mohs-num">3</span>
+            <span class="mohs-name">Calcite</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 120;">
+            <span class="mohs-num">4</span>
+            <span class="mohs-name">Fluorite</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 170;">
+            <span class="mohs-num">5</span>
+            <span class="mohs-name">Apatite</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 200;">
+            <span class="mohs-num">6</span>
+            <span class="mohs-name">Feldspar</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 240;">
+            <span class="mohs-num">7</span>
+            <span class="mohs-name">Quartz</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 280;">
+            <span class="mohs-num">8</span>
+            <span class="mohs-name">Topaz</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 320;">
+            <span class="mohs-num">9</span>
+            <span class="mohs-name">Corundum</span>
+          </div>
+          <div class="mohs-item" style="--mohs-hue: 350;">
+            <span class="mohs-num">10</span>
+            <span class="mohs-name">Diamond</span>
+          </div>
+        </div>
+
+        <!-- Optical Properties -->
+        <h3 class="headline-small reveal">Optical Properties</h3>
+        <div class="card-grid">
+          <article class="card reveal">
+            <h4 class="title-medium">Refractive Index (RI)</h4>
+            <p class="body-small">How much light bends entering the stone. Measured with a refractometer. Diamond: 2.42, Quartz: 1.54. Key diagnostic tool.</p>
+          </article>
+          <article class="card reveal reveal--delay-1">
+            <h4 class="title-medium">Dispersion</h4>
+            <p class="body-small">Splitting white light into spectral colors — the "fire" in a gemstone. Diamond's dispersion (0.044) creates its famous rainbow flashes.</p>
+          </article>
+          <article class="card reveal reveal--delay-2">
+            <h4 class="title-medium">Pleochroism</h4>
+            <p class="body-small">Showing different colors when viewed from different crystal directions. Tanzanite displays blue, violet, and burgundy depending on axis.</p>
+          </article>
+          <article class="card reveal">
+            <h4 class="title-medium">Luster</h4>
+            <p class="body-small">Quality of light reflected from the surface. Types: adamantine (diamond), vitreous (quartz), waxy, pearly, silky, metallic.</p>
+          </article>
+          <article class="card reveal reveal--delay-1">
+            <h4 class="title-medium">Fluorescence</h4>
+            <p class="body-small">Emission of visible light under UV radiation. ~25–35% of diamonds fluoresce blue under long-wave UV. Useful for identification.</p>
+          </article>
+          <article class="card reveal reveal--delay-2">
+            <h4 class="title-medium">Specific Gravity</h4>
+            <p class="body-small">Density relative to water. Measured by hydrostatic weighing. Helps distinguish look-alikes — glass (SG ~2.5) vs. sapphire (SG 4.0).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Identification -->
+    <section class="section" id="identification">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="chip">Chapter 3</span>
+          <h2 class="headline-large">Gem Identification</h2>
+          <p class="body-large">A systematic process of observation and measurement to determine a gemstone's identity and detect treatments or synthetics.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__number">1</div>
+            <div class="step__content">
+              <h4 class="title-medium">Visual Inspection</h4>
+              <p class="body-small">Observe color, transparency, luster, and any visible inclusions with the naked eye. Note the cut style and overall appearance. First impressions narrow the possibilities.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">2</div>
+            <div class="step__content">
+              <h4 class="title-medium">10× Loupe Examination</h4>
+              <p class="body-small">Inspect under magnification for inclusions, growth patterns, surface blemishes, and doubling of back facets (birefringence). Inclusions are often diagnostic — silk in sapphire, horsetails in demantoid garnet.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">3</div>
+            <div class="step__content">
+              <h4 class="title-medium">Refractive Index Test</h4>
+              <p class="body-small">Place the stone on a refractometer with contact liquid. Read the RI value(s). Single reading = isotropic (cubic system). Double reading = anisotropic. Compare against known RI tables.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">4</div>
+            <div class="step__content">
+              <h4 class="title-medium">Specific Gravity Test</h4>
+              <p class="body-small">Weigh in air, then immersed in water. SG = weight in air ÷ (weight in air − weight in water). Separates gems with similar appearance but different density.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">5</div>
+            <div class="step__content">
+              <h4 class="title-medium">Spectroscope Analysis</h4>
+              <p class="body-small">View the absorption spectrum. Each gem absorbs specific wavelengths — chromium lines in emerald (683nm, 680nm), iron bands in peridot. Distinguishes natural from synthetic.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step__number">6</div>
+            <div class="step__content">
+              <h4 class="title-medium">Advanced Testing</h4>
+              <p class="body-small">UV fluorescence, polariscope (optic character), dichroscope (pleochroism), Chelsea filter, and microscopy. For conclusive results on difficult stones or treatment detection.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Common Confusions -->
+        <h3 class="headline-small reveal">Common Look-Alikes</h3>
+        <div class="table-wrap reveal">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Stone A</th>
+                <th>Stone B</th>
+                <th>Key Differentiator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Diamond</td><td>Moissanite</td><td>Moissanite is doubly refractive (RI 2.65); diamond is singly refractive (RI 2.42)</td></tr>
+              <tr><td>Ruby</td><td>Red Spinel</td><td>Ruby is doubly refractive and shows dichroism; spinel is singly refractive</td></tr>
+              <tr><td>Emerald</td><td>Tsavorite Garnet</td><td>Emerald: RI 1.57–1.58, often included. Tsavorite: RI 1.74, typically cleaner</td></tr>
+              <tr><td>Blue Sapphire</td><td>Tanzanite</td><td>Sapphire: RI 1.76–1.77, hardness 9. Tanzanite: RI 1.69, hardness 6.5</td></tr>
+              <tr><td>Aquamarine</td><td>Blue Topaz</td><td>Aquamarine: RI 1.57–1.58, SG 2.72. Topaz: RI 1.62–1.63, SG 3.53</td></tr>
+              <tr><td>Citrine</td><td>Yellow Sapphire</td><td>Citrine: hardness 7, RI 1.54. Yellow sapphire: hardness 9, RI 1.76</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gem Catalog -->
+    <section class="section section--tonal" id="catalog">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="chip">Chapter 4</span>
+          <h2 class="headline-large">Gem Catalog</h2>
+          <p class="body-large">Key data for major gemstones — composition, hardness, RI, and notable characteristics.</p>
+        </div>
+
+        <!-- Filter chips -->
+        <div class="filter-chips reveal" id="filterChips">
+          <button class="filter-chip filter-chip--active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="precious">Precious</button>
+          <button class="filter-chip" data-filter="semi-precious">Semi-Precious</button>
+          <button class="filter-chip" data-filter="organic">Organic</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+
+          <article class="gem-card reveal" data-category="precious">
+            <div class="gem-card__color" style="--gem-hue: 0; --gem-sat: 75%; --gem-light: 45%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Diamond</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Carbon (C)</dd></div>
+                <div><dt>Hardness</dt><dd>10</dd></div>
+                <div><dt>RI</dt><dd>2.417</dd></div>
+                <div><dt>SG</dt><dd>3.52</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+              </dl>
+              <p class="body-small">Hardest natural material. Exceptional brilliance and dispersion. Valued by the 4 Cs. Can occur in virtually any color.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="precious">
+            <div class="gem-card__color" style="--gem-hue: 348; --gem-sat: 80%; --gem-light: 40%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Ruby</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Al₂O₃ (Cr)</dd></div>
+                <div><dt>Hardness</dt><dd>9</dd></div>
+                <div><dt>RI</dt><dd>1.762–1.770</dd></div>
+                <div><dt>SG</dt><dd>4.00</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+              </dl>
+              <p class="body-small">Red variety of corundum. Color from chromium. "Pigeon blood" red is most prized. Fluorescence under UV is common.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="precious">
+            <div class="gem-card__color" style="--gem-hue: 220; --gem-sat: 72%; --gem-light: 42%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Sapphire</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Al₂O₃ (Fe, Ti)</dd></div>
+                <div><dt>Hardness</dt><dd>9</dd></div>
+                <div><dt>RI</dt><dd>1.762–1.770</dd></div>
+                <div><dt>SG</dt><dd>4.00</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+              </dl>
+              <p class="body-small">Corundum in any color except red. Blue from iron and titanium. "Fancy" sapphires include pink, yellow, orange (padparadscha), and green.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="precious">
+            <div class="gem-card__color" style="--gem-hue: 145; --gem-sat: 65%; --gem-light: 35%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Emerald</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Be₃Al₂Si₆O₁₈ (Cr, V)</dd></div>
+                <div><dt>Hardness</dt><dd>7.5–8</dd></div>
+                <div><dt>RI</dt><dd>1.565–1.602</dd></div>
+                <div><dt>SG</dt><dd>2.72</dd></div>
+                <div><dt>Crystal</dt><dd>Hexagonal</dd></div>
+              </dl>
+              <p class="body-small">Green variety of beryl. Color from chromium and/or vanadium. Inclusions ("jardin") are expected and help prove natural origin.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 280; --gem-sat: 55%; --gem-light: 42%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Amethyst</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>SiO₂ (Fe)</dd></div>
+                <div><dt>Hardness</dt><dd>7</dd></div>
+                <div><dt>RI</dt><dd>1.544–1.553</dd></div>
+                <div><dt>SG</dt><dd>2.66</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+              </dl>
+              <p class="body-small">Purple variety of quartz. Color from iron and irradiation. Color zoning is common. Heat treatment turns it to citrine.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 180; --gem-sat: 50%; --gem-light: 55%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Aquamarine</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Be₃Al₂Si₆O₁₈ (Fe)</dd></div>
+                <div><dt>Hardness</dt><dd>7.5–8</dd></div>
+                <div><dt>RI</dt><dd>1.567–1.590</dd></div>
+                <div><dt>SG</dt><dd>2.72</dd></div>
+                <div><dt>Crystal</dt><dd>Hexagonal</dd></div>
+              </dl>
+              <p class="body-small">Blue to blue-green beryl. Color from iron. Typically eye-clean. Often heat treated to remove green tint for pure blue.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 130; --gem-sat: 60%; --gem-light: 50%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Peridot</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>(Mg,Fe)₂SiO₄</dd></div>
+                <div><dt>Hardness</dt><dd>6.5–7</dd></div>
+                <div><dt>RI</dt><dd>1.654–1.690</dd></div>
+                <div><dt>SG</dt><dd>3.34</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+              </dl>
+              <p class="body-small">Gem-quality olivine. Always green — one of few idiochromatic gems. Strong birefringence causes visible doubling of back facets.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 5; --gem-sat: 70%; --gem-light: 40%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Garnet</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>X₃Y₂(SiO₄)₃</dd></div>
+                <div><dt>Hardness</dt><dd>6.5–7.5</dd></div>
+                <div><dt>RI</dt><dd>1.714–1.888</dd></div>
+                <div><dt>SG</dt><dd>3.5–4.3</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+              </dl>
+              <p class="body-small">A mineral group, not a single species. Includes almandine, pyrope, spessartine, grossular (tsavorite), and andradite (demantoid). Singly refractive.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 195; --gem-sat: 65%; --gem-light: 48%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Topaz</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Al₂SiO₄(F,OH)₂</dd></div>
+                <div><dt>Hardness</dt><dd>8</dd></div>
+                <div><dt>RI</dt><dd>1.619–1.627</dd></div>
+                <div><dt>SG</dt><dd>3.53</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+              </dl>
+              <p class="body-small">Naturally colorless, yellow, or pink. Blue topaz is almost always irradiated and heat-treated. Imperial topaz (orange-pink) is most valuable.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 260; --gem-sat: 50%; --gem-light: 45%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Tanzanite</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Ca₂Al₃(SiO₄)₃(OH)</dd></div>
+                <div><dt>Hardness</dt><dd>6–7</dd></div>
+                <div><dt>RI</dt><dd>1.691–1.700</dd></div>
+                <div><dt>SG</dt><dd>3.35</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+              </dl>
+              <p class="body-small">Blue-violet zoisite found only in Tanzania. Strongly trichroic (blue/violet/burgundy). Almost always heat treated to enhance blue.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 50; --gem-sat: 70%; --gem-light: 50%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Spinel</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>MgAl₂O₄</dd></div>
+                <div><dt>Hardness</dt><dd>8</dd></div>
+                <div><dt>RI</dt><dd>1.712–1.762</dd></div>
+                <div><dt>SG</dt><dd>3.60</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+              </dl>
+              <p class="body-small">Historically confused with ruby and sapphire. The "Black Prince's Ruby" is actually spinel. Singly refractive, no dichroism. Now valued in its own right.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="semi-precious">
+            <div class="gem-card__color" style="--gem-hue: 165; --gem-sat: 55%; --gem-light: 50%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Tourmaline</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Complex borosilicate</dd></div>
+                <div><dt>Hardness</dt><dd>7–7.5</dd></div>
+                <div><dt>RI</dt><dd>1.624–1.644</dd></div>
+                <div><dt>SG</dt><dd>3.06</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+              </dl>
+              <p class="body-small">Widest color range of any gem species. Paraíba (neon blue-green, copper-bearing) is most valuable. Strong pleochroism. Can be multicolored in one crystal.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="organic">
+            <div class="gem-card__color" style="--gem-hue: 30; --gem-sat: 15%; --gem-light: 85%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Pearl</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>CaCO₃ (aragonite) + conchiolin</dd></div>
+                <div><dt>Hardness</dt><dd>2.5–4.5</dd></div>
+                <div><dt>RI</dt><dd>1.52–1.66</dd></div>
+                <div><dt>SG</dt><dd>2.61–2.85</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic (aragonite)</dd></div>
+              </dl>
+              <p class="body-small">Formed by mollusks depositing nacre around an irritant. Evaluated by luster, surface quality, shape, color, and size. Natural pearls are extremely rare today.</p>
+            </div>
+          </article>
+
+          <article class="gem-card reveal" data-category="organic">
+            <div class="gem-card__color" style="--gem-hue: 35; --gem-sat: 80%; --gem-light: 50%;"></div>
+            <div class="gem-card__body">
+              <h4 class="title-medium">Amber</h4>
+              <dl class="gem-specs">
+                <div><dt>Composition</dt><dd>Fossilized resin</dd></div>
+                <div><dt>Hardness</dt><dd>2–2.5</dd></div>
+                <div><dt>RI</dt><dd>1.539–1.545</dd></div>
+                <div><dt>SG</dt><dd>1.05–1.10</dd></div>
+                <div><dt>Crystal</dt><dd>Amorphous</dd></div>
+              </dl>
+              <p class="body-small">Fossilized tree resin, 30–90 million years old. Warm to touch, floats in salt water (key test vs. plastic imitations). May contain preserved insects.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools & Techniques -->
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="section__header reveal">
+          <span class="chip">Chapter 5</span>
+          <h2 class="headline-large">Tools &amp; Equipment</h2>
+          <p class="body-large">The essential instruments used in gemological examination and identification.</p>
+        </div>
+
+        <div class="tools-grid">
+          <article class="tool-card reveal">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <h4 class="title-medium">10× Loupe</h4>
+            </div>
+            <p class="body-small">Triplet lens for 10× magnification. Industry standard for grading clarity. Corrected for chromatic and spherical aberration. Essential first tool.</p>
+          </article>
+
+          <article class="tool-card reveal reveal--delay-1">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3v18"/><path d="M18 3v18"/><path d="M6 12h12"/><path d="M6 7h12"/><path d="M6 17h12"/></svg>
+              <h4 class="title-medium">Refractometer</h4>
+            </div>
+            <p class="body-small">Measures refractive index using total internal reflection. Requires contact liquid (RI 1.81). Range: 1.30–1.81. Single most important identification instrument.</p>
+          </article>
+
+          <article class="tool-card reveal reveal--delay-2">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="10" rx="2"/><line x1="7" y1="7" x2="7" y2="17"/><line x1="17" y1="7" x2="17" y2="17"/></svg>
+              <h4 class="title-medium">Spectroscope</h4>
+            </div>
+            <p class="body-small">Displays absorption spectrum of light passing through a gem. Prism type offers better resolution; diffraction grating type is easier to read.</p>
+          </article>
+
+          <article class="tool-card reveal">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              <h4 class="title-medium">Polariscope</h4>
+            </div>
+            <p class="body-small">Two polarizing filters determine optic character: singly refractive (SR), doubly refractive (DR), or aggregate (AGG). Also detects strain in SR stones.</p>
+          </article>
+
+          <article class="tool-card reveal reveal--delay-1">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3l-8 18h16L12 3z"/></svg>
+              <h4 class="title-medium">Dichroscope</h4>
+            </div>
+            <p class="body-small">Shows pleochroic colors side by side through a calcite rhomb. Quick test to separate SR from DR stones and confirm gem identity.</p>
+          </article>
+
+          <article class="tool-card reveal reveal--delay-2">
+            <div class="tool-card__header">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/></svg>
+              <h4 class="title-medium">UV Lamp</h4>
+            </div>
+            <p class="body-small">Long-wave (365nm) and short-wave (254nm) UV. Tests fluorescence and phosphorescence. Helps separate natural, synthetic, and treated stones.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <svg width="24" height="24" viewBox="0 0 28 28" fill="none">
+              <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+              <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+            </svg>
+            <span>GemLens</span>
+          </div>
+          <p class="body-small">An educational resource for gemology students and enthusiasts. Content is for learning purposes.</p>
+          <div class="footer__links">
+            <a href="#fundamentals">Fundamentals</a>
+            <a href="#properties">Properties</a>
+            <a href="#identification">Identification</a>
+            <a href="#catalog">Catalog</a>
+            <a href="#tools">Tools</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+</body>
+</html>
