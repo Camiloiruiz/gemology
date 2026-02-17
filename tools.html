@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tools &amp; Equipment — GemLens</title>
+  <meta name="description" content="Comprehensive guide to gemological instruments and equipment: refractometer, polariscope, dichroscope, spectroscope, microscope, loupe, UV lamp, specific gravity testing, and diamond testers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Tools</span>
+        </nav>
+        <span class="chip">Chapter 5</span>
+        <h1 class="display-medium">Tools &amp; Equipment</h1>
+        <p class="body-large">The essential instruments of the gemological laboratory: how each tool works, proper technique for accurate results, and the science behind every measurement a professional gemologist must master.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-grid content-grid--with-toc">
+          <div class="prose">
+
+            <!-- ============================================= -->
+            <!-- SECTION 1: THE ESSENTIAL GEMOLOGICAL TOOLKIT  -->
+            <!-- ============================================= -->
+            <h2 id="essential-instruments" class="reveal">The Essential Gemological Toolkit</h2>
+
+            <div class="reveal">
+              <p>Professional gemological identification relies on a standardized set of instruments, each designed to measure or reveal a specific physical or optical property of a gemstone. No single instrument can conclusively identify every gem&mdash;positive identification requires correlating data from multiple tests. The ten standard instruments that form the core of every gemological laboratory are:</p>
+            </div>
+
+            <div class="reveal">
+              <ol>
+                <li><strong>Refractometer</strong> &mdash; measures refractive index and birefringence, the two most diagnostic optical constants for gem identification.</li>
+                <li><strong>Polariscope</strong> &mdash; determines whether a gem is singly refractive, doubly refractive, or an aggregate; reveals optic character and sign through interference figures.</li>
+                <li><strong>Dichroscope</strong> &mdash; detects and displays pleochroic colors in doubly refractive gems, aiding in species and variety identification.</li>
+                <li><strong>Spectroscope</strong> &mdash; reveals the absorption spectrum, showing which wavelengths of light a gem absorbs&mdash;often diagnostic for specific chromophores and treatments.</li>
+                <li><strong>Gemological microscope</strong> &mdash; provides magnified examination under various lighting techniques to study inclusions, growth features, and treatment evidence.</li>
+                <li><strong>10x loupe</strong> &mdash; the portable magnification standard used universally in the trade for grading, preliminary examination, and field work.</li>
+                <li><strong>Ultraviolet lamp</strong> &mdash; tests fluorescence reactions under long-wave (365 nm) and short-wave (254 nm) UV, which can be diagnostic for certain species and treatments.</li>
+                <li><strong>Specific gravity equipment</strong> &mdash; hydrostatic weighing or heavy liquid testing determines density, a fundamental physical constant for identification.</li>
+                <li><strong>Thermal/electrical conductivity tester</strong> &mdash; primarily used to separate diamond from its simulants, and to distinguish moissanite from diamond.</li>
+                <li><strong>Chelsea filter</strong> &mdash; a simplified spectroscopic tool transmitting only red (~690 nm) and green (~570 nm) wavelengths, useful as a quick screening device for certain gems.</li>
+              </ol>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Note</p>
+              <p>The systematic approach to gem testing follows a logical sequence. Begin with observation (color, transparency, luster, heft), then proceed to refractometer, polariscope, dichroscope, spectroscope, and microscope. Specific gravity and fluorescence provide additional data points. Always record every measurement&mdash;a professional gemologist documents results methodically, building toward a conclusive identification through the convergence of evidence.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 2: THE REFRACTOMETER                  -->
+            <!-- ============================================= -->
+            <h2 id="refractometer" class="reveal">The Refractometer</h2>
+
+            <div class="reveal">
+              <p>The refractometer is the single most important instrument in gemological identification. It measures the refractive index (RI) of a gemstone&mdash;the ratio of the speed of light in air to its speed within the gem material. Because each gem species has a characteristic RI or RI range, a single refractometer reading can immediately narrow the field of possible identities. Combined with birefringence (the numerical difference between the maximum and minimum RI readings), the refractometer provides the two most diagnostic optical constants available to the gemologist.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Principle of Operation</h3>
+              <p>The gemological refractometer operates on the principle of <strong>total internal reflection</strong>. When light traveling through a dense medium (the glass hemicylinder of the refractometer) strikes the boundary with a less dense medium (the gemstone) at an angle greater than the critical angle, the light is totally reflected back into the glass. At angles less than the critical angle, light passes through into the gem. The boundary between the bright (reflected) and dark (transmitted) zones on the refractometer scale corresponds to the critical angle, which is directly related to the gem's refractive index.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Components</h3>
+              <ul>
+                <li><strong>High-RI glass hemicylinder:</strong> A polished glass prism with a refractive index of approximately <span class="val">1.86</span> (commonly lead glass or yttrium aluminum garnet glass). This sets the upper measurement limit of the instrument&mdash;gems with an RI above the hemicylinder's RI cannot be measured.</li>
+                <li><strong>Light source:</strong> A monochromatic sodium vapor lamp emitting at <span class="val">589 nm</span> (the sodium D line) is ideal. The standard refractometer scale is calibrated for this wavelength. White light can be used but produces a less sharp shadow edge.</li>
+                <li><strong>Contact liquid:</strong> A drop of high-RI liquid (typically methylene iodide, RI <span class="val">1.81</span>, or a saturated sulfur solution in methylene iodide) is placed between the gem's polished flat surface and the hemicylinder. This liquid eliminates the air gap and provides optical contact. The contact liquid's RI effectively sets the practical upper limit of measurement at approximately <span class="val">1.81</span>.</li>
+                <li><strong>Eyepiece and scale:</strong> A calibrated scale (typically ranging from 1.30 to 1.81) is viewed through an eyepiece. The shadow edge position on this scale gives the RI reading, typically readable to &plusmn;0.001 or &plusmn;0.002.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Reading Technique</h3>
+              <p>Place a small drop of contact liquid on the hemicylinder surface. Position the gem with a flat, polished facet face-down on the hemicylinder, ensuring good optical contact without trapped air bubbles. Look through the eyepiece and observe the shadow edge on the calibrated scale. For an <strong>isotropic</strong> (singly refractive) gem, you will see a single, stationary shadow edge regardless of gem orientation&mdash;this gives one RI value.</p>
+              <p>For an <strong>anisotropic</strong> (doubly refractive) gem, you will see two shadow edges, corresponding to the ordinary ray and the extraordinary ray (in uniaxial gems) or two of the three principal vibration directions (in biaxial gems). Rotate the gem 180&deg; on the hemicylinder while observing the scale. The two shadow edges will move as the gem rotates. Record the highest and lowest positions of each shadow edge. The difference between the maximum and minimum RI readings gives the <strong>birefringence</strong>.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Spot Reading Technique</h3>
+              <p>For gems without a flat polished facet&mdash;cabochons, beads, rough material&mdash;the <strong>spot reading</strong> (distant vision) method is used. Place the curved surface of the stone on the contact liquid and look through the eyepiece. Instead of a sharp shadow edge, you will see a hazy spot of light on the scale. Pull your eye back from the eyepiece (distant vision) until the spot resolves into a sharp-edged bright area. Read the RI at the boundary of this bright area. Spot readings are typically accurate to &plusmn;0.01, less precise than flat-facet readings but still diagnostically useful.</p>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">OTL &mdash; Over the Limits</p>
+              <p>Gems with an RI above approximately <span class="val">1.81</span> (the RI of the contact liquid) will not produce a readable shadow edge on a standard refractometer. These are called <strong>OTL</strong> (over-the-limits) stones. Important OTL gems include diamond (RI <span class="val">2.417</span>), zircon (RI up to <span class="val">1.984</span>), demantoid garnet (RI <span class="val">1.880&ndash;1.888</span>), some almandine garnets, sphene (RI <span class="val">1.843&ndash;2.110</span>), and synthetic moissanite (RI <span class="val">2.648&ndash;2.691</span>). An OTL reading is itself a useful diagnostic clue&mdash;it immediately rules out the majority of gem species. Further identification of OTL gems requires other instruments: specific gravity, spectroscope, thermal conductivity tester, and microscopic examination.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Common RI Readings</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Species</th>
+                    <th>RI Range</th>
+                    <th>Birefringence</th>
+                    <th>Optic Character</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Quartz</td>
+                    <td><span class="val">1.544&ndash;1.553</span></td>
+                    <td><span class="val">0.009</span></td>
+                    <td>Uniaxial (+)</td>
+                  </tr>
+                  <tr>
+                    <td>Beryl (emerald, aquamarine)</td>
+                    <td><span class="val">1.577&ndash;1.583</span></td>
+                    <td><span class="val">0.005&ndash;0.009</span></td>
+                    <td>Uniaxial (&minus;)</td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline</td>
+                    <td><span class="val">1.624&ndash;1.644</span></td>
+                    <td><span class="val">0.018&ndash;0.040</span></td>
+                    <td>Uniaxial (&minus;)</td>
+                  </tr>
+                  <tr>
+                    <td>Topaz</td>
+                    <td><span class="val">1.629&ndash;1.637</span></td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Biaxial (+)</td>
+                  </tr>
+                  <tr>
+                    <td>Peridot</td>
+                    <td><span class="val">1.654&ndash;1.690</span></td>
+                    <td><span class="val">0.036</span></td>
+                    <td>Biaxial (+/&minus;)</td>
+                  </tr>
+                  <tr>
+                    <td>Corundum (ruby, sapphire)</td>
+                    <td><span class="val">1.762&ndash;1.770</span></td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Uniaxial (&minus;)</td>
+                  </tr>
+                  <tr>
+                    <td>Spinel</td>
+                    <td><span class="val">1.712&ndash;1.736</span></td>
+                    <td>None (isotropic)</td>
+                    <td>Isotropic</td>
+                  </tr>
+                  <tr>
+                    <td>Garnet (pyrope)</td>
+                    <td><span class="val">1.714&ndash;1.742</span></td>
+                    <td>None (isotropic)</td>
+                    <td>Isotropic</td>
+                  </tr>
+                  <tr>
+                    <td>Garnet (almandine)</td>
+                    <td><span class="val">1.780&ndash;1.810</span></td>
+                    <td>None (isotropic)</td>
+                    <td>Isotropic</td>
+                  </tr>
+                  <tr>
+                    <td>Tanzanite (zoisite)</td>
+                    <td><span class="val">1.691&ndash;1.700</span></td>
+                    <td><span class="val">0.009</span></td>
+                    <td>Biaxial (+)</td>
+                  </tr>
+                  <tr>
+                    <td>Spodumene (kunzite)</td>
+                    <td><span class="val">1.660&ndash;1.676</span></td>
+                    <td><span class="val">0.015</span></td>
+                    <td>Biaxial (+)</td>
+                  </tr>
+                  <tr>
+                    <td>Feldspar (moonstone)</td>
+                    <td><span class="val">1.518&ndash;1.526</span></td>
+                    <td><span class="val">0.005&ndash;0.008</span></td>
+                    <td>Biaxial (&minus;)</td>
+                  </tr>
+                  <tr>
+                    <td>Glass (artificial)</td>
+                    <td><span class="val">1.470&ndash;1.700</span></td>
+                    <td>None (isotropic)</td>
+                    <td>Isotropic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>Always take multiple readings by rotating the stone on the hemicylinder. Record the minimum and maximum shadow edge positions. For biaxial gems, you may observe three distinct RI values (alpha, beta, gamma) depending on the facet orientation&mdash;the full range from lowest to highest gives the maximum birefringence. If a gem shows only a single, stationary shadow edge, it is either isotropic (cubic system or amorphous) or you may be reading along the optic axis of a uniaxial gem. Rotate the stone to confirm.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 3: THE POLARISCOPE                    -->
+            <!-- ============================================= -->
+            <h2 id="polariscope" class="reveal">The Polariscope</h2>
+
+            <div class="reveal">
+              <p>The polariscope is a deceptively simple instrument&mdash;two polarizing filters (a polarizer below and an analyzer above) with a light source beneath&mdash;that provides critical information about a gem's optical nature. It reveals whether a gem is singly refractive (isotropic), doubly refractive (anisotropic), or polycrystalline, and with a condensing lens, it can determine the optic character (uniaxial vs. biaxial) and optic sign (positive or negative).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Setup and Basic Test</h3>
+              <p>The polariscope consists of a lower polarizing filter (the <strong>polarizer</strong>) with a light source beneath it, and an upper polarizing filter (the <strong>analyzer</strong>) oriented at 90&deg; to the polarizer&mdash;the "crossed polars" position. With no gem between them and both filters crossed, the field appears dark because the analyzer blocks all light that passed through the polarizer.</p>
+              <p>To test a gem, place it on the lower polarizer and look down through the upper analyzer. Slowly rotate the gem 360&deg; while observing the changes in light and dark.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Interpreting Results</h3>
+              <ul>
+                <li><strong>Remains dark (isotropic or SR):</strong> If the gem stays uniformly dark throughout a full 360&deg; rotation, it is singly refractive. This includes all cubic-system gems (diamond, garnet, spinel, fluorite) and amorphous materials (glass, opal, amber). The gem does not split light into two polarized rays, so no light passes through the crossed analyzer.</li>
+                <li><strong>Alternates light and dark four times (anisotropic or DR):</strong> If the gem blinks from light to dark four times during a 360&deg; rotation (once every 90&deg;), it is doubly refractive (anisotropic). This includes all gems in the tetragonal, hexagonal, trigonal, orthorhombic, monoclinic, and triclinic crystal systems. Each dark position occurs when one of the gem's vibration directions aligns with the polarizer or analyzer.</li>
+                <li><strong>Anomalous double refraction (ADR):</strong> Some gems that should be isotropic (cubic system) show patchy, incomplete darkening&mdash;areas of light leaking through when the gem should appear dark. This <strong>anomalous double refraction</strong> is caused by internal strain in the crystal lattice. ADR is commonly observed in garnet (especially almandine and spessartine), diamond, and spinel. The pattern is typically irregular and patchy, unlike the uniform blink of true double refraction. ADR is itself a diagnostic feature: strong ADR in a red gem with an RI around 1.76 strongly suggests garnet.</li>
+                <li><strong>Aggregate reaction (AGG):</strong> If the gem remains light and never goes fully dark regardless of rotation, it is showing an <strong>aggregate reaction</strong>. This indicates a polycrystalline material&mdash;an aggregate of many tiny randomly oriented crystals, each doubly refractive, so light always finds a path through in some orientation. AGG is characteristic of jadeite, nephrite, chalcedony (cryptocrystalline quartz), turquoise, lapis lazuli, and other polycrystalline gem materials.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Conoscopy: Interference Figures</h3>
+              <p>When a <strong>condensing lens</strong> (or a small sphere of high-RI glass) is placed between the gem and the analyzer, the polariscope becomes a <strong>conoscope</strong>. Instead of parallel light passing through the gem, the condensing lens introduces convergent light, which reveals an <strong>interference figure</strong>&mdash;a pattern of light and dark bands (isochromes) crossed by dark bars (isogyres) that reveals the gem's optic character.</p>
+              <ul>
+                <li><strong>Uniaxial figure:</strong> A centered uniaxial interference figure shows a dark cross (isogyres) centered on the optic axis exit point (the <strong>melatope</strong>), surrounded by concentric colored rings (isochromes). This "bullseye" pattern is characteristic of all uniaxial minerals (hexagonal, trigonal, and tetragonal systems). As the gem is rotated on the polariscope stage, the cross remains stationary if the optic axis is perpendicular to the viewing direction.</li>
+                <li><strong>Biaxial figure:</strong> A centered biaxial figure shows two melatopes (one for each optic axis) connected by curved isogyres. In the centered position, the isogyres form a cross that splits into two hyperbolic curves as the stage is rotated 45&deg;. The separation of the melatopes indicates the 2V angle (the angle between the two optic axes). Biaxial figures are produced by gems in the orthorhombic, monoclinic, and triclinic crystal systems.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Determining Optic Sign</h3>
+              <p>The <strong>optic sign</strong> (positive or negative) provides an additional identification parameter. It is determined by inserting a compensator plate (such as a first-order red plate or a quarter-wave plate) into the optical path while viewing the interference figure. The compensator adds or subtracts retardation in specific quadrants of the figure, causing color changes that indicate the sign:</p>
+              <ul>
+                <li>In a <strong>uniaxial positive (+)</strong> gem, the slow ray vibrates parallel to the optic axis (epsilon &gt; omega). With a first-order red plate inserted, the NE and SW quadrants of the bullseye figure shift toward blue, while the NW and SE quadrants shift toward yellow.</li>
+                <li>In a <strong>uniaxial negative (&minus;)</strong> gem, the slow ray vibrates perpendicular to the optic axis (epsilon &lt; omega). The color shifts are reversed: NE and SW shift to yellow, NW and SE shift to blue.</li>
+                <li>For <strong>biaxial</strong> gems, the sign is determined by the curvature of the isogyres and color distribution around the melatopes when the compensator is inserted.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>Obtaining a good interference figure requires finding a direction in the gem close to the optic axis. For uniaxial gems, look down the c-axis. This can be difficult in faceted stones&mdash;try different orientations by tilting the gem. Immersion in a liquid can help by reducing surface reflections. Even a partial or off-center figure provides useful information about optic character.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 4: THE DICHROSCOPE                    -->
+            <!-- ============================================= -->
+            <h2 id="dichroscope" class="reveal">The Dichroscope</h2>
+
+            <div class="reveal">
+              <p>The dichroscope is a small, handheld instrument that reveals <strong>pleochroism</strong>&mdash;the property of doubly refractive colored gems to show different colors or color intensities when light vibrates in different crystallographic directions. It is one of the most underutilized tools in the gemologist's kit, yet it provides quick, valuable diagnostic information that can narrow identification significantly or distinguish a natural gem from a singly refractive simulant.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>How It Works</h3>
+              <p>The standard calcite dichroscope contains a small cleaved rhomb of optical-grade calcite (Iceland spar), mounted in a metal tube with a viewing window at one end and a small opening at the other. When you look through the dichroscope at a colored gem, the calcite's extreme birefringence (0.172) splits the incoming light into two polarized rays vibrating at right angles to each other. These two rays appear as two side-by-side rectangular color patches in the eyepiece. If the gem is pleochroic, the two patches will show different colors or different intensities of the same color.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Technique</h3>
+              <p>Hold the dichroscope close to your eye and look through it at the gem, which should be illuminated by transmitted white light (a penlight or fiber optic light behind the gem works well). Slowly rotate the dichroscope while keeping it aimed at the gem, and also rotate the gem itself into different orientations. In a <strong>dichroic</strong> gem (uniaxial, with two principal vibration directions), you will see two pleochroic colors. In a <strong>trichroic</strong> gem (biaxial, with three principal vibration directions), you will see different pairs of colors depending on the viewing direction&mdash;three distinct colors can be observed across multiple orientations.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Pleochroism Strength</h3>
+              <p>Pleochroism is classified by the degree of color difference between the two patches:</p>
+              <ul>
+                <li><strong>None:</strong> Isotropic gems (garnet, spinel, diamond) show no pleochroism&mdash;both patches are identical. If a "ruby" shows no pleochroism, it is not corundum and may be red garnet, red spinel, or glass.</li>
+                <li><strong>Weak:</strong> Slight difference in tone or saturation. Aquamarine and most light-colored sapphires show weak pleochroism.</li>
+                <li><strong>Moderate:</strong> Clear color difference visible between the two patches. Ruby and blue sapphire typically show moderate pleochroism.</li>
+                <li><strong>Strong:</strong> Dramatic color difference. Tourmaline, tanzanite, kunzite, andalusite, and iolite exhibit strong pleochroism.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Key Pleochroic Colors by Species</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem</th>
+                    <th>Pleochroic Colors</th>
+                    <th>Strength</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ruby</td>
+                    <td>Purplish-red / orangy-red</td>
+                    <td>Moderate to strong</td>
+                  </tr>
+                  <tr>
+                    <td>Blue sapphire</td>
+                    <td>Violetish-blue / greenish-blue</td>
+                    <td>Moderate</td>
+                  </tr>
+                  <tr>
+                    <td>Emerald</td>
+                    <td>Bluish-green / yellowish-green</td>
+                    <td>Moderate</td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline (green)</td>
+                    <td>Dark green / light green (or yellow-green)</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline (pink/red)</td>
+                    <td>Dark pink / light pink (nearly colorless)</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Tanzanite (trichroic, unheated)</td>
+                    <td>Blue / violet / red-brown</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Tanzanite (trichroic, heated)</td>
+                    <td>Blue / violet / purple</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Kunzite (trichroic)</td>
+                    <td>Pink / violet / colorless</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Andalusite (trichroic)</td>
+                    <td>Brownish-red / olive green / yellowish</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Iolite (cordierite, trichroic)</td>
+                    <td>Blue-violet / pale blue-gray / pale yellow</td>
+                    <td>Strong</td>
+                  </tr>
+                  <tr>
+                    <td>Peridot</td>
+                    <td>Yellow-green / green / colorless</td>
+                    <td>Weak</td>
+                  </tr>
+                  <tr>
+                    <td>Aquamarine</td>
+                    <td>Near colorless / light blue</td>
+                    <td>Weak to moderate</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Note</p>
+              <p>The dichroscope is particularly valuable for separating ruby from its common lookalikes. Red garnet (isotropic) and red spinel (isotropic) show no pleochroism. Red glass shows none. If a red stone shows clear purplish-red / orangy-red pleochroism, it is doubly refractive and likely corundum. This simple test can be performed in seconds, even in the field, without any contact with the stone.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 5: THE SPECTROSCOPE                   -->
+            <!-- ============================================= -->
+            <h2 id="spectroscope" class="reveal">The Spectroscope</h2>
+
+            <div class="reveal">
+              <p>The spectroscope allows a gemologist to observe the <strong>absorption spectrum</strong> of a gem&mdash;the specific wavelengths of visible light that a gem absorbs as white light passes through it. Because different chromophores (color-causing agents) absorb light at characteristic wavelengths, the pattern of dark lines and bands seen in the spectrum can identify the chemical cause of color and, in many cases, the gem species itself. Spectroscopy is especially useful for detecting certain treatments (such as cobalt-doped glass in filled rubies) and for identifying specific varieties (such as chrome-bearing gems by the characteristic chromium absorption doublet at 692.8/694.2 nm).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Types of Spectroscope</h3>
+              <ul>
+                <li><strong>Prism spectroscope:</strong> Uses one or more glass prisms to disperse white light into a spectrum. The prism produces a brighter image at the red end of the spectrum and compresses the violet end. The non-linear dispersion makes it easier to see absorption features in the red region but harder to read precise wavelengths.</li>
+                <li><strong>Diffraction grating spectroscope:</strong> Uses a finely ruled grating to disperse light. Produces an evenly illuminated spectrum with a linear wavelength scale, making it easier to estimate wavelengths of absorption features. However, the overall image is dimmer because light is spread evenly across the spectrum and some is lost to higher diffraction orders.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Viewing Technique</h3>
+              <p>The gem can be examined in <strong>transmitted light</strong> (light passing through the gem and into the spectroscope) or <strong>reflected light</strong> (light reflecting off the gem's surface, useful for opaque or heavily included stones). A strong, focused white light source (fiber optic illuminator or penlight) is essential. Point the spectroscope at the gem and focus the eyepiece until the spectrum is sharp. Look for dark lines (narrow absorptions) and broad dark bands (wider absorption regions) against the continuous color spectrum.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Key Diagnostic Spectra</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem / Chromophore</th>
+                    <th>Key Absorption Features</th>
+                    <th>Diagnostic Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ruby / Cr<sup>3+</sup></td>
+                    <td>Doublet at 692.8 &amp; 694.2 nm; broad absorption in green-yellow (550 nm region); fluorescence line at 693 nm</td>
+                    <td>Chromium doublet diagnostic of Cr-colored corundum</td>
+                  </tr>
+                  <tr>
+                    <td>Blue sapphire / Fe<sup>2+</sup>+Ti<sup>4+</sup></td>
+                    <td>Three lines at 450, 460, 470 nm (iron spectrum)</td>
+                    <td>Characteristic iron triplet confirms natural blue sapphire</td>
+                  </tr>
+                  <tr>
+                    <td>Emerald / Cr<sup>3+</sup></td>
+                    <td>Chromium doublet at ~683/680 nm; broad absorption centered near 600 nm (orange-red region)</td>
+                    <td>Chromium lines confirm Cr-colored beryl; absent in vanadium-colored emerald</td>
+                  </tr>
+                  <tr>
+                    <td>Almandine garnet / Fe<sup>2+</sup></td>
+                    <td>Strong band at 505 nm; lines at 527 and 576 nm</td>
+                    <td>Almandine spectrum is among the most distinctive; 505 nm band is diagnostic</td>
+                  </tr>
+                  <tr>
+                    <td>Zircon</td>
+                    <td>Up to 40 fine lines throughout spectrum; strong line at 653.5 nm</td>
+                    <td>Fine-line "uranium" spectrum unmistakable</td>
+                  </tr>
+                  <tr>
+                    <td>Peridot / Fe<sup>2+</sup></td>
+                    <td>Three evenly spaced bands at 453, 473, 493 nm in blue</td>
+                    <td>Even spacing of iron bands diagnostic</td>
+                  </tr>
+                  <tr>
+                    <td>Cobalt glass / Co<sup>2+</sup></td>
+                    <td>Three broad bands centered at ~530, 580, 640 nm</td>
+                    <td>Cobalt triplet indicates glass or cobalt-doped filling</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="reveal">
+              <h3>The Chelsea Filter</h3>
+              <p>The <strong>Chelsea filter</strong> (also called the emerald filter) is a simplified spectroscopic screening tool. It is a color filter that transmits only two narrow wavelength windows: one in the deep red (~690 nm) and one in the yellow-green (~570 nm). When viewed through the Chelsea filter, gems that transmit or fluoresce red light (e.g., chromium-bearing gems) appear pink or red, while gems colored by iron appear green. Originally developed to help separate natural emerald (red reaction, due to chromium fluorescence and transmission) from green glass or synthetic emerald imitations, the Chelsea filter is useful but not definitive&mdash;some synthetic emeralds also show a red reaction, and some natural emeralds (vanadium-colored) may not. It is best used as a quick screening tool, with results confirmed by other instruments.</p>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>Practice reading spectra with known reference stones. The skill of interpreting absorption patterns improves dramatically with experience. Start with strongly absorbing gems (almandine garnet, chrome tourmaline, ruby) before attempting to read the subtle spectra of paler stones. Using a narrower slit width gives sharper lines but reduces brightness&mdash;find the optimal balance for each stone.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 6: THE GEMOLOGICAL MICROSCOPE         -->
+            <!-- ============================================= -->
+            <h2 id="microscope" class="reveal">The Gemological Microscope</h2>
+
+            <div class="reveal">
+              <p>The gemological microscope is arguably the most informative instrument in the laboratory. While other tools measure specific numerical properties, the microscope reveals the internal world of the gem&mdash;inclusions, growth structures, treatment evidence, and surface features that tell the story of the stone's formation and history. A skilled microscopist can often determine species, natural vs. synthetic origin, geographic provenance, and treatment status from inclusions alone.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Illumination Techniques</h3>
+              <p>The gemological microscope is distinguished from a standard stereo microscope by its specialized lighting systems, designed to reveal different types of internal features:</p>
+              <ul>
+                <li><strong>Darkfield illumination:</strong> The primary lighting mode in gemological microscopy. Light enters the gem from the sides (below the stone platform), and no direct light reaches the objective lens. Internal features&mdash;inclusions, fractures, growth zones&mdash;scatter and refract this side-lighting, appearing as bright objects against a dark background. Darkfield provides high contrast and is the standard lighting for initial examination and photomicrography.</li>
+                <li><strong>Brightfield illumination:</strong> Transmitted light passes directly up through the gem from below. The background appears bright, and inclusions appear dark in silhouette. Brightfield is useful for observing color zoning, growth patterns, curved striae in flame-fusion synthetics, and the outline of large inclusions.</li>
+                <li><strong>Overhead (reflected/episcopic) illumination:</strong> Light directed down onto the gem's surface. Used for examining surface features: polish quality, surface-reaching fractures, filled cavities, surface coatings, and the "flash effect" seen in lead-glass-filled rubies (colored surface reflections visible when the stone is rocked). Fiber optic illumination provides a focused, directional light that is extremely versatile for pinpointing and highlighting specific features.</li>
+                <li><strong>Oblique illumination:</strong> A fiber optic light directed at a steep angle into the side of the gem. This technique is excellent for revealing strain patterns, twinning, and subtle growth zoning. It produces dramatic relief effects that make features stand out.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Magnification and Working Distance</h3>
+              <p>Standard gemological microscopes offer magnification ranges of <span class="val">10x to 70x</span>, typically through a zoom mechanism. Lower magnifications (10x&ndash;20x) provide a wide field of view for initial survey and orientation. Higher magnifications (40x&ndash;70x) are used for resolving fine details: needle-like inclusions, growth patterns, minute treatment evidence. The binocular stereo design provides a three-dimensional view of internal features, allowing the observer to judge the depth and spatial relationships of inclusions within the stone.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Immersion Technique</h3>
+              <p>Placing a gem in a small glass cell filled with an immersion liquid (methylene iodide, water, or baby oil) dramatically improves the view of internal features. The liquid reduces surface reflections by matching (or approaching) the gem's RI, effectively making the surface "disappear" and allowing light to enter the stone with minimal distortion. Immersion is essential for:</p>
+              <ul>
+                <li>Observing color zoning and growth patterns (critical for distinguishing natural from synthetic origin)</li>
+                <li>Detecting curved striae in flame-fusion synthetics</li>
+                <li>Examining stones with rough or unpolished surfaces (rough material, cabochons)</li>
+                <li>Reducing distracting surface reflections that obscure internal features</li>
+                <li>Revealing diffusion treatment (shallow color concentrated near the surface)</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>What to Look For</h3>
+            </div>
+
+            <div class="accordion reveal">
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Inclusions &mdash; fingerprints of origin
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Inclusions are solid, liquid, or gaseous materials trapped within a gem during its formation. They are the most important features visible under magnification because they provide evidence of origin (natural, synthetic, or treated), geographic provenance, and formation conditions.</p>
+                    <ul>
+                      <li><strong>Mineral inclusions:</strong> Crystals of other minerals trapped during growth. Rutile needles ("silk") in corundum, calcite crystals in emerald, chromite octahedra in diamond, and zircon halos in sapphire are classic examples. The identity of mineral inclusions can indicate geographic origin (e.g., pargasite crystals in Burmese ruby).</li>
+                      <li><strong>Fluid inclusions:</strong> Tiny cavities filled with liquid (often water or CO<sub>2</sub>), sometimes containing a gas bubble (two-phase) or both a gas bubble and a daughter crystal such as halite (three-phase). Three-phase inclusions are diagnostic of Colombian emerald.</li>
+                      <li><strong>Growth features:</strong> Straight angular growth zoning in natural corundum, hexagonal growth patterns in natural beryl, and trigon markings on natural diamond crystal faces. Curved growth striae indicate flame-fusion synthesis. Chevron or V-shaped patterns suggest hydrothermal synthesis.</li>
+                      <li><strong>Treatment evidence:</strong> Gas bubbles in glass-filled fractures, flash-effect colors (blue and orange) in lead-glass-filled ruby, residual flux in fracture-filled emeralds, dissolved silk in heat-treated sapphire (intact silk haloes surrounding partially dissolved needles), and surface-reaching color concentrations from diffusion treatment.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Surface features and finish quality
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>The microscope reveals surface characteristics that are important for grading and identification:</p>
+                    <ul>
+                      <li><strong>Polish quality:</strong> Scratches, polishing lines, pitting, and "orange peel" texture. Different gem species polish differently due to varying hardness with crystallographic direction. Diamond shows sharp, flat facets; softer stones may show rounded facet junctions.</li>
+                      <li><strong>Surface coatings:</strong> Thin films applied to alter color. Under magnification, coatings often show scratches, wear at facet edges, and uneven color distribution. Coated topaz ("Mystic topaz") shows rainbow iridescence that is confined to the surface.</li>
+                      <li><strong>Naturals and trigons:</strong> On diamond, naturals (remnants of the original crystal surface left on the girdle) and trigons (triangular growth/etch marks on crystal faces) indicate natural origin.</li>
+                      <li><strong>Doubling of back facets:</strong> In gems with high birefringence (zircon, peridot, calcite), the back facet edges appear doubled when viewed through the table. This is visible at 10x and is a quick diagnostic indicator.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Note</p>
+              <p>Microscopic examination is an art as much as a science. Two gemologists examining the same stone may notice different features depending on the lighting angle, magnification, and their experience. Develop a systematic approach: begin with low magnification and darkfield lighting for an overall survey, then increase magnification and vary the lighting to resolve specific features. Always document your observations with photomicrographs when possible.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 7: THE 10x LOUPE                      -->
+            <!-- ============================================= -->
+            <h2 id="loupe" class="reveal">The 10x Loupe</h2>
+
+            <div class="reveal">
+              <p>The 10x loupe is the gemologist's most portable and universally used tool. It is the standard magnification for diamond clarity grading (all GIA clarity grades are assessed at 10x), the instrument of choice for preliminary examination in the trade, and the tool that goes everywhere a gemologist goes. Despite its simplicity, proper loupe technique is a fundamental skill that requires practice to master.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Specifications</h3>
+              <p>The standard gemological loupe is a <strong>10x triplet</strong>&mdash;three lens elements cemented together in a configuration that corrects for both <strong>chromatic aberration</strong> (color fringing caused by the lens dispersing light into its component wavelengths) and <strong>spherical aberration</strong> (image distortion at the edges caused by the curvature of a single lens). A single-element magnifying lens (doublet or singlet) produces blurry, color-fringed images at the margins. Always use a fully corrected triplet for professional work. The lens should be housed in a dark (matte black) frame to reduce stray light.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Proper Technique</h3>
+              <p>Hold the loupe between the thumb and forefinger of one hand, close to your eye (approximately 25 mm from the eye, resting against your brow or cheekbone for stability). Hold the gem in tweezers or your other hand and bring it toward the loupe until it comes into sharp focus at the loupe's focal distance (approximately 25 mm from the lens). Both hands should be braced together for stability&mdash;rest your hands or elbows on the worktable. Examine the gem under a strong, focused light source, tilting and rotating it to observe different facets and angles. Move the gem slowly and methodically, examining the table, crown facets, pavilion (by looking through the crown), and the girdle.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>What 10x Reveals</h3>
+              <ul>
+                <li><strong>Inclusions:</strong> Crystals, needles, clouds, feathers (fractures), pinpoints, and other clarity characteristics used in diamond grading and colored stone assessment.</li>
+                <li><strong>Surface blemishes:</strong> Scratches, nicks, abrasions, pits, and naturals on the surface.</li>
+                <li><strong>Doubling of back facets:</strong> In highly birefringent gems (zircon, peridot, sphene), the back facet edges appear doubled when viewed through the table. This can be seen at 10x and immediately suggests a high-birefringence gem.</li>
+                <li><strong>Polish quality:</strong> Polishing lines, wheel marks, and the overall finish of facet surfaces.</li>
+                <li><strong>Symmetry:</strong> Facet alignment, table centering, girdle evenness, and culet position for diamond grading.</li>
+                <li><strong>Treatment evidence:</strong> Fracture fillings (surface-reaching fractures that appear transparent rather than reflective), coatings peeling at facet junctions, and surface residues from oiling or resin treatment.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Why 10x Is the Standard</p>
+              <p>The 10x magnification standard was established because it provides a practical balance between resolution and field of view. At 10x, the major clarity characteristics of a diamond are visible to a trained eye, while the image remains stable and the field of view is wide enough for efficient examination. Features not visible at 10x are considered "eye clean" for grading purposes&mdash;they do not affect the clarity grade. Higher magnifications (20x, 40x, 60x) are reserved for the microscope when detailed study of specific features is required.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 8: ULTRAVIOLET LAMP                   -->
+            <!-- ============================================= -->
+            <h2 id="uv-lamp" class="reveal">Ultraviolet Lamp</h2>
+
+            <div class="reveal">
+              <p>The ultraviolet (UV) lamp tests the <strong>fluorescence</strong> of gemstones&mdash;the emission of visible light when a gem is exposed to ultraviolet radiation. Fluorescence occurs when UV photons excite electrons in certain atoms or defects within the crystal, which then release energy as visible light when they return to their ground state. The color, intensity, and wavelength-dependence (long-wave vs. short-wave response) of fluorescence provide useful diagnostic information for identification and treatment detection.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Long-Wave vs. Short-Wave UV</h3>
+              <ul>
+                <li><strong>Long-wave UV (LWUV):</strong> Wavelength centered at approximately <span class="val">365 nm</span>. This is the more commonly used wavelength and produces stronger fluorescence in most gem materials. LWUV lamps are less expensive and the radiation is less hazardous to eyes and skin, though precautions are still necessary.</li>
+                <li><strong>Short-wave UV (SWUV):</strong> Wavelength centered at approximately <span class="val">254 nm</span>. Produces different fluorescence responses in some gems and is essential for separating certain species. SWUV is more energetic and potentially more harmful&mdash;never look directly at the lamp, and minimize skin exposure. Some gems fluoresce only under SWUV (e.g., certain synthetic diamonds and some types of natural diamond).</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Testing Procedure</h3>
+              <p>Testing must be conducted in a <strong>completely darkened room</strong>. Place the gem on an inert (non-fluorescent) surface&mdash;a black plastic tray or dark-colored ceramic tile. Avoid paper, fabric, or wood surfaces, which may fluoresce and contaminate the observation. Expose the gem to long-wave UV first, observe and record the fluorescence color and intensity, then switch to short-wave UV and repeat. Compare the LWUV and SWUV reactions&mdash;the relative responses under each wavelength can be diagnostic.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Diagnostic Fluorescence Reactions</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Material</th>
+                    <th>LWUV (365 nm)</th>
+                    <th>SWUV (254 nm)</th>
+                    <th>Diagnostic Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Diamond (Cape series)</td>
+                    <td>Blue (variable: inert to strong)</td>
+                    <td>Often weaker blue or inert</td>
+                    <td>~30&ndash;35% of gem diamonds fluoresce blue under LWUV; strong blue fluorescence can affect appearance</td>
+                  </tr>
+                  <tr>
+                    <td>Ruby (natural, Cr-bearing)</td>
+                    <td>Strong red to orangy-red</td>
+                    <td>Moderate to strong red</td>
+                    <td>Strong Cr fluorescence; iron-rich rubies (Thai/Australian) may be weaker or inert due to iron quenching</td>
+                  </tr>
+                  <tr>
+                    <td>Emerald (natural)</td>
+                    <td>Usually inert to weak red</td>
+                    <td>Usually inert</td>
+                    <td>Some Colombian emeralds show weak red Cr fluorescence; most are inert due to iron quenching</td>
+                  </tr>
+                  <tr>
+                    <td>Synthetic emerald (hydrothermal)</td>
+                    <td>Moderate to strong red</td>
+                    <td>Weak to moderate red</td>
+                    <td>Stronger fluorescence than most naturals due to low iron content; useful screening indicator</td>
+                  </tr>
+                  <tr>
+                    <td>Kunzite (spodumene)</td>
+                    <td>Strong orange or pink-orange</td>
+                    <td>Moderate orange</td>
+                    <td>Also exhibits phosphorescence (continues glowing after UV is removed)</td>
+                  </tr>
+                  <tr>
+                    <td>Natural pearl</td>
+                    <td>Light blue to yellowish</td>
+                    <td>Inert to weak</td>
+                    <td>Varies by nacre composition; cultured pearls may differ from natural</td>
+                  </tr>
+                  <tr>
+                    <td>Alexandrite (chrysoberyl)</td>
+                    <td>Weak to moderate red</td>
+                    <td>Weak red</td>
+                    <td>Cr fluorescence, similar to ruby but weaker</td>
+                  </tr>
+                  <tr>
+                    <td>Fluorite</td>
+                    <td>Strong blue-violet (classic)</td>
+                    <td>Variable</td>
+                    <td>The word "fluorescence" derives from fluorite; among the strongest fluorescent minerals</td>
+                  </tr>
+                  <tr>
+                    <td>Synthetic spinel (flame-fusion)</td>
+                    <td>Often chalky blue-white or green</td>
+                    <td>Chalky blue-white</td>
+                    <td>The chalky reaction is a strong indicator of synthetic origin; natural spinel varies</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">Safety</p>
+              <p>UV radiation is harmful to eyes and skin. Never look directly at a UV lamp. Wear UV-blocking safety glasses (polycarbonate lenses provide adequate protection). Minimize exposure time. Short-wave UV is more hazardous than long-wave&mdash;ensure proper shielding around the lamp and avoid prolonged skin exposure. Work in a well-ventilated area, as some SWUV lamps generate small amounts of ozone.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 9: SPECIFIC GRAVITY TESTING           -->
+            <!-- ============================================= -->
+            <h2 id="specific-gravity" class="reveal">SG Testing Equipment</h2>
+
+            <div class="reveal">
+              <p><strong>Specific gravity</strong> (SG), also called relative density, is the ratio of a gemstone's density to the density of water. It is a fundamental physical constant used in gem identification&mdash;every mineral species has a characteristic SG or SG range determined by its chemical composition and crystal structure. SG is particularly valuable for identifying unmounted stones, rough material, carvings, and cabochons where refractometer readings may be limited to spot readings. Two primary methods are used in gemological laboratories: the hydrostatic (immersion) method and the heavy liquid method.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Hydrostatic Balance Method</h3>
+              <p>This method is based on <strong>Archimedes' principle</strong>: an object immersed in a fluid is buoyed up by a force equal to the weight of the fluid displaced. By weighing a gem in air and then in water, the SG can be calculated precisely.</p>
+              <p>A precision digital balance (accurate to at least 0.01 ct or 0.002 g) is fitted with a <strong>hydrostatic attachment</strong>&mdash;a platform that holds a beaker of distilled water above the balance pan, with a thin wire frame or basket suspended from the pan hook that dips into the water. The gem is first weighed in air on the pan (W<sub>air</sub>), then placed in the wire basket suspended in water and weighed again (W<sub>water</sub>).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>The Formula</h3>
+              <p>Specific gravity is calculated as:</p>
+              <p><strong>SG = W<sub>air</sub> / (W<sub>air</sub> &minus; W<sub>water</sub>)</strong></p>
+              <p>Where W<sub>air</sub> is the weight in air and W<sub>water</sub> is the weight in water. The denominator (W<sub>air</sub> &minus; W<sub>water</sub>) equals the weight of water displaced, which is proportional to the gem's volume.</p>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Worked Example</p>
+              <p>A blue stone suspected to be sapphire weighs <span class="val">3.52 ct</span> in air and <span class="val">2.64 ct</span> in water.</p>
+              <p>SG = 3.52 / (3.52 &minus; 2.64) = 3.52 / 0.88 = <strong>4.00</strong></p>
+              <p>The expected SG for corundum (sapphire) is <span class="val">3.99&ndash;4.02</span>. This result is consistent with sapphire and rules out common blue simulants such as blue glass (SG ~2.30&ndash;4.20, variable), synthetic spinel (SG ~3.63), and tanzanite (SG ~3.35). Combined with an RI of <span class="val">1.762&ndash;1.770</span>, the identification is highly confident.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Heavy Liquid Method</h3>
+              <p>Heavy liquids are dense chemical solutions with precisely known specific gravities. By observing whether a gem sinks, floats, or remains suspended in a heavy liquid, the SG can be estimated quickly. The three traditional gemological heavy liquids are:</p>
+              <ul>
+                <li><strong>Bromoform (CHBr<sub>3</sub>):</strong> SG = <span class="val">2.89</span>. Quartz (SG 2.65) floats; tourmaline (SG ~3.06) sinks.</li>
+                <li><strong>Methylene iodide (CH<sub>2</sub>I<sub>2</sub>):</strong> SG = <span class="val">3.32</span>. Topaz (SG ~3.53) sinks; beryl (SG ~2.72) floats.</li>
+                <li><strong>Clerici solution:</strong> SG up to <span class="val">4.15</span> when concentrated. Useful for testing denser gems. Highly toxic and corrosive&mdash;rarely used outside of specialized labs.</li>
+              </ul>
+              <p>The heavy liquid method is quick and non-destructive but provides only an approximate SG range (sink, float, or suspend). It is most useful for rapid screening and sorting of large numbers of stones. Modern gemological practice increasingly relies on the hydrostatic method due to safety and environmental concerns about heavy liquid chemicals.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Practical Considerations</h3>
+              <ul>
+                <li>Ensure the gem is free of surface oils, fingerprints, and attached materials that could affect weight.</li>
+                <li>Use distilled water at room temperature (approximately 20&deg;C / 68&deg;F). Water temperature affects its density slightly.</li>
+                <li>Avoid testing porous or fractured gems by immersion&mdash;they may absorb liquid, altering weight and potentially causing damage. Pearls, opal, and turquoise should generally not be immersed in heavy liquids.</li>
+                <li>Very small stones produce small weight differences, increasing measurement error. SG determination is most accurate for stones above approximately 1 carat.</li>
+                <li>Ensure there are no air bubbles clinging to the gem when it is weighed in water, as these will reduce the apparent weight and produce an erroneously low SG reading.</li>
+              </ul>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 10: DIAMOND TESTERS & THERMAL         -->
+            <!-- ============================================= -->
+            <h2 id="thermal-tester" class="reveal">Diamond Testers &amp; Thermal Conductivity</h2>
+
+            <div class="reveal">
+              <p>Thermal conductivity testers (commonly called "diamond testers") were developed as a rapid, portable method for separating diamond from its common simulants. Diamond has extraordinarily high thermal conductivity&mdash;approximately <span class="val">2200 W/m&middot;K</span>, roughly five times greater than copper and orders of magnitude greater than most gem materials. This extreme thermal conductivity is a direct consequence of diamond's rigid, uniform covalent bonding network and light carbon atoms, which transmit lattice vibrations (phonons) with exceptional efficiency.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>How the Thermal Probe Works</h3>
+              <p>The tester consists of a handheld probe containing a small copper tip heated to a controlled temperature. When the tip touches the surface of a gem, heat flows from the probe into the stone. The rate of heat flow depends on the gem's thermal conductivity. A thermistor (temperature-sensitive resistor) at the probe tip measures how quickly the temperature drops&mdash;if the gem conducts heat away rapidly (as diamond does), the temperature drops quickly, and the instrument signals "diamond." If the gem is a poor thermal conductor (glass, CZ, corundum, quartz), the temperature drops slowly, and the instrument signals "not diamond."</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Effectiveness and Common Separations</h3>
+              <p>Thermal conductivity testing is highly effective at separating diamond from the most common diamond simulants:</p>
+              <ul>
+                <li><strong>Cubic zirconia (CZ):</strong> Thermal conductivity ~2 W/m&middot;K. More than 1000 times lower than diamond. The tester separates diamond from CZ instantly and reliably.</li>
+                <li><strong>Glass:</strong> Thermal conductivity ~1 W/m&middot;K. Easily separated.</li>
+                <li><strong>Synthetic spinel, YAG, strontium titanate, synthetic rutile:</strong> All have low thermal conductivities. All clearly separated from diamond.</li>
+                <li><strong>White sapphire and white topaz:</strong> Low thermal conductivity (~35 W/m&middot;K and ~11 W/m&middot;K respectively). Easily separated from diamond.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">Critical Limitation: Moissanite</p>
+              <p><strong>Synthetic moissanite</strong> (silicon carbide, SiC) has a thermal conductivity of approximately <span class="val">490 W/m&middot;K</span>&mdash;not as high as diamond, but high enough that many thermal diamond testers will give a "diamond" or ambiguous reading when testing moissanite. This is a well-known limitation. Since synthetic moissanite entered the gem market in 1998 as a diamond simulant, thermal testing alone has been insufficient for definitive diamond identification.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Electrical Conductivity: The Moissanite Solution</h3>
+              <p>The key to separating diamond from moissanite lies in <strong>electrical conductivity</strong>. Moissanite is a semiconductor&mdash;it conducts electricity. The vast majority of natural diamonds are electrical insulators (Type Ia and Type IIa). Therefore, a combined thermal/electrical tester can reliably distinguish between the two: a stone that tests positive for high thermal conductivity <em>and</em> conducts electricity is moissanite, while a stone that is thermally conductive but electrically insulating is diamond.</p>
+              <p>The important exception is <strong>Type IIb diamond</strong>, which is a natural (and very rare) blue diamond colored by boron impurities. Boron acts as an electron acceptor, making Type IIb diamonds semiconductors. These diamonds will test as electrically conductive. However, Type IIb diamonds are exceedingly rare (they account for a tiny fraction of all natural diamonds), and their blue color generally distinguishes them from colorless moissanite simulants in practice.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Modern Multi-Test Instruments</h3>
+              <p>Current-generation diamond testers typically combine multiple testing modalities:</p>
+              <ul>
+                <li><strong>Thermal conductivity</strong> to separate diamond from most simulants</li>
+                <li><strong>Electrical conductivity</strong> to separate moissanite from diamond</li>
+                <li>Some advanced models incorporate <strong>UV fluorescence</strong> or <strong>photoluminescence</strong> screening to flag potential HPHT-treated or CVD-grown synthetic diamonds</li>
+              </ul>
+              <p>These combined instruments (such as the GIA iD100 and various trade-level screening devices) provide rapid, high-confidence separation of diamond, moissanite, and common simulants in a single test. However, for conclusive identification of synthetic diamonds (lab-grown vs. natural), advanced spectroscopic methods (photoluminescence spectroscopy, FTIR, UV-Vis-NIR) remain necessary.</p>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>When using a thermal diamond tester, ensure the probe tip makes firm, perpendicular contact with a clean, flat facet surface. Avoid testing through metal settings (metal conducts heat and can produce false readings). Test multiple facets if possible. Allow the probe to reset to its baseline temperature between tests. In cold environments, thermal testers may be less reliable&mdash;allow both the instrument and the gems to reach room temperature before testing.</p>
+            </div>
+
+          </div>
+
+          <aside class="toc">
+            <p class="toc__title">On this page</p>
+            <ul class="toc__list">
+              <li><a href="#essential-instruments">The Essential Gemological Toolkit</a></li>
+              <li><a href="#refractometer">The Refractometer</a></li>
+              <li><a href="#polariscope">The Polariscope</a></li>
+              <li><a href="#dichroscope">The Dichroscope</a></li>
+              <li><a href="#spectroscope">The Spectroscope</a></li>
+              <li><a href="#microscope">The Gemological Microscope</a></li>
+              <li><a href="#loupe">The 10x Loupe</a></li>
+              <li><a href="#uv-lamp">Ultraviolet Lamp</a></li>
+              <li><a href="#specific-gravity">SG Testing Equipment</a></li>
+              <li><a href="#thermal-tester">Diamond Testers &amp; Thermal Conductivity</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="page-nav">
+        <a href="catalog.html" class="page-nav__link">
+          <span class="page-nav__label">Previous</span>
+          <span class="page-nav__title">Gem Catalog</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+</body>
+</html>

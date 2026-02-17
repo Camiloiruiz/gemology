@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identification — GemLens</title>
+  <meta name="description" content="Systematic gemstone identification techniques: refractometer use, spectroscope analysis, diagnostic inclusions, treatment detection, and synthetic recognition for professional gemologists.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Identification</span>
+        </nav>
+        <span class="chip">Chapter 3</span>
+        <h1 class="display-medium">Gem Identification</h1>
+        <p class="body-large">The systematic methods, instruments, and diagnostic criteria that professional gemologists use to identify gemstones, detect treatments, and distinguish natural stones from their synthetic and simulant counterparts.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-grid content-grid--with-toc">
+          <div class="prose">
+
+            <!-- ============================================= -->
+            <!-- SECTION 1: SYSTEMATIC IDENTIFICATION          -->
+            <!-- ============================================= -->
+            <h2 id="systematic-identification" class="reveal">Systematic Identification</h2>
+
+            <div class="reveal">
+              <p>Professional gem identification is a disciplined, sequential process&mdash;not guesswork. A trained gemologist follows a systematic workflow that moves from general observation to specific instrumental measurements, progressively narrowing the range of possibilities until a conclusive identification is reached. The goal is not to confirm what you think a stone is, but to determine what it actually is through objective data.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>The Identification Workflow</h3>
+              <p>The standard gemological identification process follows three phases:</p>
+              <ol>
+                <li><strong>Observation:</strong> Unaided visual assessment and basic sensory evaluation. This includes noting color, transparency, luster, heft (estimated specific gravity), crystal shape (if rough), surface features, and any immediately visible phenomena (star, cat&rsquo;s eye, play of color). At this stage, the gemologist forms a preliminary list of possible identities&mdash;but critically, does <em>not</em> commit to a conclusion.</li>
+                <li><strong>Instrument Testing:</strong> Systematic measurement using gemological instruments in a defined sequence. The refractometer provides refractive index and birefringence. The polariscope determines optic character (isotropic vs. anisotropic, uniaxial vs. biaxial). The spectroscope reveals absorption spectra. The microscope exposes internal characteristics (inclusions, growth features). Specific gravity measurement, UV fluorescence testing, and additional techniques are applied as needed. Each test either confirms or eliminates candidate species.</li>
+                <li><strong>Conclusion:</strong> The gemologist synthesizes all data points into a definitive identification. The conclusion must be consistent with <em>all</em> measured properties&mdash;not just some. If any measurement contradicts the tentative ID, further testing is required. A responsible gemologist never forces data to fit a preconceived identification.</li>
+              </ol>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">Avoid Assumption Bias</p>
+              <p>The most common error in gem identification is assumption bias&mdash;deciding what a stone is based on appearance alone and then unconsciously interpreting instrument readings to confirm that assumption. A red stone is not necessarily ruby. A blue stone is not necessarily sapphire. A green stone is not necessarily emerald. Always let the data lead to the conclusion, not the reverse. The systematic approach exists precisely to guard against this cognitive trap.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Initial Observation Checklist</h3>
+              <p>Before touching any instrument, a thorough visual assessment provides valuable information that guides subsequent testing:</p>
+              <ul>
+                <li><strong>Color:</strong> Record the hue, tone, and saturation. Note any color zoning (angular zones suggest natural corundum; curved zones suggest flame-fusion synthetic). Observe color in multiple light sources if available.</li>
+                <li><strong>Transparency:</strong> Transparent, translucent, or opaque? Most faceted gemstones are transparent; translucency may suggest a different species or heavy treatment.</li>
+                <li><strong>Luster:</strong> Adamantine (high RI, like diamond or zircon), vitreous (most gems), waxy, resinous, or silky? Luster provides an immediate RI range estimate.</li>
+                <li><strong>Heft:</strong> Bounce the stone gently in your palm. A practiced gemologist can estimate specific gravity to within <span class="val">0.3&ndash;0.5</span> units. An unexpectedly heavy stone (e.g., glass, YAG, CZ) or unexpectedly light stone (e.g., plastic, opal) immediately narrows the field.</li>
+                <li><strong>Crystal shape (rough stones):</strong> Hexagonal prisms suggest beryl or corundum. Rounded triangular cross-sections suggest tourmaline. Octahedral crystals suggest diamond, spinel, or fluorite. Dodecahedral crystals suggest garnet. Prismatic crystals with vertical striations and a square cross-section suggest zircon.</li>
+                <li><strong>Facet condition:</strong> Examine facet edges with a loupe. Soft stones show worn, rounded facet junctions. Hard stones retain sharp edges. Doubling of back facet edges (visible through the table) immediately suggests high birefringence&mdash;zircon, peridot, or sphene.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Tip</p>
+              <p>Develop the habit of recording observations in a consistent format. Write down each measurement as you obtain it. At the end of the testing sequence, review the complete data set before making an identification call. This documentation practice prevents errors and creates a professional record of your work.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 2: REFRACTOMETER TECHNIQUE            -->
+            <!-- ============================================= -->
+            <h2 id="refractometer-technique" class="reveal">Refractometer Technique</h2>
+
+            <div class="reveal">
+              <p>The refractometer is the single most important identification instrument in gemology. A correct refractive index reading, combined with birefringence and optic character determination, can identify the vast majority of standard gemstones. Understanding how the instrument works, how to read it properly, and its limitations is essential for every gemologist.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>How the Refractometer Works</h3>
+              <p>The gemological refractometer operates on the principle of <strong>total internal reflection</strong>. It consists of a dense glass hemicylinder (typically lead glass with an RI of approximately <span class="val">1.86</span>) mounted on a calibrated scale. A monochromatic sodium light source (<span class="val">589 nm</span> wavelength) illuminates the hemicylinder from below.</p>
+              <p>A small drop of <strong>contact liquid</strong> (methylene iodide, RI <span class="val">1.81</span>, or a sulfur-selenium compound of similar RI) is placed on the hemicylinder, and the flat, polished facet of the gem is placed face-down on the liquid. The contact liquid creates optical continuity between the gem and the hemicylinder, eliminating the air gap. When the gemologist views the eyepiece, a sharp boundary between a light zone and a dark zone appears on the scale. The position of this shadow edge on the calibrated scale gives the refractive index reading.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Reading the Scale</h3>
+              <p>The reading procedure differs depending on whether the gem is isotropic (singly refractive) or anisotropic (doubly refractive):</p>
+              <ul>
+                <li><strong>Isotropic gems (cubic system, amorphous):</strong> A single shadow edge appears and remains stationary as the stone is rotated on the hemicylinder. This single value is the RI. Examples: diamond (OTL), garnet, spinel, glass.</li>
+                <li><strong>Anisotropic gems (all other crystal systems):</strong> Two shadow edges appear. As the stone is rotated <span class="val">360&deg;</span>, these edges move. The gemologist records the highest and lowest positions of each edge over a full rotation. The difference between the maximum and minimum readings is the <strong>birefringence</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Determining Optic Character</h3>
+              <p>By carefully observing how the two shadow edges behave during rotation, the gemologist can determine optic character:</p>
+              <ul>
+                <li><strong>Uniaxial:</strong> One shadow edge remains stationary (the ordinary ray, &omega;) while the other moves (the extraordinary ray, &epsilon;). If the moving ray is higher than the stationary ray, the gem is <strong>uniaxial positive</strong>. If lower, it is <strong>uniaxial negative</strong>. Examples: Quartz (U+), Corundum (U&minus;), Tourmaline (U&minus;), Zircon (U+).</li>
+                <li><strong>Biaxial:</strong> Both shadow edges move during rotation. The three principal RI values are designated &alpha; (lowest), &beta; (intermediate), and &gamma; (highest). If &beta; is closer to &alpha;, the gem is <strong>biaxial positive</strong>. If &beta; is closer to &gamma;, it is <strong>biaxial negative</strong>. Examples: Topaz (B+), Peridot (B+), Tanzanite (B&minus;).</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Spot Readings for Cabochons</h3>
+              <p>Flat-faceted surfaces are required for a standard RI reading. Cabochon-cut gems, with their curved surfaces, cannot produce a clean shadow edge. Instead, gemologists use the <strong>spot reading</strong> (or distant vision) method: a small bright spot appears on the scale rather than a shadow edge. The spot is less precise than a standard reading (accuracy of approximately &plusmn;<span class="val">0.01</span> compared to &plusmn;<span class="val">0.002</span> for flat readings), but it provides a usable approximate RI for identification purposes.</p>
+              <p>For spot readings, hold the stone on the hemicylinder and move your eye slowly away from the eyepiece until the spot comes into sharpest focus. Rotate the stone and note the range of movement. With practice, spot readings can reliably separate major gem groups.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Common Refractive Index Values</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Gem Material</th>
+                    <th>RI Range</th>
+                    <th>Birefringence</th>
+                    <th>Optic Character</th>
+                    <th>SG</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fluorite</td>
+                    <td><span class="val">1.434</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">3.18</span></td>
+                  </tr>
+                  <tr>
+                    <td>Opal</td>
+                    <td><span class="val">1.440&ndash;1.460</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic (amorphous)</td>
+                    <td><span class="val">2.15</span></td>
+                  </tr>
+                  <tr>
+                    <td>Quartz</td>
+                    <td><span class="val">1.544&ndash;1.553</span></td>
+                    <td><span class="val">0.009</span></td>
+                    <td>Uniaxial +</td>
+                    <td><span class="val">2.66</span></td>
+                  </tr>
+                  <tr>
+                    <td>Beryl (Emerald)</td>
+                    <td><span class="val">1.565&ndash;1.602</span></td>
+                    <td><span class="val">0.006</span></td>
+                    <td>Uniaxial &minus;</td>
+                    <td><span class="val">2.72</span></td>
+                  </tr>
+                  <tr>
+                    <td>Tourmaline</td>
+                    <td><span class="val">1.624&ndash;1.644</span></td>
+                    <td><span class="val">0.018</span></td>
+                    <td>Uniaxial &minus;</td>
+                    <td><span class="val">3.06</span></td>
+                  </tr>
+                  <tr>
+                    <td>Topaz</td>
+                    <td><span class="val">1.629&ndash;1.637</span></td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Biaxial +</td>
+                    <td><span class="val">3.53</span></td>
+                  </tr>
+                  <tr>
+                    <td>Peridot</td>
+                    <td><span class="val">1.654&ndash;1.690</span></td>
+                    <td><span class="val">0.036</span></td>
+                    <td>Biaxial +</td>
+                    <td><span class="val">3.34</span></td>
+                  </tr>
+                  <tr>
+                    <td>Spinel</td>
+                    <td><span class="val">1.712&ndash;1.762</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">3.60</span></td>
+                  </tr>
+                  <tr>
+                    <td>Pyrope Garnet</td>
+                    <td><span class="val">1.714&ndash;1.742</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">3.78</span></td>
+                  </tr>
+                  <tr>
+                    <td>Almandine Garnet</td>
+                    <td><span class="val">1.770&ndash;1.820</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">4.05</span></td>
+                  </tr>
+                  <tr>
+                    <td>Corundum (Ruby/Sapphire)</td>
+                    <td><span class="val">1.762&ndash;1.770</span></td>
+                    <td><span class="val">0.008</span></td>
+                    <td>Uniaxial &minus;</td>
+                    <td><span class="val">4.00</span></td>
+                  </tr>
+                  <tr>
+                    <td>Chrysoberyl</td>
+                    <td><span class="val">1.746&ndash;1.755</span></td>
+                    <td><span class="val">0.009</span></td>
+                    <td>Biaxial +</td>
+                    <td><span class="val">3.73</span></td>
+                  </tr>
+                  <tr>
+                    <td>Zircon (high)</td>
+                    <td><span class="val">1.925&ndash;1.984</span></td>
+                    <td><span class="val">0.059</span></td>
+                    <td>Uniaxial +</td>
+                    <td><span class="val">4.69</span></td>
+                  </tr>
+                  <tr>
+                    <td>Spessartine Garnet</td>
+                    <td><span class="val">1.795&ndash;1.815</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">4.15</span></td>
+                  </tr>
+                  <tr>
+                    <td>Andradite (Demantoid)</td>
+                    <td><span class="val">1.880&ndash;1.888</span></td>
+                    <td>&mdash;</td>
+                    <td>Isotropic</td>
+                    <td><span class="val">3.84</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Limitations</p>
+              <p>The standard gemological refractometer has an upper reading limit of <span class="val">1.81</span>, determined by the RI of the contact liquid (methylene iodide). Gems with RI above this value&mdash;including diamond (<span class="val">2.417</span>), zircon (<span class="val">1.925&ndash;1.984</span>), demantoid garnet (<span class="val">1.888</span>), CZ (<span class="val">2.15</span>), and moissanite (<span class="val">2.65</span>)&mdash;are described as "over the limits" (OTL) and produce no shadow edge. OTL stones require alternative identification methods: specific gravity, spectroscopy, thermal conductivity testing, or spot readings on cabochons. An OTL reading itself is diagnostic&mdash;it immediately limits the field to a small group of high-RI materials.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 3: SPECTROSCOPE ANALYSIS              -->
+            <!-- ============================================= -->
+            <h2 id="spectroscope-analysis" class="reveal">Spectroscope Analysis</h2>
+
+            <div class="reveal">
+              <p>The spectroscope reveals the <strong>absorption spectrum</strong> of a gemstone&mdash;the specific wavelengths of visible light that the stone absorbs as white light passes through it. Because different chromophores (color-causing elements) in different host crystals produce unique patterns of absorption lines and bands, the spectroscope provides powerful diagnostic information that can confirm or refute an identification, detect certain treatments, and sometimes indicate geographic origin.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Prism vs. Diffraction Grating Spectroscopes</h3>
+              <p>Two types of handheld spectroscope are used in gemology:</p>
+              <ul>
+                <li><strong>Prism spectroscope:</strong> Uses a glass prism (or series of prisms) to disperse white light into its component wavelengths. Produces a bright, high-resolution spectrum with unequal spacing&mdash;the red end is compressed and the violet end is expanded. Prism spectroscopes are preferred for detecting narrow absorption lines because of their superior resolution. They require practice to estimate wavelength positions due to the non-linear scale.</li>
+                <li><strong>Diffraction grating spectroscope:</strong> Uses a ruled diffraction grating to produce a spectrum with evenly spaced wavelengths, making wavelength estimation easier and more intuitive. However, resolution is typically lower than prism types, and the spectrum is dimmer, making faint lines harder to detect. Grating spectroscopes are often used in classroom settings.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>How Absorption Spectra Work</h3>
+              <p>When white light enters a gemstone, electrons in chromophore ions absorb photons of specific energies (wavelengths), corresponding to electron transitions within the ion&rsquo;s energy levels. The wavelengths that are absorbed appear as dark lines or bands against the continuous spectrum viewed through the spectroscope. The wavelengths that are <em>not</em> absorbed pass through the stone and combine to produce the color we see.</p>
+              <p>Absorption features can be <strong>narrow lines</strong> (sharp, well-defined absorptions at precise wavelengths, typically from rare-earth elements or chromium in specific coordination environments), <strong>broad bands</strong> (wide regions of absorption, typical of iron and many transition metals), or <strong>general absorption</strong> (a cutoff where all wavelengths below or above a certain point are absorbed).</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Key Diagnostic Spectra</h3>
+              <p>The following absorption spectra are among the most diagnostic and commonly encountered in gemological practice. Each represents a unique fingerprint of the chromophore-host combination.</p>
+            </div>
+
+            <div class="accordion reveal">
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Ruby &mdash; Chromium Spectrum
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Ruby&rsquo;s spectrum is dominated by chromium (Cr<sup>3+</sup>) in the corundum lattice and is one of the most distinctive in gemology:</p>
+                    <ul>
+                      <li><strong>Fluorescent doublet at <span class="val">694.2</span> and <span class="val">692.8</span> nm:</strong> Two bright emission lines in the deep red, visible even with a small spectroscope. These lines appear bright (not dark) because chromium fluorescence is so strong that it overwhelms the spectrum at these wavelengths. This doublet is the single most diagnostic feature of natural and synthetic ruby.</li>
+                      <li><strong>Absorption lines at <span class="val">668</span> and <span class="val">659</span> nm:</strong> Two fine dark lines in the orange-red region, flanking the fluorescent doublet on the shorter-wavelength side.</li>
+                      <li><strong>Broad absorption band centered around <span class="val">550</span> nm:</strong> A wide absorption in the green-yellow region, responsible for ruby&rsquo;s selective transmission of red light.</li>
+                      <li><strong>Broad absorption band centered around <span class="val">410</span> nm:</strong> A wide absorption in the violet region.</li>
+                    </ul>
+                    <p>High-iron rubies (e.g., Thai/Cambodian origin) may show diminished fluorescent lines due to iron quenching the chromium fluorescence&mdash;a feature that can provide origin clues.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Blue Sapphire &mdash; Iron Spectrum
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Blue sapphire&rsquo;s color arises from Fe<sup>2+</sup>&ndash;Ti<sup>4+</sup> intervalence charge transfer, but its diagnostic spectrum is dominated by iron (Fe) absorption:</p>
+                    <ul>
+                      <li><strong>Three absorption bands at <span class="val">450</span>, <span class="val">460</span>, and <span class="val">471</span> nm:</strong> These closely spaced iron lines in the blue-violet region are the hallmark of natural blue sapphire. The <span class="val">450</span> nm band is typically the strongest and most readily visible. Together, these three bands form a characteristic cluster that is immediately recognizable with practice.</li>
+                      <li><strong>Weak line at <span class="val">387</span> nm:</strong> An additional iron absorption in the near-violet, sometimes difficult to observe without good illumination.</li>
+                    </ul>
+                    <p>The intensity of these iron bands varies with the iron content of the stone. Australian and Thai sapphires (high iron) show very strong <span class="val">450</span> nm absorption, while Kashmir and Burmese sapphires (lower iron) may show weaker bands. Synthetic blue sapphires produced by flame fusion typically contain no iron and show <em>no</em> absorption lines&mdash;a critical diagnostic separation.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Emerald &mdash; Chromium/Vanadium Spectrum
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Emerald&rsquo;s green color arises from chromium and/or vanadium in the beryl lattice. The spectrum varies depending on the dominant chromophore:</p>
+                    <ul>
+                      <li><strong>Chromium doublet at <span class="val">680</span> and <span class="val">683</span> nm:</strong> Two fine lines in the red region, analogous to the ruby doublet but at slightly different wavelengths due to the beryl host crystal. These lines may appear as bright emission lines (fluorescent) in low-iron emeralds, particularly Colombian stones.</li>
+                      <li><strong>Broad absorption band centered at approximately <span class="val">600</span> nm:</strong> Absorption in the orange-red region, part of the chromium crystal-field absorption that produces green transmission.</li>
+                      <li><strong>General absorption below approximately <span class="val">450</span> nm:</strong> Strong absorption in the violet end of the spectrum, cutting off transmission of shorter wavelengths.</li>
+                      <li><strong>Partial absorption around <span class="val">630&ndash;660</span> nm:</strong> Weak absorption between the two major features.</li>
+                    </ul>
+                    <p>Vanadium-dominant emeralds (some Colombian and Brazilian stones) show a slightly different spectrum with less distinct lines in the red region. The presence or absence of the chromium doublet, combined with fluorescence behavior, helps separate chromium-colored from vanadium-colored emeralds&mdash;a distinction some trade organizations consider important for classification.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Almandine Garnet &mdash; Iron Bands
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Almandine garnet produces one of the most instantly recognizable spectra in gemology, dominated by three broad iron (Fe<sup>2+</sup>) absorption bands:</p>
+                    <ul>
+                      <li><strong>Band at <span class="val">504</span> nm:</strong> A strong, broad absorption in the blue-green region.</li>
+                      <li><strong>Band at <span class="val">520</span> nm:</strong> Overlapping with the 504 band, creating a wide absorption trough in the green.</li>
+                      <li><strong>Band at <span class="val">573</span> nm:</strong> The strongest and most characteristic band, located in the yellow-green. This single band is often sufficient to identify almandine.</li>
+                    </ul>
+                    <p>These three bands are broad and strong, easily visible even with a basic spectroscope. Pyrope-almandine mixtures (such as rhodolite garnet) show a weaker version of this pattern. Pure pyrope shows little iron absorption. Spessartine garnet shows a different pattern with bands shifted toward <span class="val">410</span>, <span class="val">420</span>, and <span class="val">430</span> nm due to manganese.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Zircon &mdash; Uranium Spectrum
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>Zircon characteristically contains trace amounts of uranium and thorium that have undergone partial radioactive decay, producing a complex spectrum of fine absorption lines throughout the visible range:</p>
+                    <ul>
+                      <li><strong>Strong line at <span class="val">653.5</span> nm:</strong> The most prominent and diagnostic line, located in the orange-red. This single line, when seen in combination with high birefringence and adamantine luster, is virtually proof of zircon identity.</li>
+                      <li><strong>Lines at <span class="val">659</span>, <span class="val">621</span>, <span class="val">615</span>, <span class="val">589</span>, and <span class="val">562</span> nm:</strong> Additional fine lines visible in well-crystallized (high) zircon.</li>
+                    </ul>
+                    <p>The number and sharpness of absorption lines depend on the degree of metamictization (radiation damage to the crystal structure). "High" zircon shows a full complement of sharp lines, strong birefringence (<span class="val">0.059</span>), and high SG (<span class="val">4.69</span>). "Low" (metamict) zircon shows fewer, broader lines, reduced birefringence, and lower SG. "Medium" zircon falls between these extremes.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger">
+                  Diamond &mdash; Cape Lines
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="accordion__body">
+                  <div class="accordion__inner">
+                    <p>The "Cape" spectrum is the most common absorption pattern in natural diamonds, seen in Type Ia stones with aggregated nitrogen:</p>
+                    <ul>
+                      <li><strong>Line at <span class="val">415.5</span> nm:</strong> The primary Cape line, located at the violet end of the visible spectrum. This is the most characteristic absorption feature in diamond and is produced by the N3 center (three nitrogen atoms surrounding a vacancy). Even in stones graded as near-colorless on the D&ndash;Z scale, the 415.5 nm line is often detectable.</li>
+                      <li><strong>Weaker lines at <span class="val">478</span>, <span class="val">452</span>, <span class="val">435</span>, and <span class="val">423</span> nm:</strong> Additional nitrogen-related absorptions that become visible in more saturated Cape-series yellow diamonds.</li>
+                    </ul>
+                    <p>The Cape spectrum helps confirm natural diamond identity and can separate natural fancy yellow diamonds from irradiated or HPHT-treated diamonds, which typically show different absorption features. Fancy-color diamonds may show entirely different spectra depending on their color origin: the <span class="val">503</span> nm (H3) and <span class="val">496</span> nm (H4) lines in some green or yellow diamonds, or the <span class="val">637</span> nm (NV center) absorption in some pink/red diamonds.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 4: DIAGNOSTIC INCLUSIONS              -->
+            <!-- ============================================= -->
+            <h2 id="diagnostic-inclusions" class="reveal">Diagnostic Inclusions</h2>
+
+            <div class="reveal">
+              <p>Inclusions are internal features trapped within a gemstone during or after its formation. While the jewelry trade often views inclusions negatively (as they can affect clarity and beauty), gemologists regard inclusions as invaluable diagnostic tools. Inclusions are the <strong>fingerprints</strong> of a gemstone: they reveal identity, confirm natural origin, indicate geographic source, and expose treatments and synthetic growth processes. Microscopic examination of inclusions is one of the most powerful techniques in gemological identification.</p>
+            </div>
+
+            <div class="callout callout--key reveal">
+              <p class="callout__label">Key Principle</p>
+              <p>Every natural gemstone grew in a specific geological environment over geological time scales. That environment left a record inside the stone&mdash;mineral crystals captured during growth, fluids trapped in healed fractures, growth disturbances from changing conditions. No synthetic process perfectly replicates the full complexity of nature, and no two natural stones contain identical inclusion suites. Inclusions are the most reliable evidence of natural origin.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Key Inclusion Types</h3>
+              <p>The following inclusion types are among the most diagnostically important in professional gemology. Each is strongly associated with specific gem species, origins, or formation conditions.</p>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Inclusion Type</th>
+                    <th>Description</th>
+                    <th>Diagnostic Significance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Silk</strong></td>
+                    <td>Dense networks of fine rutile (TiO<sub>2</sub>) needles oriented along crystallographic directions at <span class="val">60&deg;</span> angles, reflecting the hexagonal symmetry of the corundum host.</td>
+                    <td>Diagnostic of natural corundum (ruby and sapphire). Intact, well-formed silk strongly indicates an unheated stone. Partially dissolved or broken silk (with dotted appearance) suggests heat treatment. When densely packed, silk produces asterism (star effect).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Three-phase inclusions</strong></td>
+                    <td>Cavities containing three components simultaneously: liquid (typically brine), a gas bubble, and a solid crystal (usually halite, NaCl, a cubic salt crystal).</td>
+                    <td>Highly diagnostic of Colombian emerald. The low formation temperature (~300&ndash;400&deg;C) of Colombian hydrothermal deposits traps saline fluids that contain all three phases. While three-phase inclusions can occur in other gems, the combination of jagged fluid cavity shape, cubic halite crystal, and a beryl host is strongly indicative of Colombian origin.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Horsetail inclusions</strong></td>
+                    <td>Radiating bundles of fine byssolite (actinolite-tremolite) fibers emanating from a central chromite crystal, creating a spray pattern resembling a horse&rsquo;s tail.</td>
+                    <td>Virtually diagnostic of demantoid garnet from the Ural Mountains, Russia. Although demantoid from other localities (Madagascar, Namibia, Iran) can contain fibrous inclusions, the classic horsetail morphology with a chromite core is most closely associated with Russian material. Horsetails are considered desirable and can increase value.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lily pad inclusions</strong></td>
+                    <td>Disc-shaped stress fractures surrounding small chromite or other mineral crystals, with a flat, rounded shape resembling a lily pad floating on water.</td>
+                    <td>Diagnostic of peridot (olivine). The stress fractures form because the included crystals have a different coefficient of thermal expansion than the peridot host. As the stone cools after formation, differential contraction creates the characteristic disc-shaped fracture pattern around each inclusion.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rain / Treacle / Roiled effect</strong></td>
+                    <td>A shimmering, liquid-like flow pattern caused by finely spaced alternating layers of slightly different RI within natural sapphire, visible when the stone is immersed and examined with transmitted light.</td>
+                    <td>Diagnostic of natural, unheated blue sapphire, particularly from Sri Lanka and Kashmir. The effect is caused by alternating color zones with slightly different iron/titanium concentrations. Heat treatment tends to homogenize these zones, so a strong rain effect is evidence against significant heat treatment.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fingerprint inclusions</strong></td>
+                    <td>Networks of tiny fluid-filled cavities arranged in curved or planar patterns, formed when a fracture partially heals by recrystallization, trapping residual fluid in a fingerprint-like pattern.</td>
+                    <td>Common in many natural gemstones, particularly corundum, quartz, and tourmaline. Fingerprints indicate natural geological formation over time and are strong evidence of natural origin. Their precise morphology can provide origin clues: for example, the "ladder-like" fingerprints in some Burmese rubies versus the more irregular patterns in African material.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Growth zoning</strong></td>
+                    <td>Visible patterns of color concentration corresponding to crystal growth stages. In natural corundum, growth zones are <strong>angular</strong> (straight, following the hexagonal crystal faces). In flame-fusion synthetics, growth zones are <strong>curved</strong> (following the shape of the boule).</td>
+                    <td>The distinction between angular (natural) and curved (synthetic flame-fusion) growth zoning is one of the most fundamental separations in gemology. Immersion in methylene iodide or water with diffused light is the standard technique for revealing growth patterns. Natural angular zoning also provides evidence of unheated status when color boundaries are sharp.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Needle inclusions</strong></td>
+                    <td>Elongated, acicular mineral crystals of various identities trapped within a host gem during growth. Common types include rutile needles in corundum, tremolite tubes in emerald, and tourmaline needles in quartz.</td>
+                    <td>The identity of needle inclusions helps determine host gem identity and origin. Parallel needle arrangements cause chatoyancy (cat&rsquo;s eye effect) and asterism. Short, randomly oriented needles are more typical of metamorphic corundum, while long, straight needles may indicate specific geological conditions.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Microscopy Technique</p>
+              <p>When examining inclusions, use a gemological microscope at <span class="val">10x</span> to <span class="val">60x</span> magnification. Begin with <strong>darkfield illumination</strong> (light enters from the sides, not directly from below) to make inclusions stand out as bright features against a dark background. Switch to <strong>brightfield illumination</strong> (transmitted light from below) to examine color zoning, growth patterns, and fingerprint inclusions. Use <strong>fiber-optic illumination</strong> (a directional light probe) to examine surface features, filling materials, and features in specific areas of the stone. Immersion in water or methylene iodide further enhances visibility by reducing surface reflections.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 5: TREATMENT DETECTION                -->
+            <!-- ============================================= -->
+            <h2 id="treatment-detection" class="reveal">Treatment Detection</h2>
+
+            <div class="reveal">
+              <p>Treatment detection is one of the most commercially important skills in modern gemology. With the vast majority of gemstones on the market undergoing some form of enhancement, the ability to recognize treatment indicators is essential for accurate disclosure, fair pricing, and consumer protection. Each treatment leaves characteristic traces that a systematic examination can reveal.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Heat Treatment Indicators</h3>
+              <p>Heat treatment is the most widespread gem enhancement, applied to corundum (ruby and sapphire), tanzanite, aquamarine, zircon, citrine, and many other species. Temperatures typically range from <span class="val">800&deg;C</span> to <span class="val">1800&deg;C</span>, and the treatment is considered permanent. While broadly accepted in the trade (with disclosure), heated stones are valued lower than comparable unheated stones. Detection relies on recognizing changes to the stone&rsquo;s internal features.</p>
+              <ul>
+                <li><strong>Dissolved silk:</strong> Intact rutile needles (silk) in corundum dissolve and recrystallize when heated to temperatures above approximately <span class="val">1300&deg;C</span>. Partially dissolved silk appears as strings of tiny dots ("dotted silk" or "broken silk") rather than continuous needles. Fully dissolved silk leaves no visible trace. Well-preserved, intact silk is strong evidence of an unheated stone.</li>
+                <li><strong>Altered crystal inclusions:</strong> Mineral crystals trapped within corundum expand at different rates than the host when heated. This creates radial stress fractures around the inclusion, often forming disc-shaped <strong>stress halos</strong> (also called discoid fractures or "snowflake" patterns). The presence of stress halos around crystals that would not naturally produce them is a reliable heat indicator.</li>
+                <li><strong>Discoid fractures:</strong> Flat, disc-shaped fractures that form around pre-existing inclusions during heating, caused by thermal expansion mismatch. These are sometimes called "snowflake" inclusions due to their distinctive radiating pattern.</li>
+                <li><strong>Altered color zoning:</strong> In unheated corundum, boundaries between color zones are typically sharp and well-defined. Heat treatment causes diffusion that softens and blurs these boundaries. In extreme cases, the "blue-on-blue" effect occurs in sapphire where colorless zones between blue zones become blue due to titanium diffusion from adjacent zones.</li>
+                <li><strong>Boehmite needles:</strong> At certain heating temperatures in a humid atmosphere, aluminum hydroxide crystals (boehmite) can form within healed fractures in corundum, appearing as tiny acicular inclusions within fingerprint-like features.</li>
+                <li><strong>Altered fluorescence:</strong> Heat treatment can modify the UV fluorescence response. For example, unheated blue sapphires typically show inert to weak fluorescence, but some heated sapphires show chalky blue-green fluorescence under short-wave UV, a feature that suggests high-temperature treatment.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Fracture and Cavity Filling</h3>
+              <p>Filling treatments inject foreign materials (glass, resin, oil, or polymer) into surface-reaching fractures or cavities to improve apparent clarity and sometimes add color. Detection is critical because filling materials are often unstable and can degrade over time.</p>
+              <ul>
+                <li><strong>Lead-glass filled ruby:</strong> Low-quality, heavily fractured corundum is filled with lead-bearing glass in a multi-step heating process. The glass has a high RI (close to corundum), making fractures less visible. Detection relies on observing <strong>flash effects</strong>&mdash;bright flashes of blue and orange color that appear in filled fractures when the stone is rocked under reflected light. These color flashes result from thin-film interference at the glass-corundum interface and are visible under magnification at <span class="val">10&ndash;40x</span>. Gas bubbles trapped in the glass, uneven surface texture at filled cavities, and a slightly lower SG than untreated corundum are additional indicators. Lead-glass filling is unstable and can be damaged by household chemicals, heat from torch repair, and even lemon juice.</li>
+                <li><strong>Emerald oiling and resin filling:</strong> Emeralds are routinely treated with cedar oil, Canada balsam, or synthetic resins (such as Opticon or Permasafe) to fill the jardins (network of fractures typical of emerald). Detection involves UV fluorescence examination (some fillers fluoresce differently than the host emerald&mdash;green or yellowish fluorescence in fractures under long-wave UV), surface-reaching features showing different reflectivity, and the presence of bubbles within filled fractures.</li>
+                <li><strong>Surface-reaching features:</strong> Any filling treatment requires surface-reaching fractures or cavities as entry points. Examining the stone&rsquo;s surface at high magnification reveals textural differences where filler material meets the host gem&mdash;differences in polish, relief, and reflectivity.</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--warn reveal">
+              <p class="callout__label">Lead-Glass Ruby Warning</p>
+              <p>Lead-glass filled ruby can contain more glass than corundum by volume in extreme cases. These stones should be disclosed as "composite ruby" or "glass-filled ruby," not simply as "ruby." The glass component is chemically unstable and can deteriorate from contact with acids (including acidic foods), ultrasonic cleaning, heat from jewelry repair, and even prolonged exposure to household cleaning products. A consumer purchasing a lead-glass filled ruby without proper disclosure is being misled about the durability and nature of the product.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Diffusion Treatment</h3>
+              <p>Diffusion treatment involves heating a gemstone in the presence of a coloring element so that the element migrates into the crystal lattice from the surface. Two primary types exist:</p>
+              <ul>
+                <li><strong>Titanium diffusion (surface diffusion):</strong> Used on sapphire, this older technique heats colorless or pale corundum with titanium oxide at approximately <span class="val">1700&ndash;1800&deg;C</span>. Titanium is a relatively large atom and penetrates only a thin surface layer (typically &lt;<span class="val">0.5</span> mm). Detection is straightforward: <strong>immersion in methylene iodide</strong> reveals color concentrated at facet edges and the surface, with a colorless or much lighter interior. Under immersion with diffused light, the facet outlines appear as dark lines of concentrated color against a lighter background.</li>
+                <li><strong>Beryllium diffusion (lattice diffusion):</strong> Discovered commercially in the early 2000s, this technique heats corundum with beryllium oxide (chrysoberyl powder or similar) at very high temperatures (<span class="val">1800&deg;C+</span>). Beryllium is an extremely small atom (atomic radius <span class="val">0.27</span> &Aring;) and can penetrate deeply&mdash;sometimes completely through the stone. It produces vivid orange, yellow, and padparadscha-like colors in sapphire. Detection of deep beryllium diffusion is challenging and often requires advanced laboratory techniques such as LA-ICP-MS (laser ablation inductively coupled plasma mass spectrometry) to detect beryllium concentrations in the parts-per-million range. Shallow diffusion can still be detected by immersion, but deep diffusion may show relatively uniform color throughout.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Coating Detection</h3>
+              <p>Coatings involve applying a thin layer of material to a gemstone&rsquo;s surface to alter its apparent color or produce iridescent effects. Coatings are inherently fragile and among the easiest treatments to detect with careful examination:</p>
+              <ul>
+                <li><strong>Surface scratches through coating:</strong> Any scratch or abrasion that penetrates the coating reveals the different color of the underlying gem. Examine facet edges, girdle, and pavilion areas where wear concentrates. Under magnification, scratches through a colored coating on a colorless substrate appear as bright lines.</li>
+                <li><strong>Color pooling in recesses:</strong> Coating material tends to accumulate in surface depressions, facet junctions, and around the girdle, creating uneven color distribution. The color appears darker and more concentrated in these recesses.</li>
+                <li><strong>Peeling or flaking:</strong> At facet edges and areas of mechanical stress, coatings may lift or peel away from the substrate, creating visible delamination.</li>
+                <li><strong>Anomalous surface luster:</strong> The coating layer may have a different luster or reflectivity than the underlying gem, producing an "oily" or unusually bright surface appearance that differs from the expected luster for the species.</li>
+              </ul>
+              <p>Common coated products include "mystic topaz" (thin metallic oxide film on colorless topaz producing rainbow effects), tanzanite-coated topaz, and cobalt-coated quartz imitating tanzanite. A gentle wipe with a cotton swab dipped in acetone can sometimes remove organic coatings, providing a quick test.</p>
+            </div>
+
+            <!-- ============================================= -->
+            <!-- SECTION 6: SYNTHETIC RECOGNITION              -->
+            <!-- ============================================= -->
+            <h2 id="synthetic-recognition" class="reveal">Synthetic Recognition</h2>
+
+            <div class="reveal">
+              <p>Distinguishing synthetic gemstones from their natural counterparts is a critical competency for any gemologist. Because synthetics have the same chemical composition and crystal structure as natural gems, they also share the same refractive index, specific gravity, hardness, and general optical properties. Separation therefore depends almost entirely on identifying the <strong>growth features</strong> characteristic of each synthesis method&mdash;features that differ from natural geological growth.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Flame Fusion (Verneuil Process)</h3>
+              <p>The Verneuil process, developed in <span class="val">1902</span>, is the oldest and most widely used method for producing synthetic corundum and spinel. Powdered feedstock (alumina for corundum, or alumina + magnesia for spinel) is dropped through an oxy-hydrogen flame and melts, then crystallizes on a rotating ceramic pedestal, building up a cylindrical crystal called a <strong>boule</strong>.</p>
+              <p>Diagnostic features of flame-fusion synthetics:</p>
+              <ul>
+                <li><strong>Curved striae (curved growth lines):</strong> The single most diagnostic feature. As the boule builds up in concentric layers, color variations between layers produce curved banding visible under immersion in methylene iodide with diffused transmitted light. Natural corundum shows angular (straight) growth zoning following crystal faces. The presence of curved striae is conclusive proof of flame-fusion origin.</li>
+                <li><strong>Gas bubbles:</strong> Spherical or near-spherical gas bubbles trapped during the rapid crystallization process. These may be isolated or clustered in "clouds." Natural corundum does not contain spherical gas bubbles (natural fluid inclusions are irregularly shaped). Gas bubbles are found primarily in flame-fusion synthetics&mdash;not in flux or hydrothermal synthetics, which grow slowly enough to exclude gas.</li>
+                <li><strong>Unlined fractures:</strong> Flame-fusion boules cool under significant internal stress and may develop fractures. Unlike natural healed fractures (which contain fluid trails or fingerprint patterns), these synthetic fractures are "clean" and unlined&mdash;smooth, empty cracks with no secondary filling.</li>
+              </ul>
+            </div>
+
+            <div class="reveal">
+              <h3>Flux Growth</h3>
+              <p>Flux-grown synthetics crystallize slowly from a molten chemical solvent (flux) over periods of weeks to months. Common fluxes include lead oxide (PbO), lithium molybdate (Li<sub>2</sub>MoO<sub>4</sub>), and bismuth oxide (Bi<sub>2</sub>O<sub>3</sub>). This slow growth can produce crystals with well-developed faces that more closely resemble natural material, making identification more challenging than with flame-fusion products.</p>
+              <p>Diagnostic features of flux-grown synthetics:</p>
+              <ul>
+                <li><strong>Flux inclusions:</strong> Remnants of the solidified flux solvent trapped within the crystal during growth. These appear as wispy, veil-like features, cloudy zones, or irregular fingerprint-like patterns. Under high magnification, flux remnants often have a characteristic "rain" or "smoke" appearance that differs from the angular fingerprint patterns of natural partially healed fractures.</li>
+                <li><strong>Metallic platelets:</strong> Many fluxes contain metals (lead, platinum from crucibles) that crystallize as flat, highly reflective metallic platelets trapped within the synthetic crystal. These appear as bright, mirror-like flakes under reflected light&mdash;a feature essentially never seen in natural corundum or emerald.</li>
+                <li><strong>Wispy veils:</strong> Thin, cloud-like concentrations of flux material that form along growth planes. These can superficially resemble natural fingerprint inclusions but typically lack the organized, planar geometry of natural partially healed fractures.</li>
+                <li><strong>Absence of natural inclusions:</strong> Flux-grown synthetics do not contain rutile silk, mineral crystal inclusions, or three-phase inclusions characteristic of specific natural origins. The inclusion suite is limited to flux remnants and growth features.</li>
+              </ul>
+              <p>Major producers include Chatham (emerald, ruby, sapphire), Ramaura (ruby), and Knischka (ruby). Flux-grown emerald (Chatham, Gilson, Lennix) is common in the market and requires careful microscopic examination for separation from natural material.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Hydrothermal Growth</h3>
+              <p>Hydrothermal synthesis mimics the natural geological process: nutrient material is dissolved in superheated water under high pressure in a sealed autoclave, then recrystallized on seed plates at slightly lower temperatures in a different zone of the vessel. Growth occurs over weeks to months. This method is used primarily for emerald, quartz varieties, and beryl.</p>
+              <p>Diagnostic features of hydrothermal synthetics:</p>
+              <ul>
+                <li><strong>Chevron (V-shaped) growth patterns:</strong> Characteristic growth zoning that forms angular V-shaped or zigzag patterns, resulting from the alternating growth on different crystal faces of the seed plate. These chevron patterns are distinctive and differ from the growth zoning seen in natural beryl or quartz.</li>
+                <li><strong>Seed plates:</strong> Many hydrothermal synthetics retain the seed crystal (a thin plate of natural or synthetic material) on which growth initiated. The seed plate may be visible as a flat, inclusion-free plane within the crystal, sometimes with a slight color difference from the grown material.</li>
+                <li><strong>Nail-head spicules:</strong> Tiny, elongated inclusions with a bulbous end, oriented perpendicular to the seed plate. These form during the initial stages of growth as the new crystal nucleates on the seed surface.</li>
+                <li><strong>Absence of natural geological inclusions:</strong> Like flux synthetics, hydrothermal products lack the mineral crystal inclusions, three-phase inclusions, and partially healed fracture patterns characteristic of natural gems formed in geological environments.</li>
+              </ul>
+              <p>Major producers include Biron and Tairus (emerald), and various Russian laboratories (emerald, quartz varieties, alexandrite). Hydrothermal synthetic emerald can be particularly challenging to distinguish from natural material and often requires advanced testing including infrared spectroscopy and trace-element analysis.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>CVD and HPHT Diamond</h3>
+              <p>Synthetic diamond production has advanced dramatically, with two primary methods now capable of producing gem-quality stones:</p>
+              <ul>
+                <li><strong>HPHT (High Pressure, High Temperature):</strong> Mimics the natural formation conditions of diamond by subjecting a carbon source to pressures of <span class="val">5&ndash;6 GPa</span> and temperatures of <span class="val">1300&ndash;1600&deg;C</span> in the presence of a metallic catalyst (typically iron, nickel, or cobalt alloy). HPHT diamonds commonly grow as cubo-octahedral crystals and may exhibit distinctive fluorescence patterns&mdash;cross-shaped or geometric patterns under UV light that differ from the uniform or zoned fluorescence of natural diamonds. Metallic flux inclusions (from the catalyst) may be visible under magnification and are sometimes magnetic. Most HPHT synthetics are Type Ib (isolated nitrogen, producing yellow color) or Type IIa (near-colorless after decolorization treatment).</li>
+                <li><strong>CVD (Chemical Vapor Deposition):</strong> Grows diamond by depositing carbon from a hydrocarbon gas (typically methane) onto a diamond seed plate in a low-pressure plasma chamber at approximately <span class="val">700&ndash;1000&deg;C</span>. CVD diamonds grow layer by layer and may show <strong>striated growth patterns</strong> visible under magnification with cross-polarized light. Under short-wave UV, CVD diamonds frequently show <strong>orange or red fluorescence</strong> (from nitrogen-vacancy centers), often with a distinctive layered pattern. Some CVD diamonds exhibit phosphorescence (afterglow). CVD diamonds are typically Type IIa (essentially nitrogen-free).</li>
+              </ul>
+            </div>
+
+            <div class="callout callout--note reveal">
+              <p class="callout__label">Laser Inscriptions</p>
+              <p>Both HPHT and CVD synthetic diamonds are required by most gemological laboratories to bear a <strong>laser inscription</strong> on the girdle, typically including the words "Laboratory Grown" or "LG" followed by a report number. Examining the girdle at <span class="val">10x</span> magnification for inscriptions is a standard first step in diamond screening. However, inscriptions can be polished off, so their absence does not confirm natural origin. Advanced identification ultimately requires spectroscopic analysis (photoluminescence, FTIR, UV-Vis-NIR) available at major gemological laboratories.</p>
+            </div>
+
+            <div class="reveal">
+              <h3>Natural vs. Synthetic: Comparison Table</h3>
+            </div>
+
+            <div class="table-wrap reveal">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Natural Gemstone</th>
+                    <th>Flame Fusion</th>
+                    <th>Flux Growth</th>
+                    <th>Hydrothermal</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Growth zoning</strong></td>
+                    <td>Angular, straight (following crystal faces)</td>
+                    <td>Curved striae (following boule shape)</td>
+                    <td>Irregular or absent</td>
+                    <td>Chevron / V-shaped patterns</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gas bubbles</strong></td>
+                    <td>Absent (irregular fluid inclusions instead)</td>
+                    <td>Spherical gas bubbles (common)</td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mineral crystals</strong></td>
+                    <td>Common (rutile, zircon, apatite, calcite, etc.)</td>
+                    <td>Absent</td>
+                    <td>Metallic platelets (Pt, Au, Cu from crucible)</td>
+                    <td>Absent or rare</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Flux/solvent remnants</strong></td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                    <td>Wispy veils, cloudy zones, flux fingerprints</td>
+                    <td>Absent (water solvent leaves no residue)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Seed plate</strong></td>
+                    <td>Absent</td>
+                    <td>Absent (pedestal contact only)</td>
+                    <td>Sometimes present</td>
+                    <td>Usually present</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Three-phase inclusions</strong></td>
+                    <td>Present in some origins (e.g., Colombian emerald)</td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Fingerprint inclusions</strong></td>
+                    <td>Common (partially healed fractures)</td>
+                    <td>Absent</td>
+                    <td>Flux "fingerprints" (different morphology)</td>
+                    <td>Absent</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Silk (rutile needles)</strong></td>
+                    <td>Common in corundum</td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                    <td>Absent</td>
+                  </tr>
+                  <tr>
+                    <td><strong>UV fluorescence</strong></td>
+                    <td>Variable by species and origin</td>
+                    <td>Often stronger or different from natural</td>
+                    <td>Often different from natural</td>
+                    <td>Often different from natural</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cost</strong></td>
+                    <td>Determined by quality and rarity</td>
+                    <td>Very low (mass production)</td>
+                    <td>Moderate (slow growth process)</td>
+                    <td>Moderate (slow growth process)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout callout--tip reveal">
+              <p class="callout__label">Practical Approach</p>
+              <p>When a stone&rsquo;s identity is established but you suspect synthetic origin, focus your microscopic examination on answering two questions: (1) Does the stone contain inclusions that could <em>only</em> form in nature (mineral crystals, three-phase inclusions, partially healed fractures with natural fluid trails)? (2) Does the stone contain features characteristic of a specific synthesis method (curved striae, flux veils, metallic platelets, seed plates, chevron growth)? If the answer to the first question is yes, the stone is natural. If the answer to the second question is yes, the stone is synthetic. If neither type of inclusion is visible (a clean stone), advanced testing may be required.</p>
+            </div>
+
+          </div>
+
+          <aside class="toc">
+            <p class="toc__title">On this page</p>
+            <ul class="toc__list">
+              <li><a href="#systematic-identification">Systematic Identification</a></li>
+              <li><a href="#refractometer-technique">Refractometer Technique</a></li>
+              <li><a href="#spectroscope-analysis">Spectroscope Analysis</a></li>
+              <li><a href="#diagnostic-inclusions">Diagnostic Inclusions</a></li>
+              <li><a href="#treatment-detection">Treatment Detection</a></li>
+              <li><a href="#synthetic-recognition">Synthetic Recognition</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="page-nav">
+        <a href="properties.html" class="page-nav__link">
+          <span class="page-nav__label">Previous</span>
+          <span class="page-nav__title">Gem Properties</span>
+        </a>
+        <a href="catalog.html" class="page-nav__link page-nav__link--next">
+          <span class="page-nav__label">Next</span>
+          <span class="page-nav__title">Gem Catalog</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+</body>
+</html>

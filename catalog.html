@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gem Catalog — GemLens</title>
+  <meta name="description" content="Detailed profiles of major gemstone species with chemical data, optical constants, diagnostic features, sources, treatments, and value factors.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Catalog</span>
+        </nav>
+        <span class="chip">Chapter 4</span>
+        <h1 class="display-medium">Gem Catalog</h1>
+        <p class="body-large">Detailed profiles of major gemstone species with chemical data, optical constants, diagnostic features, sources, treatments, and value factors.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Filter chips -->
+        <div class="filter-chips">
+          <button class="filter-chip filter-chip--active" data-filter="all">All</button>
+          <button class="filter-chip" data-filter="precious">Precious</button>
+          <button class="filter-chip" data-filter="semi-precious">Semi-Precious</button>
+          <button class="filter-chip" data-filter="organic">Organic</button>
+          <button class="filter-chip" data-filter="phenomenal">Phenomenal</button>
+        </div>
+
+        <!-- Gem card grid -->
+        <div class="catalog-grid">
+
+          <!-- ========== PRECIOUS ========== -->
+
+          <!-- 1. Diamond -->
+          <div class="gem-card" data-category="precious" style="--gem-hue:0;--gem-sat:0%;--gem-light:85%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Diamond</p>
+              <p class="body-small">Pure carbon crystallized under extreme mantle pressures. The hardest natural material and the benchmark for brilliance and fire in gemstones.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Diamond</dd></div>
+                <div><dt>Formula</dt><dd>C</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+                <div><dt>Mohs</dt><dd>10</dd></div>
+                <div><dt>RI</dt><dd>2.417</dd></div>
+                <div><dt>SG</dt><dd>3.52</dd></div>
+                <div><dt>Dispersion</dt><dd>0.044</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Botswana, Russia (Yakutia), South Africa, Canada, Angola, Australia</p>
+              <p class="body-small"><strong>Common treatments:</strong> HPHT (color improvement), laser drilling (clarity), fracture filling, irradiation</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Adamantine luster, single refraction, strong thermal conductivity, naturals and trigons on crystal faces, graining</p>
+            </div>
+          </div>
+
+          <!-- 2. Ruby -->
+          <div class="gem-card" data-category="precious" style="--gem-hue:0;--gem-sat:70%;--gem-light:45%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Ruby</p>
+              <p class="body-small">Variety of corundum colored by chromium. The most valued colored gemstone historically.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Corundum</dd></div>
+                <div><dt>Formula</dt><dd>Al&#8322;O&#8323;</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+                <div><dt>Mohs</dt><dd>9</dd></div>
+                <div><dt>RI</dt><dd>1.762&ndash;1.770</dd></div>
+                <div><dt>SG</dt><dd>4.00</dd></div>
+                <div><dt>Dispersion</dt><dd>0.018</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Myanmar (Mogok), Mozambique, Madagascar, Thailand, Vietnam</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment, fracture filling (lead glass), flux healing</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Silk (rutile needles), fluorescence (strong red under UV), lamellar twinning, color zoning</p>
+            </div>
+          </div>
+
+          <!-- 3. Blue Sapphire -->
+          <div class="gem-card" data-category="precious" style="--gem-hue:220;--gem-sat:65%;--gem-light:40%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Blue Sapphire</p>
+              <p class="body-small">Blue variety of corundum, colored by iron and titanium intervalence charge transfer. One of the most commercially important colored gemstones.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Corundum</dd></div>
+                <div><dt>Formula</dt><dd>Al&#8322;O&#8323;</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+                <div><dt>Mohs</dt><dd>9</dd></div>
+                <div><dt>RI</dt><dd>1.762&ndash;1.770</dd></div>
+                <div><dt>SG</dt><dd>4.00</dd></div>
+                <div><dt>Dispersion</dt><dd>0.018</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Kashmir, Sri Lanka (Ceylon), Myanmar, Madagascar, Australia, Montana (USA)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (dissolves silk, intensifies color), lattice diffusion (titanium, beryllium)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Silk (rutile needles), angular color zoning, hexagonal growth patterns, iron absorption spectrum (450 nm band)</p>
+            </div>
+          </div>
+
+          <!-- 4. Emerald -->
+          <div class="gem-card" data-category="precious" style="--gem-hue:145;--gem-sat:60%;--gem-light:38%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Emerald</p>
+              <p class="body-small">Green variety of beryl colored by chromium and/or vanadium. Prized for its vivid green color; inclusions (jardin) are expected and accepted.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Beryl</dd></div>
+                <div><dt>Formula</dt><dd>Be&#8323;Al&#8322;Si&#8326;O&#8321;&#8328;</dd></div>
+                <div><dt>Crystal</dt><dd>Hexagonal</dd></div>
+                <div><dt>Mohs</dt><dd>7.5&ndash;8</dd></div>
+                <div><dt>RI</dt><dd>1.565&ndash;1.602</dd></div>
+                <div><dt>SG</dt><dd>2.72</dd></div>
+                <div><dt>Dispersion</dt><dd>0.014</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Colombia (Muzo, Chivor), Zambia (Kagem), Brazil, Ethiopia, Zimbabwe</p>
+              <p class="body-small"><strong>Common treatments:</strong> Oil/resin filling of fractures (cedar oil, Opticon, polymer resins), minor enhancement nearly universal</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Three-phase inclusions (Colombian), jardin (fracture networks), tremolite needles (Zambian), chromium absorption spectrum</p>
+            </div>
+          </div>
+
+          <!-- ========== SEMI-PRECIOUS ========== -->
+
+          <!-- 5. Aquamarine -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:195;--gem-sat:55%;--gem-light:60%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Aquamarine</p>
+              <p class="body-small">Blue to blue-green variety of beryl, colored by iron. Known for excellent clarity and large crystal sizes in pegmatite deposits.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Beryl</dd></div>
+                <div><dt>Formula</dt><dd>Be&#8323;Al&#8322;Si&#8326;O&#8321;&#8328;</dd></div>
+                <div><dt>Crystal</dt><dd>Hexagonal</dd></div>
+                <div><dt>Mohs</dt><dd>7.5&ndash;8</dd></div>
+                <div><dt>RI</dt><dd>1.565&ndash;1.590</dd></div>
+                <div><dt>SG</dt><dd>2.72</dd></div>
+                <div><dt>Dispersion</dt><dd>0.014</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Brazil (Minas Gerais), Pakistan, Madagascar, Mozambique, Nigeria</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (removes greenish tint, common and accepted), typically eye-clean without filling</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Rain-like parallel tube inclusions, negative crystals, iron spectrum (427 nm band), dichroism (blue / near-colorless)</p>
+            </div>
+          </div>
+
+          <!-- 6. Tourmaline -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:160;--gem-sat:50%;--gem-light:42%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Tourmaline</p>
+              <p class="body-small">Complex borosilicate group occurring in nearly every color. Elbaite, liddicoatite, and dravite are the most common gem species.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Tourmaline group</dd></div>
+                <div><dt>Formula</dt><dd>Complex borosilicate</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+                <div><dt>Mohs</dt><dd>7&ndash;7.5</dd></div>
+                <div><dt>RI</dt><dd>1.624&ndash;1.644</dd></div>
+                <div><dt>SG</dt><dd>3.06</dd></div>
+                <div><dt>Dispersion</dt><dd>0.017</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Brazil (Para&iacute;ba, Minas Gerais), Afghanistan, Mozambique, Nigeria, Madagascar, USA (Maine, California)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (lightens dark stones), irradiation (enhances pink/red), clarity enhancement rare</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Strong dichroism, thread-like tube inclusions, rounded triangular cross-section, growth tubes parallel to c-axis</p>
+            </div>
+          </div>
+
+          <!-- 7. Spinel -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:340;--gem-sat:60%;--gem-light:45%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Spinel</p>
+              <p class="body-small">Historically confused with ruby, now valued in its own right. Singly refractive with vivid saturation and no routine treatment.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Spinel</dd></div>
+                <div><dt>Formula</dt><dd>MgAl&#8322;O&#8324;</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+                <div><dt>Mohs</dt><dd>8</dd></div>
+                <div><dt>RI</dt><dd>1.712&ndash;1.762</dd></div>
+                <div><dt>SG</dt><dd>3.60</dd></div>
+                <div><dt>Dispersion</dt><dd>0.020</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Myanmar (Mogok), Sri Lanka, Tanzania (Mahenge), Tajikistan, Vietnam</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; occasional heat treatment reported but uncommon</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Single refraction (isotropic), octahedral inclusions, spinel-law twinning (macle), absence of dichroism, zinc absorption lines in some colors</p>
+            </div>
+          </div>
+
+          <!-- 8. Garnet (Almandine) -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:0;--gem-sat:55%;--gem-light:30%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Garnet (Almandine)</p>
+              <p class="body-small">Iron-aluminum garnet, the most common garnet species. Deep red to brownish-red color; often found in metamorphic rocks.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Garnet (Almandine)</dd></div>
+                <div><dt>Formula</dt><dd>Fe&#8323;Al&#8322;(SiO&#8324;)&#8323;</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+                <div><dt>Mohs</dt><dd>7&ndash;7.5</dd></div>
+                <div><dt>RI</dt><dd>1.790</dd></div>
+                <div><dt>SG</dt><dd>4.05</dd></div>
+                <div><dt>Dispersion</dt><dd>0.024</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> India, Sri Lanka, Brazil, Madagascar, USA, Czech Republic (pyrope-almandine)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Single refraction, almandine absorption spectrum (505 nm, 520 nm, 576 nm bands), rutile needle inclusions, rounded crystal inclusions</p>
+            </div>
+          </div>
+
+          <!-- 9. Garnet (Tsavorite) -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:135;--gem-sat:65%;--gem-light:40%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Garnet (Tsavorite)</p>
+              <p class="body-small">Vanadium/chromium-bearing green grossular garnet. Discovered in 1967 near Tsavo National Park, Kenya. Rivals emerald in color saturation.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Garnet (Grossular)</dd></div>
+                <div><dt>Formula</dt><dd>Ca&#8323;Al&#8322;(SiO&#8324;)&#8323;</dd></div>
+                <div><dt>Crystal</dt><dd>Cubic</dd></div>
+                <div><dt>Mohs</dt><dd>7&ndash;7.5</dd></div>
+                <div><dt>RI</dt><dd>1.740</dd></div>
+                <div><dt>SG</dt><dd>3.61</dd></div>
+                <div><dt>Dispersion</dt><dd>0.028</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Kenya (Tsavo), Tanzania (Merelani), Madagascar</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; no known routine treatments</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Single refraction, vanadium/chromium absorption spectrum, graphite plate inclusions, actinolite needle inclusions, high clarity typical in small sizes</p>
+            </div>
+          </div>
+
+          <!-- 10. Topaz -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:35;--gem-sat:55%;--gem-light:55%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Topaz</p>
+              <p class="body-small">Aluminum fluorosilicate prized in imperial orange, pink, and natural blue. The most valuable variety is &ldquo;Imperial topaz&rdquo; from Ouro Preto, Brazil.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Topaz</dd></div>
+                <div><dt>Formula</dt><dd>Al&#8322;SiO&#8324;(F,OH)&#8322;</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+                <div><dt>Mohs</dt><dd>8</dd></div>
+                <div><dt>RI</dt><dd>1.629&ndash;1.637</dd></div>
+                <div><dt>SG</dt><dd>3.53</dd></div>
+                <div><dt>Dispersion</dt><dd>0.014</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Brazil (Ouro Preto for Imperial), Pakistan, Russia (Ural Mountains), Sri Lanka, Nigeria</p>
+              <p class="body-small"><strong>Common treatments:</strong> Irradiation + heat (produces blue topaz; nearly all blue topaz is treated), surface coating (&ldquo;Mystic topaz&rdquo;)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Perfect basal cleavage (one direction), high density for a transparent gem, liquid inclusions with two-phase fills, biaxial positive optic sign</p>
+            </div>
+          </div>
+
+          <!-- 11. Tanzanite -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:255;--gem-sat:55%;--gem-light:45%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Tanzanite</p>
+              <p class="body-small">Blue-violet variety of zoisite from a single source in Tanzania. Trichroic, showing blue, violet, and burgundy depending on crystal axis.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Zoisite</dd></div>
+                <div><dt>Formula</dt><dd>Ca&#8322;Al&#8323;(SiO&#8324;)(Si&#8322;O&#8327;)O(OH)</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+                <div><dt>Mohs</dt><dd>6&ndash;6.5</dd></div>
+                <div><dt>RI</dt><dd>1.691&ndash;1.700</dd></div>
+                <div><dt>SG</dt><dd>3.35</dd></div>
+                <div><dt>Dispersion</dt><dd>0.030</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Tanzania (Merelani Hills)&mdash;the only known commercial source worldwide</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (virtually all tanzanite is heated to convert brown/yellow zoisite to blue-violet; universally accepted)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Strong trichroism (blue, violet, burgundy), single-source origin, vanadium absorption, perfect prismatic cleavage in one direction, moderate hardness</p>
+            </div>
+          </div>
+
+          <!-- 12. Peridot -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:90;--gem-sat:55%;--gem-light:42%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Peridot</p>
+              <p class="body-small">Gem variety of olivine (forsterite-fayalite series), colored by iron. One of few gems that occur in only one color&mdash;green to yellowish-green.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Olivine</dd></div>
+                <div><dt>Formula</dt><dd>(Mg,Fe)&#8322;SiO&#8324;</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+                <div><dt>Mohs</dt><dd>6.5&ndash;7</dd></div>
+                <div><dt>RI</dt><dd>1.654&ndash;1.690</dd></div>
+                <div><dt>SG</dt><dd>3.34</dd></div>
+                <div><dt>Dispersion</dt><dd>0.020</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Myanmar, Pakistan (Kashmir), USA (Arizona&mdash;San Carlos Reservation), China, Ethiopia, Egypt (Zabargad/St. John&rsquo;s Island)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; occasional metal-foil backing in historical pieces</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Strong doubling of back facet edges visible through table, lily-pad inclusions (chromite crystals with tension halos), idiochromatic color (iron is essential, not trace)</p>
+            </div>
+          </div>
+
+          <!-- 13. Zircon -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:195;--gem-sat:45%;--gem-light:55%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Zircon</p>
+              <p class="body-small">Natural zirconium silicate (not to be confused with cubic zirconia). High dispersion and strong birefringence produce exceptional brilliance and visible facet doubling.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Zircon</dd></div>
+                <div><dt>Formula</dt><dd>ZrSiO&#8324;</dd></div>
+                <div><dt>Crystal</dt><dd>Tetragonal</dd></div>
+                <div><dt>Mohs</dt><dd>7.5</dd></div>
+                <div><dt>RI</dt><dd>1.925&ndash;1.984</dd></div>
+                <div><dt>SG</dt><dd>4.69</dd></div>
+                <div><dt>Dispersion</dt><dd>0.039</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Cambodia (Ratanakiri), Sri Lanka, Myanmar, Tanzania, Australia</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (produces blue and colorless from brownish rough; common and accepted)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Very strong birefringence (visible doubling of back facets), high RI and dispersion, zirconium spectrum (653.5 nm line), metamict varieties show reduced properties due to radioactive decay damage</p>
+            </div>
+          </div>
+
+          <!-- 14. Amethyst -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:275;--gem-sat:50%;--gem-light:45%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Amethyst</p>
+              <p class="body-small">Purple variety of quartz, colored by iron and irradiation-induced color centers. The most valued variety of quartz, prized since antiquity.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Quartz</dd></div>
+                <div><dt>Formula</dt><dd>SiO&#8322;</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+                <div><dt>Mohs</dt><dd>7</dd></div>
+                <div><dt>RI</dt><dd>1.544&ndash;1.553</dd></div>
+                <div><dt>SG</dt><dd>2.66</dd></div>
+                <div><dt>Dispersion</dt><dd>0.013</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Brazil (Rio Grande do Sul), Uruguay, Zambia, Madagascar, South Korea</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (can convert to citrine or prasiolite/green quartz at ~470&deg;C), generally not enhanced</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Zebra-stripe color zoning (alternating purple and colorless bands following rhombohedral growth), Brasil-law twinning, tiger-stripe patterns, feather inclusions</p>
+            </div>
+          </div>
+
+          <!-- 15. Citrine -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:42;--gem-sat:65%;--gem-light:52%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Citrine</p>
+              <p class="body-small">Yellow to orange variety of quartz. Most commercial citrine is heat-treated amethyst; natural citrine is comparatively rare and typically pale yellow.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Quartz</dd></div>
+                <div><dt>Formula</dt><dd>SiO&#8322;</dd></div>
+                <div><dt>Crystal</dt><dd>Trigonal</dd></div>
+                <div><dt>Mohs</dt><dd>7</dd></div>
+                <div><dt>RI</dt><dd>1.544&ndash;1.553</dd></div>
+                <div><dt>SG</dt><dd>2.66</dd></div>
+                <div><dt>Dispersion</dt><dd>0.013</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Brazil (Minas Gerais, Rio Grande do Sul), Madagascar, Zambia, Spain, Russia (Ural Mountains)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Most commercial citrine is heat-treated amethyst (orangey tones) or smoky quartz; natural citrine is typically not treated</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Absence of dichroism distinguishes from topaz, uniform color (heat-treated) vs. subtle zoning (natural), same RI/SG as all quartz varieties, liquid inclusions</p>
+            </div>
+          </div>
+
+          <!-- 16. Kunzite -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:315;--gem-sat:40%;--gem-light:65%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Kunzite</p>
+              <p class="body-small">Pink to lilac variety of spodumene, colored by manganese. Named after gemologist George Frederick Kunz. Color can fade with prolonged light exposure.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Spodumene</dd></div>
+                <div><dt>Formula</dt><dd>LiAlSi&#8322;O&#8326;</dd></div>
+                <div><dt>Crystal</dt><dd>Monoclinic</dd></div>
+                <div><dt>Mohs</dt><dd>6.5&ndash;7</dd></div>
+                <div><dt>RI</dt><dd>1.660&ndash;1.676</dd></div>
+                <div><dt>SG</dt><dd>3.18</dd></div>
+                <div><dt>Dispersion</dt><dd>0.017</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Afghanistan (Nuristan), Brazil (Minas Gerais), Madagascar, Pakistan, USA (California)</p>
+              <p class="body-small"><strong>Common treatments:</strong> Irradiation (deepens pink color; may fade), heat treatment occasionally used</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Strong pleochroism (pink, violet, colorless along different axes), perfect cleavage in two directions, color fading risk in sunlight, tubular inclusions</p>
+            </div>
+          </div>
+
+          <!-- 17. Chrysoberyl -->
+          <div class="gem-card" data-category="semi-precious" style="--gem-hue:55;--gem-sat:45%;--gem-light:50%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Chrysoberyl</p>
+              <p class="body-small">Beryllium aluminum oxide, exceptionally hard and durable. Ordinary chrysoberyl is yellowish-green to golden; the species also includes alexandrite and cat&rsquo;s eye varieties.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Chrysoberyl</dd></div>
+                <div><dt>Formula</dt><dd>BeAl&#8322;O&#8324;</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+                <div><dt>Mohs</dt><dd>8.5</dd></div>
+                <div><dt>RI</dt><dd>1.746&ndash;1.755</dd></div>
+                <div><dt>SG</dt><dd>3.73</dd></div>
+                <div><dt>Dispersion</dt><dd>0.015</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Sri Lanka, Brazil, Madagascar, Tanzania, Myanmar</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; no routine treatments known</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> High hardness (8.5, third hardest gem), cyclic twinning (trillings), fingerprint inclusions, strong vitreous luster, step-like fracture</p>
+            </div>
+          </div>
+
+          <!-- ========== PHENOMENAL ========== -->
+
+          <!-- 18. Alexandrite -->
+          <div class="gem-card" data-category="phenomenal" style="--gem-hue:160;--gem-sat:40%;--gem-light:40%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Alexandrite</p>
+              <p class="body-small">Color-change variety of chrysoberyl: green in daylight, red-purple in incandescent light. Caused by chromium&rsquo;s narrow transmission window between red and green absorption.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Chrysoberyl</dd></div>
+                <div><dt>Formula</dt><dd>BeAl&#8322;O&#8324;</dd></div>
+                <div><dt>Crystal</dt><dd>Orthorhombic</dd></div>
+                <div><dt>Mohs</dt><dd>8.5</dd></div>
+                <div><dt>RI</dt><dd>1.746&ndash;1.755</dd></div>
+                <div><dt>SG</dt><dd>3.73</dd></div>
+                <div><dt>Dispersion</dt><dd>0.015</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Russia (Ural Mountains&mdash;original source), Brazil, Sri Lanka, Tanzania, India</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; synthetics are common and must be distinguished from naturals</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Dramatic color change (green/red), chromium absorption spectrum (680 nm doublet), trillings (cyclic twins), strong pleochroism (green, orange, purple-red)</p>
+            </div>
+          </div>
+
+          <!-- 19. Opal -->
+          <div class="gem-card" data-category="phenomenal" style="--gem-hue:210;--gem-sat:35%;--gem-light:70%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Opal</p>
+              <p class="body-small">Hydrated amorphous silica displaying play of color from diffraction of light by orderly arrays of submicroscopic silica spheres. Contains 3&ndash;21% water.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Opal</dd></div>
+                <div><dt>Formula</dt><dd>SiO&#8322;&middot;nH&#8322;O</dd></div>
+                <div><dt>Crystal</dt><dd>Amorphous</dd></div>
+                <div><dt>Mohs</dt><dd>5.5&ndash;6.5</dd></div>
+                <div><dt>RI</dt><dd>1.440&ndash;1.460</dd></div>
+                <div><dt>SG</dt><dd>2.15</dd></div>
+                <div><dt>Dispersion</dt><dd>N/A (play of color from diffraction)</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Australia (Lightning Ridge, Coober Pedy, Mintabie), Ethiopia (Wollo), Mexico (fire opal), Brazil</p>
+              <p class="body-small"><strong>Common treatments:</strong> Smoke treatment (darkens body color), sugar/acid treatment, impregnation with oil or polymer, assembled stones (doublets, triplets)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Play of color (spectral diffraction), amorphous (SR on polariscope with possible ADR), low SG, columnar structure in some types, water content (crazing risk), no crystal structure</p>
+            </div>
+          </div>
+
+          <!-- 20. Moonstone -->
+          <div class="gem-card" data-category="phenomenal" style="--gem-hue:220;--gem-sat:20%;--gem-light:75%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Moonstone</p>
+              <p class="body-small">Feldspar variety displaying adularescence&mdash;a billowy blue-white sheen caused by light scattering from alternating layers of orthoclase and albite formed by exsolution.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Feldspar (Orthoclase)</dd></div>
+                <div><dt>Formula</dt><dd>KAlSi&#8323;O&#8328;</dd></div>
+                <div><dt>Crystal</dt><dd>Monoclinic</dd></div>
+                <div><dt>Mohs</dt><dd>6&ndash;6.5</dd></div>
+                <div><dt>RI</dt><dd>1.518&ndash;1.526</dd></div>
+                <div><dt>SG</dt><dd>2.57</dd></div>
+                <div><dt>Dispersion</dt><dd>0.012</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Sri Lanka (finest blue sheen), India, Myanmar, Tanzania, Madagascar</p>
+              <p class="body-small"><strong>Common treatments:</strong> Generally untreated; occasional coating or impregnation in low-quality material</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Adularescence (blue or white sheen), centipede-like inclusions, lamellar exsolution layers visible under magnification, two cleavage directions at ~90&deg;, low specific gravity</p>
+            </div>
+          </div>
+
+          <!-- ========== ORGANIC ========== -->
+
+          <!-- 21. Pearl -->
+          <div class="gem-card" data-category="organic" style="--gem-hue:35;--gem-sat:15%;--gem-light:82%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Pearl</p>
+              <p class="body-small">Organic gem formed by mollusks depositing concentric layers of nacre (aragonite platelets and conchiolin) around an irritant. Natural pearls are extremely rare today.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Pearl (organic)</dd></div>
+                <div><dt>Formula</dt><dd>CaCO&#8323; (aragonite)</dd></div>
+                <div><dt>Crystal</dt><dd>N/A (polycrystalline aragonite)</dd></div>
+                <div><dt>Mohs</dt><dd>2.5&ndash;4.5</dd></div>
+                <div><dt>RI</dt><dd>1.530&ndash;1.685</dd></div>
+                <div><dt>SG</dt><dd>2.61&ndash;2.85</dd></div>
+                <div><dt>Dispersion</dt><dd>N/A</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Japan, China, Australia (South Sea), French Polynesia (Tahitian), Persian Gulf (natural), Philippines</p>
+              <p class="body-small"><strong>Common treatments:</strong> Bleaching, dyeing, irradiation (darkens Akoya), luster coating (maeshori for Akoya), bead nucleation (cultured)</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Surface texture (gritty tooth test), orient and overtone, nacre layering visible under magnification, X-ray reveals nucleus in cultured pearls, UV fluorescence patterns</p>
+            </div>
+          </div>
+
+          <!-- 22. Amber -->
+          <div class="gem-card" data-category="organic" style="--gem-hue:38;--gem-sat:70%;--gem-light:50%">
+            <div class="gem-card__color"></div>
+            <div class="gem-card__body">
+              <p class="title-medium">Amber</p>
+              <p class="body-small">Fossilized tree resin, typically 30&ndash;90 million years old. Valued for its warm color, light weight, and inclusions of prehistoric insects and plant material.</p>
+              <dl class="gem-specs">
+                <div><dt>Species</dt><dd>Amber (organic)</dd></div>
+                <div><dt>Formula</dt><dd>C&#8321;&#8320;H&#8321;&#8326;O (approximate)</dd></div>
+                <div><dt>Crystal</dt><dd>Amorphous</dd></div>
+                <div><dt>Mohs</dt><dd>2&ndash;2.5</dd></div>
+                <div><dt>RI</dt><dd>1.539&ndash;1.545</dd></div>
+                <div><dt>SG</dt><dd>1.08</dd></div>
+                <div><dt>Dispersion</dt><dd>N/A</dd></div>
+              </dl>
+              <p class="body-small"><strong>Key sources:</strong> Baltic region (Poland, Lithuania, Russia), Dominican Republic (blue amber), Myanmar (Burmese amber/burmite), Mexico</p>
+              <p class="body-small"><strong>Common treatments:</strong> Heat treatment (clarification by removing gas bubbles, producing &ldquo;sun spangles&rdquo;), pressing/reconstitution (ambroid), dyeing, coating</p>
+              <p class="body-small"><strong>Diagnostic features:</strong> Warm to touch, floats in saturated salt water (SG ~1.08), produces static charge when rubbed, pine-resin scent when hot-needle tested, insect/plant inclusions, fluorescence (blue in Dominican amber)</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <nav class="page-nav">
+        <a href="identification.html" class="page-nav__link">
+          <span class="page-nav__label">Previous</span>
+          <span class="page-nav__title">Identification</span>
+        </a>
+        <a href="tools.html" class="page-nav__link page-nav__link--next">
+          <span class="page-nav__label">Next</span>
+          <span class="page-nav__title">Tools &amp; Equipment</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+</body>
+</html>
