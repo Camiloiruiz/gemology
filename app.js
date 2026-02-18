@@ -204,4 +204,155 @@
     });
   });
 
+  // --- Glossary Term Auto-Linker ---
+  // Scans prose content and wraps the first occurrence of each technical term
+  // with a link to its definition on the glossary page.
+  (function () {
+    // Do not run on the glossary page itself.
+    if (location.pathname.indexOf('glossary.html') !== -1) return;
+
+    var GLOSSARY = 'glossary.html';
+
+    // Map of lowercase term -> glossary anchor id.
+    // Longer / more specific phrases are listed first so they are matched
+    // before any shorter substring they contain.
+    var termMap = [
+      ['absorption spectrum',   'absorption-spectrum'],
+      ['refractive index',      'refractive-index'],
+      ['specific gravity',      'specific-gravity'],
+      ['optic character',       'optic-character'],
+      ['fracture filling',      'fracture-filling'],
+      ['heat treatment',        'heat-treatment'],
+      ['diffusion treatment',   'diffusion-treatment'],
+      ['hydrostatic weighing',  'hydrostatic-weighing'],
+      ['negative crystal',      'negative-crystal'],
+      ['laser drilling',        'laser-drilling'],
+      ['flux growth',           'flux-growth'],
+      ['crystal system',        'crystal-system'],
+      ['color-change',          'color-change'],
+      ['mohs hardness',         'mohs-scale'],
+      ['mohs scale',            'mohs-scale'],
+      ['adularescence',         'adularescence'],
+      ['labradorescence',       'labradorescence'],
+      ['birefringence',         'birefringence'],
+      ['czochralski',           'czochralski'],
+      ['pleochroism',           'pleochroism'],
+      ['dichroism',             'pleochroism'],
+      ['trichroism',            'pleochroism'],
+      ['fluorescence',          'fluorescence'],
+      ['irradiation',           'irradiation'],
+      ['refractometer',         'refractometer'],
+      ['polariscope',           'polariscope'],
+      ['spectroscope',          'spectroscope'],
+      ['chromophore',           'chromophore'],
+      ['chatoyancy',            'chatoyancy'],
+      ['asterism',              'asterism'],
+      ['acicular',              'acicular'],
+      ['simulant',              'simulant'],
+      ['toughness',             'toughness'],
+      ['twinning',              'twinning'],
+      ['dispersion',            'dispersion'],
+      ['corundum',              'corundum'],
+      ['cleavage',              'cleavage'],
+      ['fracture',              'fracture'],
+      ['inclusion',             'inclusion'],
+      ['luster',                'luster'],
+      ['uniaxial',              'uniaxial-biaxial'],
+      ['biaxial',               'uniaxial-biaxial'],
+      ['jardin',                'jardin'],
+      ['oiling',                'oiling'],
+      ['carat',                 'carat'],
+      ['hpht',                  'hpht'],
+      ['silk',                  'silk']
+    ];
+
+    // Build a regex that matches any of the terms (longest first, already sorted above).
+    function escRe(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+    var pattern = new RegExp(
+      '\\b(' + termMap.map(function (t) { return escRe(t[0]); }).join('|') + ')s?\\b',
+      'gi'
+    );
+
+    // Lookup: normalized lowercase base form -> anchor id.
+    var lookup = {};
+    termMap.forEach(function (t) { lookup[t[0]] = t[1]; });
+
+    // Track which anchor IDs have already been linked (one link per term per page).
+    var linked = {};
+
+    // Replace matches in a single text node; returns a DocumentFragment or null.
+    function replaceInTextNode(node) {
+      var text = node.nodeValue;
+      var frag = null;
+      var last = 0;
+      var m;
+      pattern.lastIndex = 0;
+
+      while ((m = pattern.exec(text)) !== null) {
+        var raw = m[0];
+        // Normalize: strip trailing 's' for plural lookup, lowercase.
+        var base = raw.toLowerCase();
+        var anchorId = lookup[base];
+        if (!anchorId) {
+          // Try stripping trailing 's' for simple plurals (e.g. "inclusions").
+          var singular = base.replace(/s$/, '');
+          anchorId = lookup[singular];
+        }
+        if (!anchorId || linked[anchorId]) continue;
+        linked[anchorId] = true;
+
+        if (!frag) frag = document.createDocumentFragment();
+        if (m.index > last) {
+          frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        }
+        var a = document.createElement('a');
+        a.href = GLOSSARY + '#' + anchorId;
+        a.className = 'glossary-term';
+        a.textContent = raw;
+        frag.appendChild(a);
+        last = m.index + raw.length;
+      }
+
+      if (frag && last < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(last)));
+      }
+      return frag;
+    }
+
+    // Tags to skip entirely (do not descend into or modify).
+    var SKIP_TAGS = {
+      A: 1, SCRIPT: 1, STYLE: 1, H1: 1, H2: 1, H3: 1, H4: 1,
+      TH: 1, CODE: 1, NAV: 1, HEADER: 1, FOOTER: 1
+    };
+    // CSS classes on an element that cause it to be skipped.
+    var SKIP_CLASSES = ['val', 'toc', 'breadcrumb', 'page-nav',
+                        'gem-specs', 'top-bar', 'drawer', 'mohs-scale',
+                        'filter-chips', 'tab-bar', 'page-header'];
+
+    function hasSkipClass(el) {
+      for (var i = 0; i < SKIP_CLASSES.length; i++) {
+        if (el.classList && el.classList.contains(SKIP_CLASSES[i])) return true;
+      }
+      return false;
+    }
+
+    function walk(node) {
+      if (node.nodeType === 3) {
+        var frag = replaceInTextNode(node);
+        if (frag) node.parentNode.replaceChild(frag, node);
+        return;
+      }
+      if (node.nodeType !== 1) return;
+      if (SKIP_TAGS[node.tagName] || hasSkipClass(node)) return;
+
+      // Clone child list because replacements mutate it.
+      var children = Array.prototype.slice.call(node.childNodes);
+      for (var i = 0; i < children.length; i++) walk(children[i]);
+    }
+
+    // Only process the main prose areas of each page.
+    var targets = document.querySelectorAll('.prose, .accordion__inner, .callout');
+    for (var i = 0; i < targets.length; i++) walk(targets[i]);
+  })();
+
 })();

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary — GemLens</title>
+  <meta name="description" content="Definitions of advanced gemological terms used throughout GemLens, covering optical properties, crystal systems, treatments, instruments, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+
+  <header class="top-bar" id="topBar">
+    <div class="top-bar__inner">
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a href="index.html" class="top-bar__brand">
+        <svg class="top-bar__icon" width="28" height="28" viewBox="0 0 28 28" fill="none">
+          <polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/>
+          <line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="2" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <span>GemLens</span>
+      </a>
+      <nav class="top-bar__nav" id="mainNav">
+        <a href="fundamentals.html" class="nav-link">Fundamentals</a>
+        <a href="properties.html" class="nav-link">Properties</a>
+        <a href="identification.html" class="nav-link">Identification</a>
+        <a href="catalog.html" class="nav-link">Catalog</a>
+        <a href="tools.html" class="nav-link">Tools</a>
+        <a href="glossary.html" class="nav-link">Glossary</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-scrim" id="drawerScrim"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer__header">
+      <span class="drawer__title">GemLens</span>
+      <button class="drawer__close" id="drawerClose" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html" class="drawer__link">Home</a>
+      <a href="fundamentals.html" class="drawer__link">Fundamentals</a>
+      <a href="properties.html" class="drawer__link">Properties</a>
+      <a href="identification.html" class="drawer__link">Identification</a>
+      <a href="catalog.html" class="drawer__link">Catalog</a>
+      <a href="tools.html" class="drawer__link">Tools</a>
+      <a href="glossary.html" class="drawer__link">Glossary</a>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb__sep">/</span>
+          <span>Glossary</span>
+        </nav>
+        <span class="chip">Reference</span>
+        <h1 class="display-medium">Glossary of Gemological Terms</h1>
+        <p class="body-large">Definitions for the advanced and technical terminology used throughout GemLens. Terms marked with a dotted underline in any chapter link directly here.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Alphabetical Jump Nav -->
+        <div class="glossary-alpha-nav" aria-label="Jump to letter">
+          <a href="#letter-a">A</a>
+          <a href="#letter-b">B</a>
+          <a href="#letter-c">C</a>
+          <a href="#letter-d">D</a>
+          <a href="#letter-f">F</a>
+          <a href="#letter-h">H</a>
+          <a href="#letter-i">I</a>
+          <a href="#letter-j">J</a>
+          <a href="#letter-l">L</a>
+          <a href="#letter-m">M</a>
+          <a href="#letter-n">N</a>
+          <a href="#letter-o">O</a>
+          <a href="#letter-p">P</a>
+          <a href="#letter-r">R</a>
+          <a href="#letter-s">S</a>
+          <a href="#letter-t">T</a>
+          <a href="#letter-u">U</a>
+        </div>
+
+        <dl class="glossary-list">
+
+          <!-- A -->
+          <div class="glossary-letter" id="letter-a">
+            <h2 class="glossary-letter__heading">A</h2>
+
+            <div class="glossary-entry" id="absorption-spectrum">
+              <dt class="glossary-entry__term">Absorption Spectrum</dt>
+              <dd class="glossary-entry__def">
+                The characteristic pattern of dark bands or lines produced when a gemstone's chromophore absorbs specific wavelengths of visible light. Observed with a spectroscope, the resulting pattern of absorbed wavelengths is diagnostic for certain gem species and can reveal the presence of specific elements such as chromium (ruby, emerald) or iron (sapphire, peridot).
+                <span class="glossary-entry__see">See also: <a href="#chromophore">Chromophore</a>, <a href="#spectroscope">Spectroscope</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="acicular">
+              <dt class="glossary-entry__term">Acicular</dt>
+              <dd class="glossary-entry__def">
+                Describing extremely fine, needle-like inclusions. In gemology the term most often refers to the slender rutile crystals enclosed in corundum (sapphire and ruby). When these needles are densely packed and oriented along three crystal directions, they scatter light to produce the six-rayed star effect called asterism.
+                <span class="glossary-entry__see">See also: <a href="#asterism">Asterism</a>, <a href="#silk">Silk</a>, <a href="#inclusion">Inclusion</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="adularescence">
+              <dt class="glossary-entry__term">Adularescence</dt>
+              <dd class="glossary-entry__def">
+                The soft, floating, blue-white glow seen in moonstone (a variety of orthoclase feldspar). It arises from light scattering at the nanoscale boundaries between alternating layers of orthoclase and albite feldspar inside the crystal. As the gem is tilted, the glow appears to roll across the surface. Named after the original source at Mt. Adular (now Adelboden) in Switzerland.
+                <span class="glossary-entry__see">See also: <a href="#labradorescence">Labradorescence</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="asterism">
+              <dt class="glossary-entry__term">Asterism</dt>
+              <dd class="glossary-entry__def">
+                A star-shaped optical phenomenon displayed by certain gems when cut as a cabochon. It is caused by light reflecting off densely packed, oriented needle-like inclusions (most commonly rutile "silk" in corundum). The number of rays corresponds to the crystal's symmetry — six-rayed stars are typical of hexagonal corundum (star sapphire, star ruby), while four-rayed stars appear in some garnets. Transmitted asterism (visible by transmitted light) differs from reflected asterism.
+                <span class="glossary-entry__see">See also: <a href="#acicular">Acicular</a>, <a href="#silk">Silk</a>, <a href="#chatoyancy">Chatoyancy</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- B -->
+          <div class="glossary-letter" id="letter-b">
+            <h2 class="glossary-letter__heading">B</h2>
+
+            <div class="glossary-entry" id="birefringence">
+              <dt class="glossary-entry__term">Birefringence</dt>
+              <dd class="glossary-entry__def">
+                The numerical difference between a doubly-refractive gem's two refractive indices (maximum RI minus minimum RI). Also called double refraction, it causes back facets or internal features to appear doubled when viewed through the table facet. Calcite has an extreme birefringence of 0.172; zircon's 0.059 produces noticeable doubling; quartz's 0.009 is rarely visible to the eye. Isotropic gems (diamond, spinel, garnet) have zero birefringence.
+                <span class="glossary-entry__see">See also: <a href="#refractive-index">Refractive Index</a>, <a href="#uniaxial-biaxial">Uniaxial / Biaxial</a>, <a href="#optic-character">Optic Character</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- C -->
+          <div class="glossary-letter" id="letter-c">
+            <h2 class="glossary-letter__heading">C</h2>
+
+            <div class="glossary-entry" id="carat">
+              <dt class="glossary-entry__term">Carat (ct)</dt>
+              <dd class="glossary-entry__def">
+                The internationally standardized unit of gemstone weight. One carat equals exactly 0.200 grams (200 milligrams). One carat is subdivided into 100 points, so a 0.50 ct stone is also described as a "50-point" stone. The term derives from the carob seed, historically used as a counterweight on balance scales. Note: "karat" (k or kt) is a different unit used for gold purity and is unrelated.
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="chatoyancy">
+              <dt class="glossary-entry__term">Chatoyancy</dt>
+              <dd class="glossary-entry__def">
+                A single bright band of reflected light — the "cat's-eye" effect — that moves across a cabochon-cut gem as the light source or stone is moved. It is caused by light reflecting off a dense parallel arrangement of fibrous, tubular, or needle-like inclusions oriented along one axis. Chrysoberyl cat's-eye is the most prized example. The inclusion must be oriented perpendicular to the length of the cut stone for the band to display properly.
+                <span class="glossary-entry__see">See also: <a href="#asterism">Asterism</a>, <a href="#inclusion">Inclusion</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="chromophore">
+              <dt class="glossary-entry__term">Chromophore</dt>
+              <dd class="glossary-entry__def">
+                The chemical agent responsible for a gem's color. In most colored gems the chromophore is a transition-metal trace element (chromium, iron, vanadium, manganese, copper, titanium) whose electrons absorb specific wavelengths of visible light, transmitting the complementary color. For example, chromium absorbs blue and yellow light in ruby, transmitting red. Color centers (structural lattice defects) can also act as chromophores, as in irradiated blue topaz or smoky quartz.
+                <span class="glossary-entry__see">See also: <a href="#absorption-spectrum">Absorption Spectrum</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="cleavage">
+              <dt class="glossary-entry__term">Cleavage</dt>
+              <dd class="glossary-entry__def">
+                The tendency of a crystalline mineral to break preferentially along flat planes defined by weaker atomic bonds in the crystal lattice. Described by direction (basal, prismatic, pinacoidal, etc.) and quality (perfect, good, distinct, poor, none). Diamond has perfect octahedral cleavage in four directions, which enables faceting but also makes it susceptible to splitting along those planes. Topaz has perfect basal cleavage, making it prone to cleaving perpendicular to the length of the crystal. Distinguished from fracture, which is irregular breakage.
+                <span class="glossary-entry__see">See also: <a href="#fracture">Fracture</a>, <a href="#toughness">Toughness</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="color-change">
+              <dt class="glossary-entry__term">Color-Change</dt>
+              <dd class="glossary-entry__def">
+                An optical phenomenon in which a gem appears a distinctly different hue under different light sources. It results from a chromophore that transmits two different wavelength ranges, one of which is dominant under daylight (blue-rich) and the other under incandescent light (red-rich). Alexandrite (a chromium-bearing chrysoberyl) is the classic example, shifting from bluish-green in daylight to purplish-red under incandescent light. Color-change garnets and sapphires also exist.
+                <span class="glossary-entry__see">See also: <a href="#chromophore">Chromophore</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="corundum">
+              <dt class="glossary-entry__term">Corundum</dt>
+              <dd class="glossary-entry__def">
+                The mineral species with chemical formula Al₂O₃ (aluminum oxide) and trigonal crystal system. Pure corundum is colorless; trace elements create the gem varieties. Red corundum colored by chromium is ruby; all other gem-quality corundum colors are classified as sapphire (blue, yellow, pink, padparadscha, etc.). Corundum has a Mohs hardness of 9 — second only to diamond — and excellent toughness, making it well suited for everyday wear.
+                <span class="glossary-entry__see">See also: <a href="#chromophore">Chromophore</a>, <a href="#mohs-scale">Mohs Scale</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="crystal-system">
+              <dt class="glossary-entry__term">Crystal System</dt>
+              <dd class="glossary-entry__def">
+                One of seven geometric frameworks that classify the internal symmetry of crystalline minerals based on the lengths and angles of their unit cell axes. The seven systems, in decreasing symmetry, are:
+                <ul>
+                  <li><strong>Cubic (Isometric)</strong> — three equal axes at 90° (diamond, garnet, spinel)</li>
+                  <li><strong>Tetragonal</strong> — two equal horizontal axes, one vertical axis, all at 90° (zircon, idocrase)</li>
+                  <li><strong>Hexagonal</strong> — three equal horizontal axes at 60°, one vertical axis (beryl, apatite)</li>
+                  <li><strong>Trigonal</strong> — rhombohedral subset of hexagonal; three equal axes at 60°, one vertical axis (corundum, quartz, tourmaline)</li>
+                  <li><strong>Orthorhombic</strong> — three unequal axes at 90° (topaz, peridot, tanzanite)</li>
+                  <li><strong>Monoclinic</strong> — three unequal axes, two at 90°, one oblique (orthoclase, spodumene, kunzite)</li>
+                  <li><strong>Triclinic</strong> — three unequal axes, none at 90° (labradorite, axinite)</li>
+                </ul>
+                The crystal system determines whether a gem is isotropic or anisotropic (doubly refractive), which directly affects its optical properties.
+                <span class="glossary-entry__see">See also: <a href="#optic-character">Optic Character</a>, <a href="#birefringence">Birefringence</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="czochralski">
+              <dt class="glossary-entry__term">Czochralski Method</dt>
+              <dd class="glossary-entry__def">
+                A synthetic crystal-growth technique in which a seed crystal is slowly pulled from a molten charge (melt) of the desired composition while being rotated. Named after Polish chemist Jan Czochralski. Used to produce synthetic corundum, synthetic garnets (YAG, GGG), and other gem materials. Characteristic internal features include curved growth striations and gas bubbles (round, elongated, or in swirling patterns), which distinguish Czochralski-grown stones from natural crystals under magnification.
+                <span class="glossary-entry__see">See also: <a href="#synthetic">Synthetic Gemstone</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- D -->
+          <div class="glossary-letter" id="letter-d">
+            <h2 class="glossary-letter__heading">D</h2>
+
+            <div class="glossary-entry" id="diffusion-treatment">
+              <dt class="glossary-entry__term">Diffusion Treatment</dt>
+              <dd class="glossary-entry__def">
+                A gem enhancement in which chemicals are driven into the surface (surface diffusion) or deep into the lattice (lattice diffusion / bulk diffusion) by prolonged heating at high temperatures. Titanium diffusion creates blue sapphire color confined to a very thin surface layer (detectable by immersion or examination of facet edges). Beryllium diffusion can penetrate much deeper, producing yellow, orange, or padparadscha colors throughout. Distinguishing diffusion-treated stones requires careful immersion microscopy and sometimes advanced testing.
+                <span class="glossary-entry__see">See also: <a href="#heat-treatment">Heat Treatment</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="dispersion">
+              <dt class="glossary-entry__term">Dispersion</dt>
+              <dd class="glossary-entry__def">
+                The separation of white light into its spectral colors (the rainbow effect) as it passes through a faceted gemstone, caused by different wavelengths of light bending (refracting) at slightly different angles. In gemology, dispersion is quantified as the difference in refractive index between the B and G Fraunhofer lines (686 nm red and 430 nm violet). Diamond's dispersion of 0.044 is exceptionally high, producing the characteristic "fire." Demantoid garnet (0.057) and sphene (0.051) exceed diamond's fire but are rarely seen.
+                <span class="glossary-entry__see">See also: <a href="#refractive-index">Refractive Index</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- F -->
+          <div class="glossary-letter" id="letter-f">
+            <h2 class="glossary-letter__heading">F</h2>
+
+            <div class="glossary-entry" id="fluorescence">
+              <dt class="glossary-entry__term">Fluorescence</dt>
+              <dd class="glossary-entry__def">
+                The emission of visible light by a gem while it is being exposed to ultraviolet (UV) radiation, X-rays, or other high-energy radiation. The fluorescence ceases immediately when the energy source is removed (distinguishing it from phosphorescence, which persists afterward). UV lamps are used at two wavelengths: long-wave (365 nm, LWUV) and short-wave (254 nm, SWUV). Fluorescence reactions — their color, intensity, and distribution — can support gem identification and sometimes reveal treatments (e.g., patchy fluorescence in a repaired fracture, or inert zones indicating diffusion).
+                <span class="glossary-entry__see">See also: <a href="#absorption-spectrum">Absorption Spectrum</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="flux-growth">
+              <dt class="glossary-entry__term">Flux Growth</dt>
+              <dd class="glossary-entry__def">
+                A method for growing synthetic gemstones in which the raw gem chemistry is dissolved in a molten flux (a salt or oxide solvent) at high temperature. As the mixture cools slowly, gem crystals precipitate and grow. Flux-grown rubies (e.g., Chatham, Kashan) and emeralds are common. Characteristic inclusions — wispy fingerprint-like flux remnants, twisted veils, and platinum or gold crucible fragments — differentiate them from natural or hydrothermally grown stones under magnification.
+                <span class="glossary-entry__see">See also: <a href="#synthetic">Synthetic Gemstone</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="fracture">
+              <dt class="glossary-entry__term">Fracture</dt>
+              <dd class="glossary-entry__def">
+                The irregular breakage of a mineral along surfaces that do not follow flat crystallographic cleavage planes. Fracture surfaces often have characteristic textures that help identify the mineral: conchoidal (curved, shell-like, as in glass and quartz), uneven or irregular (most minerals), hackly (jagged, metallic minerals), and splintery or fibrous (certain fibrous minerals). Distinguished from cleavage, which produces flat, reflective planes.
+                <span class="glossary-entry__see">See also: <a href="#cleavage">Cleavage</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="fracture-filling">
+              <dt class="glossary-entry__term">Fracture Filling</dt>
+              <dd class="glossary-entry__def">
+                A clarity enhancement in which glass, resin, oil, or wax is injected into surface-reaching fractures to reduce their visibility and improve apparent transparency. Common in emeralds (cedar oil or synthetic resins, historically described as "oiling"), rubies (lead-glass filling), and diamonds (glass filling of feather fractures). Detectable under magnification by the presence of a "flash effect" — a distinctive color flash (often orange-pink or blue-green) caused by the filling material's different refractive index from the host gem.
+                <span class="glossary-entry__see">See also: <a href="#oiling">Oiling</a>, <a href="#inclusion">Inclusion</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- H -->
+          <div class="glossary-letter" id="letter-h">
+            <h2 class="glossary-letter__heading">H</h2>
+
+            <div class="glossary-entry" id="heat-treatment">
+              <dt class="glossary-entry__term">Heat Treatment</dt>
+              <dd class="glossary-entry__def">
+                The controlled application of high temperature — and sometimes pressure — to alter a gem's color, clarity, or other optical properties. It is the most common and widely accepted gem enhancement. Heat treatment can dissolve silk inclusions in sapphire to improve clarity, enhance or lighten blue in sapphires, develop ruby color in pink corundum, and improve the color of tanzanite (from brown to violet-blue), among many other effects. Evidence of heating can sometimes be detected under magnification (healed fractures, altered inclusions, dotted clouds, disrupted silk).
+                <span class="glossary-entry__see">See also: <a href="#diffusion-treatment">Diffusion Treatment</a>, <a href="#hpht">HPHT</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="hpht">
+              <dt class="glossary-entry__term">HPHT (High-Pressure High-Temperature)</dt>
+              <dd class="glossary-entry__def">
+                A treatment or synthesis method that subjects material to conditions mimicking those in the Earth's mantle — pressures of 50,000–70,000 atmospheres and temperatures of 1,300–1,600 °C. Used to: (1) grow synthetic diamonds from carbon dissolved in a molten metal catalyst; (2) improve the color of certain brown natural diamonds (converting them to colorless, yellow, or fancy colors). HPHT-treated diamonds can often be identified by specific graining patterns, strain features, and spectroscopic anomalies.
+                <span class="glossary-entry__see">See also: <a href="#synthetic">Synthetic Gemstone</a>, <a href="#heat-treatment">Heat Treatment</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="hydrostatic-weighing">
+              <dt class="glossary-entry__term">Hydrostatic Weighing</dt>
+              <dd class="glossary-entry__def">
+                The laboratory method for measuring a gem's specific gravity (SG) using Archimedes' principle. The gem is first weighed in air, then weighed while fully immersed in water (suspended by a fine wire). SG = Weight in air ÷ (Weight in air − Weight in water). Since water's density at standard conditions equals 1.000, the resulting ratio equals the gem's density in g/cm³. The method is non-destructive and accurate to ±0.01 SG for stones over about 5 carats.
+                <span class="glossary-entry__see">See also: <a href="#specific-gravity">Specific Gravity</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- I -->
+          <div class="glossary-letter" id="letter-i">
+            <h2 class="glossary-letter__heading">I</h2>
+
+            <div class="glossary-entry" id="inclusion">
+              <dt class="glossary-entry__term">Inclusion</dt>
+              <dd class="glossary-entry__def">
+                Any internal feature of a gemstone, encompassing solid mineral crystals, fluid-filled cavities, gas bubbles, fractures, color zones, growth features, twinning planes, and more. Inclusions are used diagnostically: they can confirm species, indicate geographic origin, reveal treatment history, and distinguish natural from synthetic stones. Common types include three-phase inclusions (solid + liquid + gas, characteristic of Colombian emeralds), silk (rutile needles in corundum), fingerprints (healed fractures with fluid droplets), negative crystals (empty voids in the host shape), and rutile needles.
+                <span class="glossary-entry__see">See also: <a href="#negative-crystal">Negative Crystal</a>, <a href="#silk">Silk</a>, <a href="#jardin">Jardin</a>, <a href="#acicular">Acicular</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="irradiation">
+              <dt class="glossary-entry__term">Irradiation</dt>
+              <dd class="glossary-entry__def">
+                Treatment of a gemstone with high-energy radiation — gamma rays, electron beams, or neutrons — to alter its color by creating or modifying color centers (structural defects that absorb specific wavelengths). Blue topaz is the most commercially important example: colorless or pale topaz is irradiated and then heated to produce stable Swiss Blue or London Blue colors. Irradiated diamonds (e.g., fancy greens, blues) may retain residual radioactivity if neutron-irradiated; gamma and electron-beam irradiation induce no lasting radioactivity.
+                <span class="glossary-entry__see">See also: <a href="#chromophore">Chromophore</a>, <a href="#heat-treatment">Heat Treatment</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- J -->
+          <div class="glossary-letter" id="letter-j">
+            <h2 class="glossary-letter__heading">J</h2>
+
+            <div class="glossary-entry" id="jardin">
+              <dt class="glossary-entry__term">Jardin</dt>
+              <dd class="glossary-entry__def">
+                French for "garden," used in gemology to describe the characteristic internal landscape of an emerald — a complex mix of fractures, liquid inclusions, growth tubes, and other features arising from the gem's formation in metamorphic rock environments. Unlike most other gems where inclusions are considered defects, jardin is an expected and accepted feature of natural emerald; an emerald with no visible jardin under 10× magnification is extraordinarily rare. The nature and distribution of jardin can also suggest geographic origin.
+                <span class="glossary-entry__see">See also: <a href="#inclusion">Inclusion</a>, <a href="#fracture-filling">Fracture Filling</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- L -->
+          <div class="glossary-letter" id="letter-l">
+            <h2 class="glossary-letter__heading">L</h2>
+
+            <div class="glossary-entry" id="labradorescence">
+              <dt class="glossary-entry__term">Labradorescence</dt>
+              <dd class="glossary-entry__def">
+                An iridescent, metallic play of spectral colors — blues, greens, golds, and sometimes reds — seen in labradorite feldspar. The phenomenon is caused by constructive and destructive interference of light as it reflects off extremely thin, alternating layers of two feldspar compositions (labradorite and bytownite) within the crystal structure. The color seen depends on the layer thickness and the angle of observation. Distinguished from adularescence (the sheen in moonstone) and from opal's play-of-color.
+                <span class="glossary-entry__see">See also: <a href="#adularescence">Adularescence</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="laser-drilling">
+              <dt class="glossary-entry__term">Laser Drilling</dt>
+              <dd class="glossary-entry__def">
+                A clarity enhancement used primarily in diamonds, in which a fine laser beam bores a channel from the surface to a dark (graphite or mineral) inclusion. The channel allows chemicals (typically strong acids) to be injected to bleach or dissolve the inclusion. The resulting drill hole — a thin tubular channel with a surface pit — is permanent and visible under magnification. Drill holes may subsequently be filled with glass to further improve the stone's appearance.
+                <span class="glossary-entry__see">See also: <a href="#fracture-filling">Fracture Filling</a>, <a href="#inclusion">Inclusion</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="luster">
+              <dt class="glossary-entry__term">Luster</dt>
+              <dd class="glossary-entry__def">
+                The quality, quantity, and character of light reflected from a gem's polished surface, determined by refractive index, transparency, and surface texture. Principal luster types used in gemology:
+                <ul>
+                  <li><strong>Adamantine</strong> — brilliant, diamond-like (diamond, demantoid garnet)</li>
+                  <li><strong>Vitreous / Glassy</strong> — glass-like; the most common type (quartz, tourmaline, beryl)</li>
+                  <li><strong>Resinous</strong> — resin-like (amber, some garnets)</li>
+                  <li><strong>Silky</strong> — surface sheen from parallel fibrous inclusions (satin spar gypsum, tiger's-eye)</li>
+                  <li><strong>Pearly / Nacreous</strong> — pearl-like iridescence (pearl, some micas)</li>
+                  <li><strong>Metallic</strong> — opaque, mirror-like (hematite, pyrite)</li>
+                  <li><strong>Waxy</strong> — subdued, wax-like (jade, turquoise, chalcedony)</li>
+                </ul>
+              </dd>
+            </div>
+          </div>
+
+          <!-- M -->
+          <div class="glossary-letter" id="letter-m">
+            <h2 class="glossary-letter__heading">M</h2>
+
+            <div class="glossary-entry" id="mohs-scale">
+              <dt class="glossary-entry__term">Mohs Scale</dt>
+              <dd class="glossary-entry__def">
+                An ordinal 1–10 scale of mineral scratch hardness established by German mineralogist Friedrich Mohs in 1812. Each mineral on the scale scratches all minerals below it and is scratched by all above it. The scale is not linear — the absolute hardness difference between 9 (corundum) and 10 (diamond) is roughly 4× in terms of grinding resistance. The standard reference minerals are: 1 Talc, 2 Gypsum, 3 Calcite, 4 Fluorite, 5 Apatite, 6 Orthoclase, 7 Quartz, 8 Topaz, 9 Corundum, 10 Diamond. Hardness is a useful but incomplete durability indicator; toughness and cleavage must also be considered.
+                <span class="glossary-entry__see">See also: <a href="#toughness">Toughness</a>, <a href="#cleavage">Cleavage</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- N -->
+          <div class="glossary-letter" id="letter-n">
+            <h2 class="glossary-letter__heading">N</h2>
+
+            <div class="glossary-entry" id="negative-crystal">
+              <dt class="glossary-entry__term">Negative Crystal</dt>
+              <dd class="glossary-entry__def">
+                A void or cavity within a host gem that has the same geometric form as the host mineral's crystal habit, created when the host crystal grew around an empty space or a liquid-filled pocket. Negative crystals often contain a liquid (sometimes with a gas bubble or a solid mineral daughter crystal — forming a three-phase inclusion). They appear as bright, sharply-outlined internal shapes. Common in topaz, quartz, and beryl; the three-phase negative crystals in Colombian emerald are diagnostically important.
+                <span class="glossary-entry__see">See also: <a href="#inclusion">Inclusion</a>, <a href="#jardin">Jardin</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- O -->
+          <div class="glossary-letter" id="letter-o">
+            <h2 class="glossary-letter__heading">O</h2>
+
+            <div class="glossary-entry" id="oiling">
+              <dt class="glossary-entry__term">Oiling / Resin Filling</dt>
+              <dd class="glossary-entry__def">
+                A clarity enhancement in which oils (traditionally cedar oil, chosen for its refractive index close to emerald's) or synthetic resins are introduced into surface-reaching fractures to reduce their visibility. Almost universal in commercial-grade emerald, where the treatment is accepted by trade standards when disclosed. Oils are not permanent and can dry out or discolor over time, requiring re-oiling. Synthetic resins (e.g., Opticon) are more stable. Extent is graded as None, Minor, Moderate, or Significant on laboratory reports.
+                <span class="glossary-entry__see">See also: <a href="#fracture-filling">Fracture Filling</a>, <a href="#jardin">Jardin</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="optic-character">
+              <dt class="glossary-entry__term">Optic Character</dt>
+              <dd class="glossary-entry__def">
+                The classification of how a gemstone interacts with polarized light, determined by its crystal system:
+                <ul>
+                  <li><strong>Isotropic (Singly Refractive)</strong> — cubic system gems (diamond, garnet, spinel, glass) have one refractive index in all directions; they appear dark and remain dark when rotated between crossed polarizing filters.</li>
+                  <li><strong>Anisotropic (Doubly Refractive)</strong> — all other crystal systems; they show a blinking (light/dark alternation) as rotated between crossed filters.
+                    <ul>
+                      <li><strong>Uniaxial</strong> — hexagonal and trigonal gems (corundum, quartz, tourmaline, beryl)</li>
+                      <li><strong>Biaxial</strong> — orthorhombic, monoclinic, and triclinic gems (topaz, peridot, tanzanite, orthoclase)</li>
+                    </ul>
+                  </li>
+                </ul>
+                Determined using a polariscope; confirmed by conoscopic figures in a polarizing microscope.
+                <span class="glossary-entry__see">See also: <a href="#polariscope">Polariscope</a>, <a href="#birefringence">Birefringence</a>, <a href="#uniaxial-biaxial">Uniaxial / Biaxial</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- P -->
+          <div class="glossary-letter" id="letter-p">
+            <h2 class="glossary-letter__heading">P</h2>
+
+            <div class="glossary-entry" id="pleochroism">
+              <dt class="glossary-entry__term">Pleochroism / Dichroism / Trichroism</dt>
+              <dd class="glossary-entry__def">
+                The property of doubly-refractive (anisotropic) colored gemstones to display different colors or different saturations of color when viewed along different crystallographic axes. Uniaxial gems show two colors (dichroism); biaxial gems can show up to three (trichroism). Both are forms of pleochroism. Famous examples: tanzanite displays blue, violet, and red-brown (trichroic); alexandrite shows green and red-orange (dichroic); ruby shows purplish-red and orange-red (dichroic). Observed using a dichroscope.
+                <span class="glossary-entry__see">See also: <a href="#optic-character">Optic Character</a>, <a href="#uniaxial-biaxial">Uniaxial / Biaxial</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="polariscope">
+              <dt class="glossary-entry__term">Polariscope</dt>
+              <dd class="glossary-entry__def">
+                A gemological instrument consisting of two polarizing filters (polarizer and analyzer) oriented at 90° to each other with a light source below. When a gem is placed between the crossed filters and rotated 360°, the pattern of light and darkness reveals its optic character: isotropic gems remain uniformly dark (or show anomalous double refraction due to strain); anisotropic gems blink (alternate between light and dark) four times per rotation. A conoscopic lens attachment allows identification of uniaxial vs. biaxial character by revealing interference figures.
+                <span class="glossary-entry__see">See also: <a href="#optic-character">Optic Character</a>, <a href="#birefringence">Birefringence</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- R -->
+          <div class="glossary-letter" id="letter-r">
+            <h2 class="glossary-letter__heading">R</h2>
+
+            <div class="glossary-entry" id="refractometer">
+              <dt class="glossary-entry__term">Refractometer</dt>
+              <dd class="glossary-entry__def">
+                The primary gemological instrument for measuring refractive index. It uses a dense glass hemisphere (usually with RI ~1.81) as a prism; a drop of contact liquid (monobromonaphthalene, RI ≈ 1.74) placed between the stone and the prism ensures optical contact. Light entering from below is either transmitted or totally internally reflected at the gem's lower surface, creating a sharp shadow edge that is read on a calibrated scale visible through the eyepiece. Singly refractive gems show one shadow edge; doubly refractive gems show two (the separation revealing birefringence). Gems with RI above ~1.81 read as "over-the-limit" (OTL).
+                <span class="glossary-entry__see">See also: <a href="#refractive-index">Refractive Index</a>, <a href="#birefringence">Birefringence</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="refractive-index">
+              <dt class="glossary-entry__term">Refractive Index (RI)</dt>
+              <dd class="glossary-entry__def">
+                A dimensionless number expressing how much a gemstone slows and bends light as it enters from air. Defined as RI = (speed of light in air) ÷ (speed of light in the gem). Higher RI values mean light bends more sharply, producing greater brilliance and dispersion potential. Singly-refractive (isotropic) gems have a single RI value; doubly-refractive gems have two (an ordinary ray and an extraordinary ray), and the range is reported (e.g., corundum 1.762–1.770). RI is the single most diagnostic optical constant for gem identification.
+                <span class="glossary-entry__see">See also: <a href="#refractometer">Refractometer</a>, <a href="#birefringence">Birefringence</a>, <a href="#dispersion">Dispersion</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- S -->
+          <div class="glossary-letter" id="letter-s">
+            <h2 class="glossary-letter__heading">S</h2>
+
+            <div class="glossary-entry" id="silk">
+              <dt class="glossary-entry__term">Silk</dt>
+              <dd class="glossary-entry__def">
+                Extremely fine, hair-like rutile (TiO₂) or other mineral needles included within corundum (ruby and sapphire), oriented parallel to the crystal's growth directions in three intersecting sets. When dense, these needles scatter light, giving the stone a silky appearance and reducing transparency. A specific density and orientation of silk produces asterism (the six-rayed star). Heat treatment dissolves silk needles to improve clarity, evidence of which can sometimes be detected as dotted rutile remnants at the edges of former needles.
+                <span class="glossary-entry__see">See also: <a href="#asterism">Asterism</a>, <a href="#acicular">Acicular</a>, <a href="#heat-treatment">Heat Treatment</a>, <a href="#inclusion">Inclusion</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="simulant">
+              <dt class="glossary-entry__term">Simulant</dt>
+              <dd class="glossary-entry__def">
+                Any natural or synthetic material used to visually imitate a more valuable gemstone but that differs in chemical composition, crystal structure, and physical properties from the stone it imitates. Common simulants include cubic zirconia (CZ) and moissanite for diamond, synthetic spinel and glass for many colored gems, and assembled doublets or triplets. Distinguished from synthetic gems, which have the same chemical composition and structure as the natural stone they replicate.
+                <span class="glossary-entry__see">See also: <a href="#synthetic">Synthetic Gemstone</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="specific-gravity">
+              <dt class="glossary-entry__term">Specific Gravity (SG)</dt>
+              <dd class="glossary-entry__def">
+                The ratio of a gem's mass to the mass of an equal volume of water at 4 °C. Numerically equal to density in g/cm³. SG is a useful diagnostic property because it is constant for a given mineral species regardless of size. Measured by hydrostatic weighing (Archimedes' method), heavy liquid comparison, or electronic density balance. Typical reference values: quartz 2.66, beryl 2.72, topaz 3.53, corundum 4.00, diamond 3.52, garnet (pyrope) 3.78.
+                <span class="glossary-entry__see">See also: <a href="#hydrostatic-weighing">Hydrostatic Weighing</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="spectroscope">
+              <dt class="glossary-entry__term">Spectroscope</dt>
+              <dd class="glossary-entry__def">
+                A gemological instrument that splits white light into a visible spectrum and reveals dark absorption lines or bands caused by a gem's chromophore. Two types are used: prism spectroscopes (compact, hand-held) and diffraction grating spectroscopes (more accurate wavelength reading). The gem is held in front of the slit; light transmitted through or reflected from the gem is dispersed into its spectrum and viewed through the eyepiece. Diagnostic lines include: 694 nm and 692 nm (ruby/red spinel chromium), 637 nm / 630 nm (ruby), 683 nm (almandine garnet), and 427 nm (blue zircon uranium).
+                <span class="glossary-entry__see">See also: <a href="#absorption-spectrum">Absorption Spectrum</a>, <a href="#chromophore">Chromophore</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="synthetic">
+              <dt class="glossary-entry__term">Synthetic Gemstone</dt>
+              <dd class="glossary-entry__def">
+                A gemstone created in a laboratory that has essentially the same chemical composition, crystal structure, and physical properties as its natural counterpart. By FTC (US) definition, "synthetic" requires the same composition and crystal structure. Common production methods include flame fusion (Verneuil), Czochralski pulling, flux growth, and hydrothermal growth. Synthetics are distinguished from simulants (which differ chemically) and from natural gems by characteristic internal features visible under magnification. Disclosure is required by trade regulations.
+                <span class="glossary-entry__see">See also: <a href="#czochralski">Czochralski Method</a>, <a href="#flux-growth">Flux Growth</a>, <a href="#simulant">Simulant</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- T -->
+          <div class="glossary-letter" id="letter-t">
+            <h2 class="glossary-letter__heading">T</h2>
+
+            <div class="glossary-entry" id="toughness">
+              <dt class="glossary-entry__term">Toughness</dt>
+              <dd class="glossary-entry__def">
+                A gem's resistance to breakage, chipping, or cracking — distinct from hardness (resistance to scratching). Toughness is determined primarily by crystal structure, cleavage, and fracture characteristics. Jadeite and nephrite jade have exceptional toughness (Very Tough) despite moderate Mohs hardness (~6.5–7), because their interlocking fibrous or granular crystal structure resists propagation of fractures. Diamond, despite being the hardest natural material, has only Good toughness because its perfect octahedral cleavage can be exploited. Toughness ratings: Exceptional, Very Tough, Tough, Fair, Poor.
+                <span class="glossary-entry__see">See also: <a href="#mohs-scale">Mohs Scale</a>, <a href="#cleavage">Cleavage</a></span>
+              </dd>
+            </div>
+
+            <div class="glossary-entry" id="twinning">
+              <dt class="glossary-entry__term">Twinning</dt>
+              <dd class="glossary-entry__def">
+                A crystal growth phenomenon in which two or more crystals of the same species grow in a specific, symmetrical geometric relationship to each other, sharing a common composition plane or axis. Common types:
+                <ul>
+                  <li><strong>Contact twins</strong> — two crystals joined at a flat twinning plane (gypsum "fishtail" twin)</li>
+                  <li><strong>Penetration twins</strong> — two crystals intergrown through each other (orthoclase Carlsbad twin, staurolite cross)</li>
+                  <li><strong>Polysynthetic twinning</strong> — repeated parallel twinning on a microscopic scale, producing fine striations on crystal faces (plagioclase feldspar, ruby "macle")</li>
+                </ul>
+                Twinning planes and repeated twinning lines visible under magnification can help identify gem species and sometimes indicate natural vs. synthetic origin.
+                <span class="glossary-entry__see">See also: <a href="#inclusion">Inclusion</a>, <a href="#crystal-system">Crystal System</a></span>
+              </dd>
+            </div>
+          </div>
+
+          <!-- U -->
+          <div class="glossary-letter" id="letter-u">
+            <h2 class="glossary-letter__heading">U</h2>
+
+            <div class="glossary-entry" id="uniaxial-biaxial">
+              <dt class="glossary-entry__term">Uniaxial / Biaxial</dt>
+              <dd class="glossary-entry__def">
+                A subdivision of anisotropic (doubly-refractive) gemstones based on the number of optical axes — directions along which light travels without being split into two rays:
+                <ul>
+                  <li><strong>Uniaxial</strong> — one optic axis; characteristic of gems in the hexagonal and trigonal crystal systems (corundum, quartz, tourmaline, beryl, zircon). On a polariscope with a conoscopic lens, uniaxial gems show a "bull's-eye" interference figure (concentric rings with a dark cross).</li>
+                  <li><strong>Biaxial</strong> — two optic axes; characteristic of orthorhombic, monoclinic, and triclinic gems (topaz, peridot, tanzanite, alexandrite, orthoclase). Biaxial gems show a figure with two sets of curved arms meeting at two "melatope" points.</li>
+                </ul>
+                Distinguishing uniaxial from biaxial is a step in systematic identification when the RI reading has been obtained.
+                <span class="glossary-entry__see">See also: <a href="#optic-character">Optic Character</a>, <a href="#polariscope">Polariscope</a>, <a href="#birefringence">Birefringence</a>, <a href="#crystal-system">Crystal System</a></span>
+              </dd>
+            </div>
+          </div>
+
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="none"><polygon points="14,2 24,10 20,26 8,26 4,10" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="4,10 14,14 24,10" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="14" y1="14" x2="8" y2="26" stroke="currentColor" stroke-width="1.2"/><line x1="14" y1="14" x2="20" y2="26" stroke="currentColor" stroke-width="1.2"/></svg>
+          <span>GemLens</span>
+        </div>
+        <p class="body-small">An educational resource for gemology students and professionals. Content is for learning purposes.</p>
+        <div class="footer__links">
+          <a href="fundamentals.html">Fundamentals</a>
+          <a href="properties.html">Properties</a>
+          <a href="identification.html">Identification</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="tools.html">Tools</a>
+          <a href="glossary.html">Glossary</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
