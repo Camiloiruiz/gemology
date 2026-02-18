@@ -185,6 +185,11 @@ body { overflow-wrap: break-word; word-break: break-word; }
 }
 .top-bar__icon { color: var(--md-primary); }
 .top-bar__nav { display: none; gap: 0.25rem; }
+.nav-toggle {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 20px; color: var(--md-on-surface); transition: background-color 0.2s;
+}
+.nav-toggle:hover { background: var(--md-surface-container-high); }
 @media(min-width:768px){
   .top-bar__nav { display: flex; }
   .nav-toggle { display: none; }
@@ -195,11 +200,6 @@ body { overflow-wrap: break-word; word-break: break-word; }
 }
 .nav-link:hover { background: var(--md-surface-container-high); color: var(--md-on-surface); }
 .nav-link--active { background: var(--md-secondary-container); color: var(--md-on-secondary-container); }
-.nav-toggle {
-  display: flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 20px; color: var(--md-on-surface); transition: background-color 0.2s;
-}
-.nav-toggle:hover { background: var(--md-surface-container-high); }
 
 /* Theme Toggle */
 .theme-toggle {
